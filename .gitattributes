@@ -1,0 +1,32 @@
+*.7z     binary
+*.bmp    binary
+*.bz2    binary
+*.cab    binary
+*.dll    binary
+*.doc    binary
+*.docx   binary
+*.exe    binary
+*.gif    binary
+*.iso    binary
+*.jpg    binary
+*.lib    binary
+*.pdf    binary
+*.png    binary
+*.ppt    binary
+*.pptx   binary
+*.tar    binary
+*.tar.gz binary
+*.tar.xz binary
+*.tgz    binary
+*.txz    binary
+*.xsl    binary
+*.xslx   binary
+*.zip    binary
+
+*.bat        text eol=crlf
+*.bat.sample text eol=crlf
+*.crt        text eol=lf
+*.gpg        text eol=lf
+*.key        text eol=lf
+*.pem        text eol=lf
+*.sln        text eol=crlf
