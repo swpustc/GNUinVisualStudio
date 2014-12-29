@@ -1,0 +1,36 @@
+::tools/signture.bat.sample
+@echo off
+setlocal
+
+if not defined GNUDir goto :eof
+
+set "CERT_PATH=%~dp0..\Common"
+set "CERT_NAME=MyCert"
+set "SUBJECT_N=Sample Cert"
+set "POLICYINF=http://home.ustc.edu.cn/~swpustc"
+if     "%~1" == "" set "SIGN_PATH="%~dp0..\Release" "
+if not "%~1" == "" set "SIGN_PATH=%*"
+
+set "ROOT_CERT_FILE_NAME=%GNUDir%etc\rootcert"
+
+:setp1
+forfiles /p "%CERT_PATH%" /m "%CERT_NAME%.pfx" /d -28 /c "cmd /c del @path & echo Certificate has expired." 2> nul
+if not exist "%CERT_PATH%\%CERT_NAME%.pfx" goto :GenNormalCert
+goto :step2
+:GenNormalCert
+if exist "%CERT_PATH%\%CERT_NAME%.*" del "%CERT_PATH%\%CERT_NAME%.*"
+call "%GNUDir%tools\mkcert.bat" normal "%CERT_PATH%\%CERT_NAME%" "%ROOT_CERT_FILE_NAME%" "%SUBJECT_N%" "%POLICYINF%" 1 "no-pause"
+goto :step2
+
+:step2
+if /i "%~1" == "nul"  goto :eof
+if /i "%~1" == "NULL" goto :eof
+if not defined PFX_FILE   set "PFX_FILE=%CERT_PATH%\%CERT_NAME%"
+if not defined PFX_PSWORD set "PFX_PSWORD="
+if not defined NSPEC_PSWD if not defined PFX_PSWORD set /p "PFX_PSWORD=Specifies the pfx certificate file password: [default=%PFX_PSWORD%] "
+if not defined TIME_STAMP set "TIME_STAMP="
+if not defined RETRYTIMES set "RETRYTIMES=10"
+if not defined FORCE_SIGN set "FORCE_SIGN="
+if not defined RET_FINISH set "RET_FINISH="
+call "%GNUDir%tools\mkcert.bat" %SIGN_PATH%
+goto :eof
