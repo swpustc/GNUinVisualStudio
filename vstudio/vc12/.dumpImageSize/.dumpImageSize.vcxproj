@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(GNUDir)gnu_vc12.props" />
+  <PropertyGroup Label="Globals">
+    <GNUProjectRoot>$(dumpImageSizeRoot)</GNUProjectRoot>
+    <GNUProjectName>$(dumpImageSizeName)</GNUProjectName>
+    <GNUProjectDir>$(dumpImageSizeDir)</GNUProjectDir>
+    <GNUProjectInclude>$(dumpImageSizeInclude)</GNUProjectInclude>
+    <GNUProjectVersion>$(dumpImageSizeVersion)</GNUProjectVersion>
+    <GNUCharacterSet>$(dumpImageSizeCharacterSet)</GNUCharacterSet>
+    <GNUApplication>true</GNUApplication>
+    <GNUConsoleApplication>true</GNUConsoleApplication>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="$(GNUProjectDir)dumpImageSize.cpp" />
+    <ClInclude Include="$(GNUProjectDir)version.h" />
+    <ClInclude Include="$(GNUProjectInclude)*" />
+    <ResourceCompile Include="$(GNUProjectDir)dumpImageSize.rc">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='Library'">true</ExcludedFromBuild>
+    </ResourceCompile>
+    <None Include="$(GNUetcDir)..\vc*\.dumpImageSize.props" />
+  </ItemGroup>
+  <Import Project="$(GNUetcglobalDir)setting.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{00000001-592E-4AFB-B995-9A0AAC8BC4BD}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>$(GNUProjectName)</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug DLL libcmt|Win32">
+      <Configuration>Debug DLL libcmt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug DLL libcmt|x64">
+      <Configuration>Debug DLL libcmt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug DLL libcrt|Win32">
+      <Configuration>Debug DLL libcrt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug DLL libcrt|x64">
+      <Configuration>Debug DLL libcrt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release DLL libcmt|Win32">
+      <Configuration>Release DLL libcmt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release DLL libcmt|x64">
+      <Configuration>Release DLL libcmt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release DLL libcrt|Win32">
+      <Configuration>Release DLL libcrt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release DLL libcrt|x64">
+      <Configuration>Release DLL libcrt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(GNUetcglobalDir)default.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <Import Project="$(GNUetcglobalDir)user.props" />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PreprocessorDefinitions>FILE_VERSION_NUMBER=$(GNUProjectVersion);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <BaseAddress>@$(GNUetcDir)addressTable.txt,$(TargetName)</BaseAddress>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>
