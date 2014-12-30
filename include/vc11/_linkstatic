@@ -1,0 +1,38 @@
+/*  This file link static library. */
+
+#ifndef __GNU_PROJECT_NAME__
+#  error _linkstatic can be included by linkxx.h only.
+#endif
+#ifndef _CRT_STRINGIZE
+#  include <crtdefs.h>
+#endif
+
+#ifdef _DEBUG       /* _DEBUG */
+#  ifdef _M_X64     /* _M_X64 */
+#    ifdef _DLL     /* libcrt */
+#      pragma comment(lib, _CRT_STRINGIZE(__GNU_PROJECT_NAME__) ".v110.static.libcrt.debug64.lib")
+#    else           /* libcmt */
+#      pragma comment(lib, _CRT_STRINGIZE(__GNU_PROJECT_NAME__) ".v110.static.libcmt.debug64.lib")
+#    endif
+#  else             /* _M_X86 */
+#    ifdef _DLL     /* libcrt */
+#      pragma comment(lib, _CRT_STRINGIZE(__GNU_PROJECT_NAME__) ".v110.static.libcrt.debug.lib")
+#    else           /* libcmt */
+#      pragma comment(lib, _CRT_STRINGIZE(__GNU_PROJECT_NAME__) ".v110.static.libcmt.debug.lib")
+#    endif
+#  endif
+#else               /* !DEBUG */
+#  ifdef _M_X64     /* _M_X64 */
+#    ifdef _DLL     /* libcrt */
+#      pragma comment(lib, _CRT_STRINGIZE(__GNU_PROJECT_NAME__) ".v110.static.libcrt64.lib")
+#    else           /* libcmt */
+#      pragma comment(lib, _CRT_STRINGIZE(__GNU_PROJECT_NAME__) ".v110.static.libcmt64.lib")
+#    endif
+#  else             /* _M_X86 */
+#    ifdef _DLL     /* libcrt */
+#      pragma comment(lib, _CRT_STRINGIZE(__GNU_PROJECT_NAME__) ".v110.static.libcrt.lib")
+#    else           /* libcmt */
+#      pragma comment(lib, _CRT_STRINGIZE(__GNU_PROJECT_NAME__) ".v110.static.libcmt.lib")
+#    endif
+#  endif
+#endif

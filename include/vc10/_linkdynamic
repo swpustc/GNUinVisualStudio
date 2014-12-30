@@ -1,0 +1,38 @@
+/*  This file link dynamic library. */
+
+#ifndef __GNU_PROJECT_NAME__
+#  error _linkdynamic can be included by linkxx.h only.
+#endif
+#ifndef _CRT_STRINGIZE
+#  include <crtdefs.h>
+#endif
+
+#ifdef _DEBUG       /* _DEBUG */
+#  ifdef _M_X64     /* _M_X64 */
+#    ifdef _DLL     /* libcrt */
+#      pragma comment(lib, _CRT_STRINGIZE(__GNU_PROJECT_NAME__) ".debug64.lib")
+#    else           /* libcmt */
+#      pragma comment(lib, _CRT_STRINGIZE(__GNU_PROJECT_NAME__) ".m.debug64.lib")
+#    endif
+#  else             /* _M_X86 */
+#    ifdef _DLL     /* libcrt */
+#      pragma comment(lib, _CRT_STRINGIZE(__GNU_PROJECT_NAME__) ".debug.lib")
+#    else           /* libcmt */
+#      pragma comment(lib, _CRT_STRINGIZE(__GNU_PROJECT_NAME__) ".m.debug.lib")
+#    endif
+#  endif
+#else               /* !DEBUG */
+#  ifdef _M_X64     /* _M_X64 */
+#    ifdef _DLL     /* libcrt */
+#      pragma comment(lib, _CRT_STRINGIZE(__GNU_PROJECT_NAME__) ".64.lib")
+#    else           /* libcmt */
+#      pragma comment(lib, _CRT_STRINGIZE(__GNU_PROJECT_NAME__) ".m64.lib")
+#    endif
+#  else             /* _M_X86 */
+#    ifdef _DLL     /* libcrt */
+#      pragma comment(lib, _CRT_STRINGIZE(__GNU_PROJECT_NAME__) ".lib")
+#    else           /* libcmt */
+#      pragma comment(lib, _CRT_STRINGIZE(__GNU_PROJECT_NAME__) ".m.lib")
+#    endif
+#  endif
+#endif
