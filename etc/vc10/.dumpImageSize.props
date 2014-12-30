@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <dumpImageSizeRoot>dumpImageSize</dumpImageSizeRoot>
+    <dumpImageSizeName>dumpImageSize</dumpImageSizeName>
+    <dumpImageSizeDir>$(GNUprojectDir).dumpImageSize\</dumpImageSizeDir>
+    <dumpImageSizeInclude>$(dumpImageSizeDir)include\</dumpImageSizeInclude>
+    <dumpImageSizeVersion>10109</dumpImageSizeVersion>
+    <dumpImageSizeCharacterSet>MultiByte</dumpImageSizeCharacterSet>
+    <!--  Global environment settings. -->
+    <GNUSourcePath>$(dumpImageSizeDir);$(GNUSourcePath)</GNUSourcePath>
+    <GNUIncludePath>$(dumpImageSizeInclude);$(GNUIncludePath)</GNUIncludePath>
+  </PropertyGroup>
+</Project>
