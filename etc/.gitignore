@@ -1,3 +1,5 @@
 !/pubgpg.key
 !/rootcert.cer
 !/rootcert.crt
+/vc*/addressTable
+/vc*/addressTable.txt
