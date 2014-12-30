@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <!--  Platform Directory -->
+    <GNUPlatformDirectory>vc12</GNUPlatformDirectory>
+    <!--  GNU project path settings. -->
+    <GNUincludeDir>$(GNUDir)include\</GNUincludeDir>
+    <GNUbinDir>$(GNUDir)bin\$(GNUPlatformDirectory)\</GNUbinDir>
+    <GNUdllDir>$(GNUDir)dll\$(GNUPlatformDirectory)\</GNUdllDir>
+    <GNUlibDir>$(GNUDir)lib\$(GNUPlatformDirectory)\</GNUlibDir>
+    <GNUbscDir>$(GNUDir)bsc\$(GNUPlatformDirectory)\</GNUbscDir>
+    <GNUpdbDir>$(GNUDir)pdb\$(GNUPlatformDirectory)\</GNUpdbDir>
+    <GNUmapDir>$(GNUDir)map\$(GNUPlatformDirectory)\</GNUmapDir>
+    <GNUetcDir>$(GNUDir)etc\$(GNUPlatformDirectory)\</GNUetcDir>
+    <GNUtmpDir>$(GNUDir)tmp\$(GNUPlatformDirectory)\</GNUtmpDir>
+    <GNUpdb_publicDir>$(GNUDir)pdb_pub\$(GNUPlatformDirectory)\</GNUpdb_publicDir>
+    <GNUinclude_etcDir>$(GNUincludeDir)$(GNUPlatformDirectory)\</GNUinclude_etcDir>
+    <GNUetcglobalDir>$(GNUetcDir)global\</GNUetcglobalDir>
+    <GNUetcaddrDir>$(GNUetcDir)addressTable\</GNUetcaddrDir>
+    <GNUtoolsDir>$(GNUDir)tools\</GNUtoolsDir>
+    <GNUprojectDir>$(GNUDir)project\</GNUprojectDir>
+    <!--  Generate files settings. -->
+    <GNUBuildOneDLL>false</GNUBuildOneDLL>
+    <GNUGenerateBrowseInformation>false</GNUGenerateBrowseInformation>
+    <GNUGenerateDebugInformation>true</GNUGenerateDebugInformation>
+    <GNUGeneratePublicSymbolDebugInformation>false</GNUGeneratePublicSymbolDebugInformation>
+    <GNUGenerateMapFile>false</GNUGenerateMapFile>
+    <GNUHardLinkInsteadofCopyExe>false</GNUHardLinkInsteadofCopyExe>
+    <GNUHardLinkInsteadofCopyDll>false</GNUHardLinkInsteadofCopyDll>
+    <GNUHardLinkInsteadofCopyLib>true</GNUHardLinkInsteadofCopyLib>
+    <!--  Global environment settings. -->
+    <GNUExecutablePath />
+    <GNULibraryPath />
+    <GNUSourcePath />
+    <GNUIncludePath />
+    <GNUPlatformToolset>v120</GNUPlatformToolset>
+    <GNUSDLCheck>true</GNUSDLCheck>
+    <WindowsSDKDesktopARMSupport>true</WindowsSDKDesktopARMSupport>
+  </PropertyGroup>
+  <!--  Import GNU projects. -->
+  <Import Project="$(GNUetcDir)zlib.props" />
+  <!--  Import Local projects. -->
+  <Import Project="$(GNUetcDir).dumpImageSize.props" />
+  <!--  Import end. -->
+  <PropertyGroup Label="Globals">
+    <GNUExecutablePath>$(GNUbinDir);$(GNUdllDir);$(GNUtoolsDir)</GNUExecutablePath>
+    <GNULibraryPath>$(GNUlibDir)</GNULibraryPath>
+  </PropertyGroup>
+</Project>
