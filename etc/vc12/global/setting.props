@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <GNUNameSuffixNonEmptyConnector>.</GNUNameSuffixNonEmptyConnector>
+    <GNUAppNameSuffix_debug_cmt>m.debug</GNUAppNameSuffix_debug_cmt>
+    <GNUAppNameSuffix_debug_crt>debug</GNUAppNameSuffix_debug_crt>
+    <GNUAppNameSuffix_release_cmt>m</GNUAppNameSuffix_release_cmt>
+    <GNUAppNameSuffix_release_crt></GNUAppNameSuffix_release_crt>
+    <GNUDLLNameSuffix_debug_cmt>m.debug</GNUDLLNameSuffix_debug_cmt>
+    <GNUDLLNameSuffix_debug_crt>debug</GNUDLLNameSuffix_debug_crt>
+    <GNUDLLNameSuffix_release_cmt>m</GNUDLLNameSuffix_release_cmt>
+    <GNUDLLNameSuffix_release_crt></GNUDLLNameSuffix_release_crt>
+    <GNULibNameSuffix_debug_cmt>$(GNUPlatformToolset).static.libcmt.debug</GNULibNameSuffix_debug_cmt>
+    <GNULibNameSuffix_debug_crt>$(GNUPlatformToolset).static.libcrt.debug</GNULibNameSuffix_debug_crt>
+    <GNULibNameSuffix_release_cmt>$(GNUPlatformToolset).static.libcmt</GNULibNameSuffix_release_cmt>
+    <GNULibNameSuffix_release_crt>$(GNUPlatformToolset).static.libcrt</GNULibNameSuffix_release_crt>
+    <GNUPlatformNameSuffix_Win32></GNUPlatformNameSuffix_Win32>
+    <GNUPlatformNameSuffix_x64>64</GNUPlatformNameSuffix_x64>
+    <GNUPlatformNameSuffix_ARM>.arm</GNUPlatformNameSuffix_ARM>
+    <GNUPlatformNameSuffix_Other>.unknow</GNUPlatformNameSuffix_Other>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GNUAppNameSuffix_debug_cmt Condition="'$(GNUAppNameSuffix_debug_cmt)'!=''">$(GNUNameSuffixNonEmptyConnector)$(GNUAppNameSuffix_debug_cmt)</GNUAppNameSuffix_debug_cmt>
+    <GNUAppNameSuffix_debug_crt Condition="'$(GNUAppNameSuffix_debug_crt)'!=''">$(GNUNameSuffixNonEmptyConnector)$(GNUAppNameSuffix_debug_crt)</GNUAppNameSuffix_debug_crt>
+    <GNUAppNameSuffix_release_cmt Condition="'$(GNUAppNameSuffix_release_cmt)'!=''">$(GNUNameSuffixNonEmptyConnector)$(GNUAppNameSuffix_release_cmt)</GNUAppNameSuffix_release_cmt>
+    <GNUAppNameSuffix_release_crt Condition="'$(GNUAppNameSuffix_release_crt)'!=''">$(GNUNameSuffixNonEmptyConnector)$(GNUAppNameSuffix_release_crt)</GNUAppNameSuffix_release_crt>
+    <GNUDLLNameSuffix_debug_cmt Condition="'$(GNUDLLNameSuffix_debug_cmt)'!=''">$(GNUNameSuffixNonEmptyConnector)$(GNUDLLNameSuffix_debug_cmt)</GNUDLLNameSuffix_debug_cmt>
+    <GNUDLLNameSuffix_debug_crt Condition="'$(GNUDLLNameSuffix_debug_crt)'!=''">$(GNUNameSuffixNonEmptyConnector)$(GNUDLLNameSuffix_debug_crt)</GNUDLLNameSuffix_debug_crt>
+    <GNUDLLNameSuffix_release_cmt Condition="'$(GNUDLLNameSuffix_release_cmt)'!=''">$(GNUNameSuffixNonEmptyConnector)$(GNUDLLNameSuffix_release_cmt)</GNUDLLNameSuffix_release_cmt>
+    <GNUDLLNameSuffix_release_crt Condition="'$(GNUDLLNameSuffix_release_crt)'!=''">$(GNUNameSuffixNonEmptyConnector)$(GNUDLLNameSuffix_release_crt)</GNUDLLNameSuffix_release_crt>
+    <GNULibNameSuffix_debug_cmt Condition="'$(GNULibNameSuffix_debug_cmt)'!=''">$(GNUNameSuffixNonEmptyConnector)$(GNULibNameSuffix_debug_cmt)</GNULibNameSuffix_debug_cmt>
+    <GNULibNameSuffix_debug_crt Condition="'$(GNULibNameSuffix_debug_crt)'!=''">$(GNUNameSuffixNonEmptyConnector)$(GNULibNameSuffix_debug_crt)</GNULibNameSuffix_debug_crt>
+    <GNULibNameSuffix_release_cmt Condition="'$(GNULibNameSuffix_release_cmt)'!=''">$(GNUNameSuffixNonEmptyConnector)$(GNULibNameSuffix_release_cmt)</GNULibNameSuffix_release_cmt>
+    <GNULibNameSuffix_release_crt Condition="'$(GNULibNameSuffix_release_crt)'!=''">$(GNUNameSuffixNonEmptyConnector)$(GNULibNameSuffix_release_crt)</GNULibNameSuffix_release_crt>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GNUPlatformNameSuffix_Platform>$(GNUPlatformNameSuffix_Other)</GNUPlatformNameSuffix_Platform>
+    <GNUPlatformNameSuffix_Platform Condition="'$(Platform)'=='Win32'">$(GNUPlatformNameSuffix_Win32)</GNUPlatformNameSuffix_Platform>
+    <GNUPlatformNameSuffix_Platform Condition="'$(Platform)'=='x64'">$(GNUPlatformNameSuffix_x64)</GNUPlatformNameSuffix_Platform>
+    <GNUPlatformNameSuffix_Platform Condition="'$(Platform)'=='ARM'">$(GNUPlatformNameSuffix_ARM)</GNUPlatformNameSuffix_Platform>
+    <GNUAppNameSuffix_debug_cmt>$(GNUAppNameSuffix_debug_cmt)$(GNUPlatformNameSuffix_Platform)</GNUAppNameSuffix_debug_cmt>
+    <GNUAppNameSuffix_debug_crt>$(GNUAppNameSuffix_debug_crt)$(GNUPlatformNameSuffix_Platform)</GNUAppNameSuffix_debug_crt>
+    <GNUAppNameSuffix_release_cmt>$(GNUAppNameSuffix_release_cmt)$(GNUPlatformNameSuffix_Platform)</GNUAppNameSuffix_release_cmt>
+    <GNUAppNameSuffix_release_crt>$(GNUAppNameSuffix_release_crt)$(GNUPlatformNameSuffix_Platform)</GNUAppNameSuffix_release_crt>
+    <GNUDLLNameSuffix_debug_cmt>$(GNUDLLNameSuffix_debug_cmt)$(GNUPlatformNameSuffix_Platform)</GNUDLLNameSuffix_debug_cmt>
+    <GNUDLLNameSuffix_debug_crt>$(GNUDLLNameSuffix_debug_crt)$(GNUPlatformNameSuffix_Platform)</GNUDLLNameSuffix_debug_crt>
+    <GNUDLLNameSuffix_release_cmt>$(GNUDLLNameSuffix_release_cmt)$(GNUPlatformNameSuffix_Platform)</GNUDLLNameSuffix_release_cmt>
+    <GNUDLLNameSuffix_release_crt>$(GNUDLLNameSuffix_release_crt)$(GNUPlatformNameSuffix_Platform)</GNUDLLNameSuffix_release_crt>
+    <GNULibNameSuffix_debug_cmt>$(GNULibNameSuffix_debug_cmt)$(GNUPlatformNameSuffix_Platform)</GNULibNameSuffix_debug_cmt>
+    <GNULibNameSuffix_debug_crt>$(GNULibNameSuffix_debug_crt)$(GNUPlatformNameSuffix_Platform)</GNULibNameSuffix_debug_crt>
+    <GNULibNameSuffix_release_cmt>$(GNULibNameSuffix_release_cmt)$(GNUPlatformNameSuffix_Platform)</GNULibNameSuffix_release_cmt>
+    <GNULibNameSuffix_release_crt>$(GNULibNameSuffix_release_crt)$(GNUPlatformNameSuffix_Platform)</GNULibNameSuffix_release_crt>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GNUAppNameSuffix_debug_cmt Condition="'$(GNUAppNameSuffix_debug_cmt)'=='$(GNUPlatformNameSuffix_x64)'">$(GNUNameSuffixNonEmptyConnector)$(GNUAppNameSuffix_debug_cmt)</GNUAppNameSuffix_debug_cmt>
+    <GNUAppNameSuffix_debug_crt Condition="'$(GNUAppNameSuffix_debug_crt)'=='$(GNUPlatformNameSuffix_x64)'">$(GNUNameSuffixNonEmptyConnector)$(GNUAppNameSuffix_debug_crt)</GNUAppNameSuffix_debug_crt>
+    <GNUAppNameSuffix_release_cmt Condition="'$(GNUAppNameSuffix_release_cmt)'=='$(GNUPlatformNameSuffix_x64)'">$(GNUNameSuffixNonEmptyConnector)$(GNUAppNameSuffix_release_cmt)</GNUAppNameSuffix_release_cmt>
+    <GNUAppNameSuffix_release_crt Condition="'$(GNUAppNameSuffix_release_crt)'=='$(GNUPlatformNameSuffix_x64)'">$(GNUNameSuffixNonEmptyConnector)$(GNUAppNameSuffix_release_crt)</GNUAppNameSuffix_release_crt>
+    <GNUDLLNameSuffix_debug_cmt Condition="'$(GNUDLLNameSuffix_debug_cmt)'=='$(GNUPlatformNameSuffix_x64)'">$(GNUNameSuffixNonEmptyConnector)$(GNUDLLNameSuffix_debug_cmt)</GNUDLLNameSuffix_debug_cmt>
+    <GNUDLLNameSuffix_debug_crt Condition="'$(GNUDLLNameSuffix_debug_crt)'=='$(GNUPlatformNameSuffix_x64)'">$(GNUNameSuffixNonEmptyConnector)$(GNUDLLNameSuffix_debug_crt)</GNUDLLNameSuffix_debug_crt>
+    <GNUDLLNameSuffix_release_cmt Condition="'$(GNUDLLNameSuffix_release_cmt)'=='$(GNUPlatformNameSuffix_x64)'">$(GNUNameSuffixNonEmptyConnector)$(GNUDLLNameSuffix_release_cmt)</GNUDLLNameSuffix_release_cmt>
+    <GNUDLLNameSuffix_release_crt Condition="'$(GNUDLLNameSuffix_release_crt)'=='$(GNUPlatformNameSuffix_x64)'">$(GNUNameSuffixNonEmptyConnector)$(GNUDLLNameSuffix_release_crt)</GNUDLLNameSuffix_release_crt>
+    <GNULibNameSuffix_debug_cmt Condition="'$(GNULibNameSuffix_debug_cmt)'=='$(GNUPlatformNameSuffix_x64)'">$(GNUNameSuffixNonEmptyConnector)$(GNULibNameSuffix_debug_cmt)</GNULibNameSuffix_debug_cmt>
+    <GNULibNameSuffix_debug_crt Condition="'$(GNULibNameSuffix_debug_crt)'=='$(GNUPlatformNameSuffix_x64)'">$(GNUNameSuffixNonEmptyConnector)$(GNULibNameSuffix_debug_crt)</GNULibNameSuffix_debug_crt>
+    <GNULibNameSuffix_release_cmt Condition="'$(GNULibNameSuffix_release_cmt)'=='$(GNUPlatformNameSuffix_x64)'">$(GNUNameSuffixNonEmptyConnector)$(GNULibNameSuffix_release_cmt)</GNULibNameSuffix_release_cmt>
+    <GNULibNameSuffix_release_crt Condition="'$(GNULibNameSuffix_release_crt)'=='$(GNUPlatformNameSuffix_x64)'">$(GNUNameSuffixNonEmptyConnector)$(GNULibNameSuffix_release_crt)</GNULibNameSuffix_release_crt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Debug DLL libcmt'">
+    <GNUAppNameSuffix>$(GNUAppNameSuffix_debug_cmt)</GNUAppNameSuffix>
+    <GNUDLLNameSuffix>$(GNUDLLNameSuffix_debug_cmt)</GNUDLLNameSuffix>
+    <GNULibNameSuffix>$(GNULibNameSuffix_debug_cmt)</GNULibNameSuffix>
+    <GNUNameSuffix Condition="'$(GNUApplication)'=='true'" >$(GNUAppNameSuffix)</GNUNameSuffix>
+    <GNUNameSuffix Condition="'$(GNUApplication)'=='false'">$(GNUDLLNameSuffix)</GNUNameSuffix>
+    <GNULinkSuffix Condition="'$(GNUBuildOneDLL)'=='false'">$(GNUDLLNameSuffix)</GNULinkSuffix>
+    <GNULinkSuffix Condition="'$(GNUBuildOneDLL)'=='true'" >$(GNULibNameSuffix)</GNULinkSuffix>
+    <GNUConfiguration>Debug</GNUConfiguration>
+    <GNUConfigurationType Condition="'$(GNUApplication)'=='false'">DLL</GNUConfigurationType>
+    <GNUConfigurationType Condition="'$(GNUApplication)'=='true'" >App</GNUConfigurationType>
+    <GNUprojectExtName Condition="'$(GNUApplication)'=='false'">dll</GNUprojectExtName>
+    <GNUprojectExtName Condition="'$(GNUApplication)'=='true'" >exe</GNUprojectExtName>
+    <GNURuntimeLibrary>libcmt</GNURuntimeLibrary>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Debug DLL libcrt'">
+    <GNUAppNameSuffix>$(GNUAppNameSuffix_debug_crt)</GNUAppNameSuffix>
+    <GNUDLLNameSuffix>$(GNUDLLNameSuffix_debug_crt)</GNUDLLNameSuffix>
+    <GNULibNameSuffix>$(GNULibNameSuffix_debug_crt)</GNULibNameSuffix>
+    <GNUNameSuffix Condition="'$(GNUApplication)'=='true'" >$(GNUAppNameSuffix)</GNUNameSuffix>
+    <GNUNameSuffix Condition="'$(GNUApplication)'=='false'">$(GNUDLLNameSuffix)</GNUNameSuffix>
+    <GNULinkSuffix Condition="'$(GNUBuildOneDLL)'=='false'">$(GNUDLLNameSuffix)</GNULinkSuffix>
+    <GNULinkSuffix Condition="'$(GNUBuildOneDLL)'=='true'" >$(GNULibNameSuffix)</GNULinkSuffix>
+    <GNUConfiguration>Debug</GNUConfiguration>
+    <GNUConfigurationType Condition="'$(GNUApplication)'=='false'">DLL</GNUConfigurationType>
+    <GNUConfigurationType Condition="'$(GNUApplication)'=='true'" >App</GNUConfigurationType>
+    <GNUprojectExtName Condition="'$(GNUApplication)'=='false'">dll</GNUprojectExtName>
+    <GNUprojectExtName Condition="'$(GNUApplication)'=='true'" >exe</GNUprojectExtName>
+    <GNURuntimeLibrary>libcrt</GNURuntimeLibrary>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Debug Library libcmt'">
+    <GNUAppNameSuffix>$(GNUAppNameSuffix_debug_cmt)</GNUAppNameSuffix>
+    <GNUDLLNameSuffix>$(GNUDLLNameSuffix_debug_cmt)</GNUDLLNameSuffix>
+    <GNULibNameSuffix>$(GNULibNameSuffix_debug_cmt)</GNULibNameSuffix>
+    <GNUNameSuffix Condition="'$(GNUApplication)'=='true'" >$(GNUAppNameSuffix)</GNUNameSuffix>
+    <GNUNameSuffix Condition="'$(GNUApplication)'=='false'">$(GNULibNameSuffix)</GNUNameSuffix>
+    <GNULinkSuffix>$(GNULibNameSuffix)</GNULinkSuffix>
+    <GNUConfiguration>Debug</GNUConfiguration>
+    <GNUConfigurationType>Library</GNUConfigurationType>
+    <GNUprojectExtName>lib</GNUprojectExtName>
+    <GNURuntimeLibrary>libcmt</GNURuntimeLibrary>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Debug Library libcrt'">
+    <GNUAppNameSuffix>$(GNUAppNameSuffix_debug_crt)</GNUAppNameSuffix>
+    <GNUDLLNameSuffix>$(GNUDLLNameSuffix_debug_crt)</GNUDLLNameSuffix>
+    <GNULibNameSuffix>$(GNULibNameSuffix_debug_crt)</GNULibNameSuffix>
+    <GNUNameSuffix Condition="'$(GNUApplication)'=='true'" >$(GNUAppNameSuffix)</GNUNameSuffix>
+    <GNUNameSuffix Condition="'$(GNUApplication)'=='false'">$(GNULibNameSuffix)</GNUNameSuffix>
+    <GNULinkSuffix>$(GNULibNameSuffix)</GNULinkSuffix>
+    <GNUConfiguration>Debug</GNUConfiguration>
+    <GNUConfigurationType>Library</GNUConfigurationType>
+    <GNUprojectExtName>lib</GNUprojectExtName>
+    <GNURuntimeLibrary>libcrt</GNURuntimeLibrary>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Release DLL libcmt'">
+    <GNUAppNameSuffix>$(GNUAppNameSuffix_release_cmt)</GNUAppNameSuffix>
+    <GNUDLLNameSuffix>$(GNUDLLNameSuffix_release_cmt)</GNUDLLNameSuffix>
+    <GNULibNameSuffix>$(GNULibNameSuffix_release_cmt)</GNULibNameSuffix>
+    <GNUNameSuffix Condition="'$(GNUApplication)'=='true'" >$(GNUAppNameSuffix)</GNUNameSuffix>
+    <GNUNameSuffix Condition="'$(GNUApplication)'=='false'">$(GNUDLLNameSuffix)</GNUNameSuffix>
+    <GNULinkSuffix Condition="'$(GNUBuildOneDLL)'=='false'">$(GNUDLLNameSuffix)</GNULinkSuffix>
+    <GNULinkSuffix Condition="'$(GNUBuildOneDLL)'=='true'" >$(GNULibNameSuffix)</GNULinkSuffix>
+    <GNUConfiguration>Release</GNUConfiguration>
+    <GNUConfigurationType Condition="'$(GNUApplication)'=='false'">DLL</GNUConfigurationType>
+    <GNUConfigurationType Condition="'$(GNUApplication)'=='true'" >App</GNUConfigurationType>
+    <GNUprojectExtName Condition="'$(GNUApplication)'=='false'">dll</GNUprojectExtName>
+    <GNUprojectExtName Condition="'$(GNUApplication)'=='true'" >exe</GNUprojectExtName>
+    <GNURuntimeLibrary>libcmt</GNURuntimeLibrary>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Release DLL libcrt'">
+    <GNUAppNameSuffix>$(GNUAppNameSuffix_release_crt)</GNUAppNameSuffix>
+    <GNUDLLNameSuffix>$(GNUDLLNameSuffix_release_crt)</GNUDLLNameSuffix>
+    <GNULibNameSuffix>$(GNULibNameSuffix_release_crt)</GNULibNameSuffix>
+    <GNUNameSuffix Condition="'$(GNUApplication)'=='true'" >$(GNUAppNameSuffix)</GNUNameSuffix>
+    <GNUNameSuffix Condition="'$(GNUApplication)'=='false'">$(GNUDLLNameSuffix)</GNUNameSuffix>
+    <GNULinkSuffix Condition="'$(GNUBuildOneDLL)'=='false'">$(GNUDLLNameSuffix)</GNULinkSuffix>
+    <GNULinkSuffix Condition="'$(GNUBuildOneDLL)'=='true'" >$(GNULibNameSuffix)</GNULinkSuffix>
+    <GNUConfiguration>Release</GNUConfiguration>
+    <GNUConfigurationType Condition="'$(GNUApplication)'=='false'">DLL</GNUConfigurationType>
+    <GNUConfigurationType Condition="'$(GNUApplication)'=='true'" >App</GNUConfigurationType>
+    <GNUprojectExtName Condition="'$(GNUApplication)'=='false'">dll</GNUprojectExtName>
+    <GNUprojectExtName Condition="'$(GNUApplication)'=='true'" >exe</GNUprojectExtName>
+    <GNURuntimeLibrary>libcrt</GNURuntimeLibrary>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Release Library libcmt'">
+    <GNUAppNameSuffix>$(GNUAppNameSuffix_release_cmt)</GNUAppNameSuffix>
+    <GNUDLLNameSuffix>$(GNUDLLNameSuffix_release_cmt)</GNUDLLNameSuffix>
+    <GNULibNameSuffix>$(GNULibNameSuffix_release_cmt)</GNULibNameSuffix>
+    <GNUNameSuffix Condition="'$(GNUApplication)'=='true'" >$(GNUAppNameSuffix)</GNUNameSuffix>
+    <GNUNameSuffix Condition="'$(GNUApplication)'=='false'">$(GNULibNameSuffix)</GNUNameSuffix>
+    <GNULinkSuffix>$(GNULibNameSuffix)</GNULinkSuffix>
+    <GNUConfiguration>Release</GNUConfiguration>
+    <GNUConfigurationType>Library</GNUConfigurationType>
+    <GNUprojectExtName>lib</GNUprojectExtName>
+    <GNURuntimeLibrary>libcmt</GNURuntimeLibrary>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Release Library libcrt'">
+    <GNUAppNameSuffix>$(GNUAppNameSuffix_release_crt)</GNUAppNameSuffix>
+    <GNUDLLNameSuffix>$(GNUDLLNameSuffix_release_crt)</GNUDLLNameSuffix>
+    <GNULibNameSuffix>$(GNULibNameSuffix_release_crt)</GNULibNameSuffix>
+    <GNUNameSuffix Condition="'$(GNUApplication)'=='true'" >$(GNUAppNameSuffix)</GNUNameSuffix>
+    <GNUNameSuffix Condition="'$(GNUApplication)'=='false'">$(GNULibNameSuffix)</GNUNameSuffix>
+    <GNULinkSuffix>$(GNULibNameSuffix)</GNULinkSuffix>
+    <GNUConfiguration>Release</GNUConfiguration>
+    <GNUConfigurationType>Library</GNUConfigurationType>
+    <GNUprojectExtName>lib</GNUprojectExtName>
+    <GNURuntimeLibrary>libcrt</GNURuntimeLibrary>
+  </PropertyGroup>
+</Project>

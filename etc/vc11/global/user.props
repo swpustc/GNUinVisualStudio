@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <ExecutablePath>$(GNUExecutablePath);$(ExecutablePath)</ExecutablePath>
+    <OutDir>$(GNUtmpDir)$(GNUProjectRoot)\</OutDir>
+    <IntDir>$(GNUtmpDir)$(GNUProjectRoot)\$(GNUProjectName)$(GNUNameSuffix).$(GNUprojectExtName).tmp\</IntDir>
+    <TargetName>$(GNUProjectName)$(GNUNameSuffix)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(GNUConfiguration)'=='Debug'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(GNUConfiguration)'=='Release'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <!--  Copy files and set file BaseAddress to list file. -->
+  <PropertyGroup>
+    <GNUignoreErrorLevel>cd .</GNUignoreErrorLevel>
+    <GNUforceErrorLevel>set "errorlevel=1"</GNUforceErrorLevel>
+    <GNUcopyCommand>    call "$(GNUtoolsDir).copy.bat" copy     </GNUcopyCommand>
+    <GNUhardlinkCommand>call "$(GNUtoolsDir).copy.bat" hardlink </GNUhardlinkCommand>
+    <GNUsymbolicCommand>call "$(GNUtoolsDir).copy.bat" symbolic </GNUsymbolicCommand>
+    <GNUdeleteCommand>  call "$(GNUtoolsDir).copy.bat" del      </GNUdeleteCommand>
+    <GNUrmdirCommand>   call "$(GNUtoolsDir).copy.bat" rmdir    </GNUrmdirCommand>
+    <GNUmkdirCommand>   call "$(GNUtoolsDir).copy.bat" mkdir    </GNUmkdirCommand>
+    <GNUmoveCommand>    call "$(GNUtoolsDir).copy.bat" move     </GNUmoveCommand>
+    <GNUrenameCommand>  call "$(GNUtoolsDir).copy.bat" rename   </GNUrenameCommand>
+    <GNUcopyExebash Condition="'$(GNUHardLinkInsteadofCopyExe)'=='true'">$(GNUhardlinkCommand)</GNUcopyExebash>
+    <GNUcopyExebash Condition="'$(GNUHardLinkInsteadofCopyExe)'!='true'">$(GNUcopyCommand)    </GNUcopyExebash>
+    <GNUcopyDllbash Condition="'$(GNUHardLinkInsteadofCopyDll)'=='true'">$(GNUhardlinkCommand)</GNUcopyDllbash>
+    <GNUcopyDllbash Condition="'$(GNUHardLinkInsteadofCopyDll)'!='true'">$(GNUcopyCommand)    </GNUcopyDllbash>
+    <GNUcopyLibbash Condition="'$(GNUHardLinkInsteadofCopyLib)'=='true'">$(GNUhardlinkCommand)</GNUcopyLibbash>
+    <GNUcopyLibbash Condition="'$(GNUHardLinkInsteadofCopyLib)'!='true'">$(GNUcopyCommand)    </GNUcopyLibbash>
+    <GNUcopybash>$(GNUcopyCommand)</GNUcopybash>
+    <GNUcopyexeFile>
+$(GNUcopyExebash) "$(OutDir)$(TargetName).exe" "$(GNUbinDir)$(TargetName).exe" "$(GNUbinDir)"
+</GNUcopyexeFile>
+    <GNUcopydllFile>
+$(GNUcopyDllbash) "$(OutDir)$(TargetName).dll" "$(GNUdllDir)$(TargetName).dll" "$(GNUdllDir)"
+</GNUcopydllFile>
+    <GNUcopylibFile>
+$(GNUcopyLibbash) "$(OutDir)$(TargetName).lib" "$(GNUlibDir)$(TargetName).lib" "$(GNUlibDir)"
+</GNUcopylibFile>
+    <GNUcopyStatic2DynamiclibFile>
+$(GNUcopyLibbash) "$(OutDir)$(TargetName).lib" "$(GNUlibDir)$(GNUProjectName)$(GNUDLLNameSuffix).lib" "$(GNUlibDir)"
+</GNUcopyStatic2DynamiclibFile>
+    <GNUcopyBaseAddressTemplate Condition="'$(GNUConfigurationType)'!='Library'">
+if not exist "$(GNUetcDir)addressTable.txt" ( $(GNUcopyCommand) "$(GNUetcDir)..\addressTable.in" "$(GNUetcDir)addressTable.txt" )
+$(GNUmkdirCommand) "$(GNUetcaddrDir)"
+if not exist "$(GNUetcaddrDir)$(TargetName).txt" ( echo $(TargetName) 0x10000000 0 > "$(GNUetcaddrDir)$(TargetName).txt" )
+</GNUcopyBaseAddressTemplate>
+    <GNUcreatePublic_pdbDirectory Condition="'$(GNUGeneratePublicSymbolDebugInformation)'=='true'">
+$(GNUmkdirCommand) "$(GNUpdb_publicDir)"
+</GNUcreatePublic_pdbDirectory>
+    <GNUpreBaseAddress>
+$(GNUcopyBaseAddressTemplate)
+if exist "$(GNUbinDir)$(dumpImageSizeName)$(GNUAppNameSuffix).exe" (
+$(dumpImageSizeName)$(GNUAppNameSuffix) --minver "$(dumpImageSizeVersion)" -- "$(GNUetcDir)addressTable.txt" -po "$(GNUetcDir)addressTable.txt" -f "$(OutDir)$(TargetName)$(TargetExt),$(Platform)" -D "$(GNUetcaddrDir)\"
+$(GNUignoreErrorLevel) )
+</GNUpreBaseAddress>
+    <GNUdumpBaseAddress>
+$(GNUcopyBaseAddressTemplate)
+$(dumpImageSizeName)$(GNUAppNameSuffix) --minver "$(dumpImageSizeVersion)" -- "$(GNUetcDir)addressTable.txt" -do "$(GNUetcDir)addressTable.txt" -f "$(OutDir)$(TargetName)$(TargetExt),$(Platform)" -D "$(GNUetcaddrDir)\"
+</GNUdumpBaseAddress>
+    <GNUPreBuildCommand>$(GNUpreBaseAddress)$(GNUcreatePublic_pdbDirectory)</GNUPreBuildCommand>
+    <GNUPostBuildCommand Condition="'$(GNUConfigurationType)'=='App'">$(GNUcopyexeFile)$(GNUdumpBaseAddress)</GNUPostBuildCommand>
+    <GNUPostBuildCommand Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUcopydllFile)$(GNUcopylibFile)$(GNUdumpBaseAddress)</GNUPostBuildCommand>
+    <GNUPostBuildCommand Condition="'$(GNUConfigurationType)'=='Library'">$(GNUcopylibFile)$(GNUdumpBaseAddress)</GNUPostBuildCommand>
+  </PropertyGroup>
+  <!--  Item definition group. -->
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(GNUProjectInclude);$(GNUProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WINDOWS;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+      <DisableSpecificWarnings>4102;4703;4819;4996</DisableSpecificWarnings>
+      <BrowseInformation>$(GNUGenerateBrowseInformation)</BrowseInformation>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <ProgramDataBaseFileName>$(GNUpdbDir)$(TargetName).vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <SDLCheck>$(GNUSDLCheck)</SDLCheck>
+    </ClCompile>
+    <Lib>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>$(GNULibraryPath);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>$(GNULibraryPath);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <LargeAddressAware>true</LargeAddressAware>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <GenerateDebugInformation>$(GNUGenerateDebugInformation)</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(GNUpdbDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <StripPrivateSymbols Condition="'$(GNUGeneratePublicSymbolDebugInformation)'=='true'">$(GNUpdb_publicDir)$(TargetName).pdb</StripPrivateSymbols>
+      <GenerateMapFile>$(GNUGenerateMapFile)</GenerateMapFile>
+      <MapFileName>$(GNUmapDir)$(TargetName).map</MapFileName>
+      <Version>$(GNUProjectVersion)</Version>
+      <BaseAddress>@$(GNUetcaddrDir)$(TargetName).txt,$(TargetName)</BaseAddress>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>$(GNUProjectInclude);$(GNUProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <NullTerminateStrings>true</NullTerminateStrings>
+    </ResourceCompile>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+      <OutputFile>$(GNUbscDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+    <MASM>
+      <IncludePaths>$(GNUProjectInclude);$(GNUProjectDir)</IncludePaths>
+      <WarningLevel>0</WarningLevel>
+    </MASM>
+    <PreBuildEvent>
+      <Command>$(GNUPreBuildCommand)</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>$(GNUPostBuildCommand)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Platform)'=='Win32'">
+    <ClCompile>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <CreateHotpatchableImage>true</CreateHotpatchableImage>
+    </ClCompile>
+    <Lib>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Lib>
+    <MASM>
+      <UseSafeExceptionHandlers>true</UseSafeExceptionHandlers>
+    </MASM>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Platform)'=='x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Lib>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(GNUConfiguration)'=='Debug'">
+    <ClCompile>
+      <PreprocessorDefinitions>_DEBUG;DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(GNUConfiguration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(GNUConfiguration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(GNUConfiguration)'=='Release'">
+    <ClCompile>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Optimization>MaxSpeed</Optimization>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <StringPooling>true</StringPooling>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <AssemblerOutput>All</AssemblerOutput>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(GNUConfiguration)|$(GNURuntimeLibrary)'=='Debug|libcmt'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(GNUConfiguration)|$(GNURuntimeLibrary)'=='Debug|libcrt'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(GNUConfiguration)|$(GNURuntimeLibrary)'=='Release|libcmt'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(GNUConfiguration)|$(GNURuntimeLibrary)'=='Release|libcrt'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(GNUConfigurationType)'=='App'">
+    <ClCompile>
+      <PreprocessorDefinitions Condition="'$(GNUConsoleApplication)'=='true'">_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem Condition="'$(GNUConsoleApplication)'=='true'">Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(GNUConfigurationType)'=='DLL'">
+    <ClCompile>
+      <PreprocessorDefinitions>_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(GNUConfigurationType)'=='Library'">
+    <ClCompile>
+      <PreprocessorDefinitions>_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+</Project>
