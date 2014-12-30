@@ -1,0 +1,112 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LOCAL_Projects", "LOCAL_Projects", "{ABDE0001-EECA-4627-9094-847618723012}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_dumpImageSize", "_dumpImageSize", "{ABDE0011-EECA-4627-9094-847618723012}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GNU_Projects", "GNU_Projects", "{AA670001-EECA-4627-9094-847618723012}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_zlib", "_zlib", "{AA670011-EECA-4627-9094-847618723012}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = ".dumpImageSize", ".dumpImageSize\.dumpImageSize.vcxproj", "{00000001-592E-4AFB-B995-9A0AAC8BC4BD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlib", "zlib\zlib.vcxproj", "{60F89955-91C6-3A36-8000-13C592FEC2DF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{00000001-592E-4AFB-B995-9A0AAC8BC4BD} = {00000001-592E-4AFB-B995-9A0AAC8BC4BD}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug DLL libcmt|Win32 = Debug DLL libcmt|Win32
+		Debug DLL libcmt|x64 = Debug DLL libcmt|x64
+		Debug DLL libcrt|Win32 = Debug DLL libcrt|Win32
+		Debug DLL libcrt|x64 = Debug DLL libcrt|x64
+		Debug Library libcmt|Win32 = Debug Library libcmt|Win32
+		Debug Library libcmt|x64 = Debug Library libcmt|x64
+		Debug Library libcrt|Win32 = Debug Library libcrt|Win32
+		Debug Library libcrt|x64 = Debug Library libcrt|x64
+		Release DLL libcmt|Win32 = Release DLL libcmt|Win32
+		Release DLL libcmt|x64 = Release DLL libcmt|x64
+		Release DLL libcrt|Win32 = Release DLL libcrt|Win32
+		Release DLL libcrt|x64 = Release DLL libcrt|x64
+		Release Library libcmt|Win32 = Release Library libcmt|Win32
+		Release Library libcmt|x64 = Release Library libcmt|x64
+		Release Library libcrt|Win32 = Release Library libcrt|Win32
+		Release Library libcrt|x64 = Release Library libcrt|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00000001-592E-4AFB-B995-9A0AAC8BC4BD}.Debug DLL libcmt|Win32.ActiveCfg = Debug DLL libcmt|Win32
+		{00000001-592E-4AFB-B995-9A0AAC8BC4BD}.Debug DLL libcmt|Win32.Build.0 = Debug DLL libcmt|Win32
+		{00000001-592E-4AFB-B995-9A0AAC8BC4BD}.Debug DLL libcmt|x64.ActiveCfg = Debug DLL libcmt|x64
+		{00000001-592E-4AFB-B995-9A0AAC8BC4BD}.Debug DLL libcmt|x64.Build.0 = Debug DLL libcmt|x64
+		{00000001-592E-4AFB-B995-9A0AAC8BC4BD}.Debug DLL libcrt|Win32.ActiveCfg = Debug DLL libcrt|Win32
+		{00000001-592E-4AFB-B995-9A0AAC8BC4BD}.Debug DLL libcrt|Win32.Build.0 = Debug DLL libcrt|Win32
+		{00000001-592E-4AFB-B995-9A0AAC8BC4BD}.Debug DLL libcrt|x64.ActiveCfg = Debug DLL libcrt|x64
+		{00000001-592E-4AFB-B995-9A0AAC8BC4BD}.Debug DLL libcrt|x64.Build.0 = Debug DLL libcrt|x64
+		{00000001-592E-4AFB-B995-9A0AAC8BC4BD}.Debug Library libcmt|Win32.ActiveCfg = Debug DLL libcmt|Win32
+		{00000001-592E-4AFB-B995-9A0AAC8BC4BD}.Debug Library libcmt|Win32.Build.0 = Debug DLL libcmt|Win32
+		{00000001-592E-4AFB-B995-9A0AAC8BC4BD}.Debug Library libcmt|x64.ActiveCfg = Debug DLL libcmt|x64
+		{00000001-592E-4AFB-B995-9A0AAC8BC4BD}.Debug Library libcmt|x64.Build.0 = Debug DLL libcmt|x64
+		{00000001-592E-4AFB-B995-9A0AAC8BC4BD}.Debug Library libcrt|Win32.ActiveCfg = Debug DLL libcrt|Win32
+		{00000001-592E-4AFB-B995-9A0AAC8BC4BD}.Debug Library libcrt|Win32.Build.0 = Debug DLL libcrt|Win32
+		{00000001-592E-4AFB-B995-9A0AAC8BC4BD}.Debug Library libcrt|x64.ActiveCfg = Debug DLL libcrt|x64
+		{00000001-592E-4AFB-B995-9A0AAC8BC4BD}.Debug Library libcrt|x64.Build.0 = Debug DLL libcrt|x64
+		{00000001-592E-4AFB-B995-9A0AAC8BC4BD}.Release DLL libcmt|Win32.ActiveCfg = Release DLL libcmt|Win32
+		{00000001-592E-4AFB-B995-9A0AAC8BC4BD}.Release DLL libcmt|Win32.Build.0 = Release DLL libcmt|Win32
+		{00000001-592E-4AFB-B995-9A0AAC8BC4BD}.Release DLL libcmt|x64.ActiveCfg = Release DLL libcmt|x64
+		{00000001-592E-4AFB-B995-9A0AAC8BC4BD}.Release DLL libcmt|x64.Build.0 = Release DLL libcmt|x64
+		{00000001-592E-4AFB-B995-9A0AAC8BC4BD}.Release DLL libcrt|Win32.ActiveCfg = Release DLL libcrt|Win32
+		{00000001-592E-4AFB-B995-9A0AAC8BC4BD}.Release DLL libcrt|Win32.Build.0 = Release DLL libcrt|Win32
+		{00000001-592E-4AFB-B995-9A0AAC8BC4BD}.Release DLL libcrt|x64.ActiveCfg = Release DLL libcrt|x64
+		{00000001-592E-4AFB-B995-9A0AAC8BC4BD}.Release DLL libcrt|x64.Build.0 = Release DLL libcrt|x64
+		{00000001-592E-4AFB-B995-9A0AAC8BC4BD}.Release Library libcmt|Win32.ActiveCfg = Release DLL libcmt|Win32
+		{00000001-592E-4AFB-B995-9A0AAC8BC4BD}.Release Library libcmt|Win32.Build.0 = Release DLL libcmt|Win32
+		{00000001-592E-4AFB-B995-9A0AAC8BC4BD}.Release Library libcmt|x64.ActiveCfg = Release DLL libcmt|x64
+		{00000001-592E-4AFB-B995-9A0AAC8BC4BD}.Release Library libcmt|x64.Build.0 = Release DLL libcmt|x64
+		{00000001-592E-4AFB-B995-9A0AAC8BC4BD}.Release Library libcrt|Win32.ActiveCfg = Release DLL libcrt|Win32
+		{00000001-592E-4AFB-B995-9A0AAC8BC4BD}.Release Library libcrt|Win32.Build.0 = Release DLL libcrt|Win32
+		{00000001-592E-4AFB-B995-9A0AAC8BC4BD}.Release Library libcrt|x64.ActiveCfg = Release DLL libcrt|x64
+		{00000001-592E-4AFB-B995-9A0AAC8BC4BD}.Release Library libcrt|x64.Build.0 = Release DLL libcrt|x64
+		{60F89955-91C6-3A36-8000-13C592FEC2DF}.Debug DLL libcmt|Win32.ActiveCfg = Debug DLL libcmt|Win32
+		{60F89955-91C6-3A36-8000-13C592FEC2DF}.Debug DLL libcmt|Win32.Build.0 = Debug DLL libcmt|Win32
+		{60F89955-91C6-3A36-8000-13C592FEC2DF}.Debug DLL libcmt|x64.ActiveCfg = Debug DLL libcmt|x64
+		{60F89955-91C6-3A36-8000-13C592FEC2DF}.Debug DLL libcmt|x64.Build.0 = Debug DLL libcmt|x64
+		{60F89955-91C6-3A36-8000-13C592FEC2DF}.Debug DLL libcrt|Win32.ActiveCfg = Debug DLL libcrt|Win32
+		{60F89955-91C6-3A36-8000-13C592FEC2DF}.Debug DLL libcrt|Win32.Build.0 = Debug DLL libcrt|Win32
+		{60F89955-91C6-3A36-8000-13C592FEC2DF}.Debug DLL libcrt|x64.ActiveCfg = Debug DLL libcrt|x64
+		{60F89955-91C6-3A36-8000-13C592FEC2DF}.Debug DLL libcrt|x64.Build.0 = Debug DLL libcrt|x64
+		{60F89955-91C6-3A36-8000-13C592FEC2DF}.Debug Library libcmt|Win32.ActiveCfg = Debug Library libcmt|Win32
+		{60F89955-91C6-3A36-8000-13C592FEC2DF}.Debug Library libcmt|Win32.Build.0 = Debug Library libcmt|Win32
+		{60F89955-91C6-3A36-8000-13C592FEC2DF}.Debug Library libcmt|x64.ActiveCfg = Debug Library libcmt|x64
+		{60F89955-91C6-3A36-8000-13C592FEC2DF}.Debug Library libcmt|x64.Build.0 = Debug Library libcmt|x64
+		{60F89955-91C6-3A36-8000-13C592FEC2DF}.Debug Library libcrt|Win32.ActiveCfg = Debug Library libcrt|Win32
+		{60F89955-91C6-3A36-8000-13C592FEC2DF}.Debug Library libcrt|Win32.Build.0 = Debug Library libcrt|Win32
+		{60F89955-91C6-3A36-8000-13C592FEC2DF}.Debug Library libcrt|x64.ActiveCfg = Debug Library libcrt|x64
+		{60F89955-91C6-3A36-8000-13C592FEC2DF}.Debug Library libcrt|x64.Build.0 = Debug Library libcrt|x64
+		{60F89955-91C6-3A36-8000-13C592FEC2DF}.Release DLL libcmt|Win32.ActiveCfg = Release DLL libcmt|Win32
+		{60F89955-91C6-3A36-8000-13C592FEC2DF}.Release DLL libcmt|Win32.Build.0 = Release DLL libcmt|Win32
+		{60F89955-91C6-3A36-8000-13C592FEC2DF}.Release DLL libcmt|x64.ActiveCfg = Release DLL libcmt|x64
+		{60F89955-91C6-3A36-8000-13C592FEC2DF}.Release DLL libcmt|x64.Build.0 = Release DLL libcmt|x64
+		{60F89955-91C6-3A36-8000-13C592FEC2DF}.Release DLL libcrt|Win32.ActiveCfg = Release DLL libcrt|Win32
+		{60F89955-91C6-3A36-8000-13C592FEC2DF}.Release DLL libcrt|Win32.Build.0 = Release DLL libcrt|Win32
+		{60F89955-91C6-3A36-8000-13C592FEC2DF}.Release DLL libcrt|x64.ActiveCfg = Release DLL libcrt|x64
+		{60F89955-91C6-3A36-8000-13C592FEC2DF}.Release DLL libcrt|x64.Build.0 = Release DLL libcrt|x64
+		{60F89955-91C6-3A36-8000-13C592FEC2DF}.Release Library libcmt|Win32.ActiveCfg = Release Library libcmt|Win32
+		{60F89955-91C6-3A36-8000-13C592FEC2DF}.Release Library libcmt|Win32.Build.0 = Release Library libcmt|Win32
+		{60F89955-91C6-3A36-8000-13C592FEC2DF}.Release Library libcmt|x64.ActiveCfg = Release Library libcmt|x64
+		{60F89955-91C6-3A36-8000-13C592FEC2DF}.Release Library libcmt|x64.Build.0 = Release Library libcmt|x64
+		{60F89955-91C6-3A36-8000-13C592FEC2DF}.Release Library libcrt|Win32.ActiveCfg = Release Library libcrt|Win32
+		{60F89955-91C6-3A36-8000-13C592FEC2DF}.Release Library libcrt|Win32.Build.0 = Release Library libcrt|Win32
+		{60F89955-91C6-3A36-8000-13C592FEC2DF}.Release Library libcrt|x64.ActiveCfg = Release Library libcrt|x64
+		{60F89955-91C6-3A36-8000-13C592FEC2DF}.Release Library libcrt|x64.Build.0 = Release Library libcrt|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AA670011-EECA-4627-9094-847618723012} = {AA670001-EECA-4627-9094-847618723012}
+		{ABDE0011-EECA-4627-9094-847618723012} = {ABDE0001-EECA-4627-9094-847618723012}
+		{60F89955-91C6-3A36-8000-13C592FEC2DF} = {AA670011-EECA-4627-9094-847618723012}
+		{00000001-592E-4AFB-B995-9A0AAC8BC4BD} = {ABDE0011-EECA-4627-9094-847618723012}
+	EndGlobalSection
+EndGlobal
