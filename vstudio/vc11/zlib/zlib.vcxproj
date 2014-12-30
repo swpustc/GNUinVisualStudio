@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(GNUDir)gnu_vc11.props" />
+  <PropertyGroup Label="Globals">
+    <GNUProjectRoot>$(zlibRoot)</GNUProjectRoot>
+    <GNUProjectName>$(zlibName)</GNUProjectName>
+    <GNUProjectDir>$(zlibDir)</GNUProjectDir>
+    <GNUProjectInclude>$(zlibInclude)</GNUProjectInclude>
+    <GNUProjectVersion>$(zlibVersion)</GNUProjectVersion>
+    <GNUCharacterSet>$(zlibCharacterSet)</GNUCharacterSet>
+    <GNUApplication>false</GNUApplication>
+    <GNUConsoleApplication>true</GNUConsoleApplication>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="$(GNUProjectDir)adler32.c" />
+    <ClCompile Include="$(GNUProjectDir)compress.c" />
+    <ClCompile Include="$(GNUProjectDir)crc32.c" />
+    <ClCompile Include="$(GNUProjectDir)deflate.c" />
+    <ClCompile Include="$(GNUProjectDir)gzclose.c" />
+    <ClCompile Include="$(GNUProjectDir)gzlib.c" />
+    <ClCompile Include="$(GNUProjectDir)gzread.c" />
+    <ClCompile Include="$(GNUProjectDir)gzwrite.c" />
+    <ClCompile Include="$(GNUProjectDir)infback.c" />
+    <ClCompile Include="$(GNUProjectDir)inffast.c" />
+    <ClCompile Include="$(GNUProjectDir)inflate.c" />
+    <ClCompile Include="$(GNUProjectDir)inftrees.c" />
+    <ClCompile Include="$(GNUProjectDir)trees.c" />
+    <ClCompile Include="$(GNUProjectDir)uncompr.c" />
+    <ClCompile Include="$(GNUProjectDir)zutil.c" />
+    <ClCompile Include="$(GNUProjectDir)contrib\masmx64\inffas8664.c">
+      <ExcludedFromBuild Condition="'$(Platform)'=='Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)contrib\minizip\ioapi.c" />
+    <ClCompile Include="$(GNUProjectDir)contrib\minizip\iowin32.c" />
+    <ClCompile Include="$(GNUProjectDir)contrib\minizip\unzip.c; $(GNUProjectDir)contrib\minizip\zip.c">
+      <PreprocessorDefinitions Condition="'$(GNUConfiguration)'=='Release'">ZLIB_INTERNAL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <MASM Include="$(GNUProjectDir)contrib\masmx64\gvmat64.asm; $(GNUProjectDir)contrib\masmx64\inffasx64.asm">
+      <ExcludedFromBuild Condition="'$(GNUConfiguration)'=='Debug'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Platform)'=='Win32'">true</ExcludedFromBuild>
+    </MASM>
+    <MASM Include="$(GNUProjectDir)contrib\masmx86\inffas32.asm; $(GNUProjectDir)contrib\masmx86\match686.asm">
+      <ExcludedFromBuild Condition="'$(GNUConfiguration)'=='Debug'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Platform)'=='x64'">true</ExcludedFromBuild>
+    </MASM>
+    <ResourceCompile Include="$(GNUProjectDir)zlib.rc">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='Library'">true</ExcludedFromBuild>
+    </ResourceCompile>
+    <None Include="$(GNUProjectDir)zlib.def" />
+  </ItemGroup>
+  <Import Project="$(GNUetcglobalDir)setting.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{60F89955-91C6-3A36-8000-13C592FEC2DF}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>$(GNUProjectName)</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug DLL libcmt|Win32">
+      <Configuration>Debug DLL libcmt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug DLL libcmt|x64">
+      <Configuration>Debug DLL libcmt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug DLL libcrt|Win32">
+      <Configuration>Debug DLL libcrt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug DLL libcrt|x64">
+      <Configuration>Debug DLL libcrt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Library libcmt|Win32">
+      <Configuration>Debug Library libcmt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Library libcmt|x64">
+      <Configuration>Debug Library libcmt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Library libcrt|Win32">
+      <Configuration>Debug Library libcrt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Library libcrt|x64">
+      <Configuration>Debug Library libcrt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release DLL libcmt|Win32">
+      <Configuration>Release DLL libcmt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release DLL libcmt|x64">
+      <Configuration>Release DLL libcmt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release DLL libcrt|Win32">
+      <Configuration>Release DLL libcrt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release DLL libcrt|x64">
+      <Configuration>Release DLL libcrt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Library libcrt|Win32">
+      <Configuration>Release Library libcrt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Library libcrt|x64">
+      <Configuration>Release Library libcrt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Library libcmt|Win32">
+      <Configuration>Release Library libcmt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Library libcmt|x64">
+      <Configuration>Release Library libcmt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(GNUetcglobalDir)default.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <Import Project="$(GNUetcglobalDir)user.props" />
+  <ItemDefinitionGroup Condition="'$(GNUConfiguration)'=='Release'">
+    <ClCompile>
+      <PreprocessorDefinitions>ASMV;ASMINF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(GNUConfigurationType)'=='DLL'">
+    <Link>
+      <ModuleDefinitionFile>$(GNUProjectDir)zlib.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>
