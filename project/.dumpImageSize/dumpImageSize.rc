@@ -1,0 +1,32 @@
+#include <windows.h>
+#include "version.h"
+
+#define IDR_VERSION1  1
+IDR_VERSION1        VERSIONINFO MOVEABLE IMPURE LOADONCALL DISCARDABLE
+  FILEVERSION       FILE_VERSION_MAJOR,FILE_VERSION_MINOR,FILE_VERSION_POINT,FILE_VERSION_POINT2
+  PRODUCTVERSION    FILE_VERSION_MAJOR,FILE_VERSION_MINOR,FILE_VERSION_POINT,FILE_VERSION_POINT2
+  FILEFLAGSMASK     VS_FFI_FILEFLAGSMASK
+  FILEFLAGS         0
+  FILEOS            VOS_NT_WINDOWS32
+  FILETYPE          VFT_APP
+  FILESUBTYPE       0 // not used
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904E4"
+    BEGIN
+      VALUE "FileDescription",  "Dump BaseAddress and ImageSize of PE files.\0"
+      VALUE "FileVersion",      FILE_VERSION "\0"
+      VALUE "ProductVersion",   FILE_VERSION "\0"
+      VALUE "InternalName",     INTERAL_NAME "\0"
+      VALUE "OriginalFilename", INTERAL_NAME ".exe\0"
+      VALUE "ProductName",      INTERAL_NAME ", Dump BaseAddress and ImageSize\0"
+      VALUE "Comments",         "DLL support by Wanpeng Song <" EMAIL_ADDRESS "> & USTC.\0"
+      VALUE "LegalCopyright",   LEGAL_COPYRIGHT "\0"
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0409, 1252
+  END
+END
