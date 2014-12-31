@@ -1,0 +1,17 @@
+; BASEADDRESS MODIFY RECORDS -- DO NOT EDIT RECORDS LINES -- MAX RECORDS TABLE LINES(32)
+zlib 0x62000000 ;Increased base For BaseAddress
+zlib.m ;Increased base By Alignment(0x1000000)
+zlib.64 0x076062000000 ;Increased base For BaseAddress
+zlib.m64 ;Increased base By Alignment(0x1000000)
+zlib.debug 0x12000000 ;Increased base For BaseAddress
+zlib.m.debug ;Increased base By Alignment(0x1000000)
+zlib.debug64 0x076012000000 ;Increased base For BaseAddress
+zlib.m.debug64 ;Increased base By Alignment(0x1000000)
+dumpImageSize           0x00400000     ;Increased base For BaseAddress
+dumpImageSize.m         0x00400000     ;Increased base By Alignment(0x200000)
+dumpImageSize.64        0x004C00400000 ;Increased base For BaseAddress
+dumpImageSize.m64       0x004C00400000 ;Increased base By Alignment(0x200000)
+dumpImageSize.debug     0x00400000     ;Increased base For BaseAddress
+dumpImageSize.m.debug   0x00400000     ;Increased base By Alignment(0x200000)
+dumpImageSize.debug64   0x004C00400000 ;Increased base For BaseAddress
+dumpImageSize.m.debug64 0x004C00400000 ;Increased base By Alignment(0x200000)
