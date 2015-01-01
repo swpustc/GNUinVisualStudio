@@ -1,0 +1,41 @@
+#include <windows.h>
+
+#define FILE_VERSION_MAJOR  1
+#define FILE_VERSION_MINOR  0
+#define FILE_VERSION_POINT  2
+#define FILE_VERSION_POINT2 3
+#ifndef _CRT_STRINGIZE
+#define __CRT_STRINGIZE(_Value) #_Value
+#define _CRT_STRINGIZE(_Value) __CRT_STRINGIZE(_Value)
+#endif
+#define FILE_VERSION        _CRT_STRINGIZE(FILE_VERSION_MAJOR) "." _CRT_STRINGIZE(FILE_VERSION_MINOR) "." _CRT_STRINGIZE(FILE_VERSION_POINT) "." _CRT_STRINGIZE(FILE_VERSION_POINT2)
+
+#define IDR_VERSION1  1
+IDR_VERSION1	VERSIONINFO	MOVEABLE IMPURE LOADONCALL DISCARDABLE
+  FILEVERSION	 FILE_VERSION_MAJOR,FILE_VERSION_MINOR,FILE_VERSION_POINT,FILE_VERSION_POINT2
+  PRODUCTVERSION FILE_VERSION_MAJOR,FILE_VERSION_MINOR,FILE_VERSION_POINT,FILE_VERSION_POINT2
+  FILEFLAGSMASK	VS_FFI_FILEFLAGSMASK
+  FILEFLAGS	0
+  FILEOS	VOS_NT_WINDOWS32
+  FILETYPE	VFT_DLL
+  FILESUBTYPE	0	// not used
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904E4"
+    BEGIN
+      VALUE "FileDescription",  "Remote memory load DLL library\0"
+      VALUE "FileVersion",      FILE_VERSION "\0"
+      VALUE "ProductVersion",   FILE_VERSION "\0"
+      VALUE "InternalName",     "rmld\0"
+      VALUE "OriginalFilename", "librmld.dll\0"
+      VALUE "ProductName",      "Remote memory load DLL\0"
+      VALUE "Comments",         "DLL support by swpustc@mail.ustc.edu.cn & USTC\0"
+      VALUE "LegalCopyright",   "Copyright (C) 2012-2014 swpustc@mail.ustc.edu.cn & USTC\0"
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0409, 1252
+  END
+END
