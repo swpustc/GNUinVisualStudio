@@ -39,6 +39,7 @@
   </PropertyGroup>
   <!--  Import GNU projects. -->
   <Import Project="$(GNUetcDir)zlib.props" />
+  <Import Project="$(GNUetcDir)png.props" />
   <!--  Import Local projects. -->
   <Import Project="$(GNUetcDir).dumpImageSize.props" />
   <!--  Import end. -->
