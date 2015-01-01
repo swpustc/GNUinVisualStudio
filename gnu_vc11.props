@@ -42,6 +42,7 @@
   <Import Project="$(GNUetcDir)png.props" />
   <!--  Import Local projects. -->
   <Import Project="$(GNUetcDir).dumpImageSize.props" />
+  <Import Project="$(GNUetcDir).rmld.props" />
   <!--  Import end. -->
   <PropertyGroup Label="Globals">
     <GNUExecutablePath>$(GNUbinDir);$(GNUdllDir);$(GNUtoolsDir)</GNUExecutablePath>
