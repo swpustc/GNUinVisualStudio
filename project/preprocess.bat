@@ -9,15 +9,18 @@ set "WORK_DIR=%~dp0"
 %WORK_DIR:~0,2%
 cd %WORK_DIR%
 
+REM keep the space because the newline could be LF
+git checkout -q sources -- preprocess.bat &&                REM
+
 echo Test for git branch...
-git checkout -f sources >nul 2>&1
+git checkout -fq sources
 if errorlevel 1 echo git is't exist or branch 'sources' checkout error. && exit /b 1
 echo;
 
 echo Reset to sources branch...
 git branch -f projects-protected projects
-git checkout -f projects >nul 2>&1 && git reset --hard sources >nul 2>&1
-git reset projects-protected >nul 2>&1
+git checkout -fq projects && git reset --hard -q sources
+git reset -q projects-protected
 git branch -D projects-protected
 echo;
 
@@ -60,14 +63,14 @@ echo Removed %MOVE_FILE_NUM% files
 echo;
 
 echo Remove BOM and add newline at end of file...
-call ..\tools\removeBOM.sh . && git checkout sources -- preprocess.bat >nul
+call ..\tools\removeBOM.sh . && git checkout -q sources -- preprocess.bat
 echo;
 
 echo Add and commit...
-git add --all :/ >nul 2>&1
+git add --all :/
 git rm -f keepNameExt
 git rm --cached preprocess.bat
-git commit -sm "auto commit. process project directory(%DATE:~0,10%)" >nul 2>&1
+git commit -sm "auto commit. process project directory(%DATE:~0,10%)"
 echo;
 
 echo Done.
