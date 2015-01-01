@@ -17,6 +17,9 @@ The Default Git Repository is **USTC** Repository.
 ### Now this project include the following packages
 - zlib-1.2.8
   - [Homepage](http://www.zlib.net/)
+- libpng-1.6.16
+  - [Homepage](http://www.libpng.org/pub/png/libpng.html)
+[Sourcecode](http://sourceforge.net/p/libpng/code/ci/master/tree/)
 
 
 ## Setup
