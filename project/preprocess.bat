@@ -11,11 +11,14 @@ cd %WORK_DIR%
 
 echo Test for git branch...
 git checkout -f sources >nul 2>&1
-if errorlevel 1 echo git is't exist. && exit /b 1
+if errorlevel 1 echo git is't exist or branch 'sources' checkout error. && exit /b 1
 echo;
 
 echo Reset to sources branch...
-git checkout -f projects >nul && git reset --hard sources >nul
+git branch -f projects-protected projects
+git checkout -f projects >nul 2>&1 && git reset --hard sources >nul 2>&1
+git reset projects-protected >nul 2>&1
+git branch -D projects-protected
 echo;
 
 echo Remove unneeded files...
@@ -57,7 +60,7 @@ echo Removed %MOVE_FILE_NUM% files
 echo;
 
 echo Remove BOM and add newline at end of file...
-call ..\tools\removeBOM.sh . && git checkout preprocess.bat >nul
+call ..\tools\removeBOM.sh . && git checkout sources -- preprocess.bat >nul
 echo;
 
 echo Add and commit...
