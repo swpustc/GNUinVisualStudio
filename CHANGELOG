@@ -1,0 +1,11 @@
+v1.0.0rc02
+  - fix preprocess script
+  - add rmld v1.0.2 sources
+  - add libpng v1.6.16 sources
+
+v1.0.0rc01
+  - add zlib v1.2.8 sources
+  - add dumpImageSize v1.1.9 sources
+  - add VS2010, VS2012 and VS2013 solution
+  - add template header file for linker
+  - add make file script(batch file).
