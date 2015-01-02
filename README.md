@@ -17,6 +17,9 @@ The Default Git Repository is **USTC** Repository.
 ### Now this project include the following packages
 - zlib ver.1.2.8
   - [Homepage](http://www.zlib.net/)
+- libsigc++ ver.2.4.0
+  - [Sourcecode](https://git.gnome.org/browse/libsigc++2/)
+[Download](https://mirrors.ustc.edu.cn/gnome/sources/libsigc++/)
 - libpng ver.1.6.16
   - [Homepage](http://www.libpng.org/pub/png/libpng.html)
 [Sourcecode](http://sourceforge.net/p/libpng/code/ci/master/tree/)
