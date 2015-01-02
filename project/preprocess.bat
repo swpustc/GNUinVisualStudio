@@ -24,6 +24,12 @@ git reset -q projects-protected
 git branch -D projects-protected
 echo;
 
+echo Preprocess libsigc++...
+set MOVE_FILE_NUM=0
+for /f "delims=" %%i in ('xcopy /s /y /h /exclude:xcopyExclude libsigc++\sigc++ libsigc++\include\sigc++\ 2^>nul') do if exist "%%i" del /f /a /q "%%i" && echo %%i && set /a MOVE_FILE_NUM+=1
+echo Moved %MOVE_FILE_NUM% files
+echo;
+
 echo Remove unneeded files...
 set MOVE_FILE_NUM_ALL=0
 for /f "delims=" %%i in ('dir /ad /b') do call :remove_unneeded_files "%%i"
