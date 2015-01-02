@@ -1,6 +1,7 @@
 v1.0.0rc02
   - fix preprocess script
   - add librmld v1.0.2 sources
+  - add libhook v0.0.1 sources(NOT released)
   - add libpng v1.6.16 sources
   - add libsigc++ v2.4.0 sources
 
