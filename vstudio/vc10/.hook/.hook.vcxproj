@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(GNUDir)gnu_vc10.props" />
+  <PropertyGroup Label="Globals">
+    <GNUProjectRoot>$(hookRoot)</GNUProjectRoot>
+    <GNUProjectName>$(hookName)</GNUProjectName>
+    <GNUProjectDir>$(hookDir)</GNUProjectDir>
+    <GNUProjectInclude>$(hookInclude)</GNUProjectInclude>
+    <GNUProjectVersion>$(hookVersion)</GNUProjectVersion>
+    <GNUCharacterSet>$(hookCharacterSet)</GNUCharacterSet>
+    <GNUApplication>false</GNUApplication>
+    <GNUConsoleApplication>true</GNUConsoleApplication>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="$(GNUProjectDir)hook.cpp" />
+    <ClCompile Include="$(GNUProjectDir)hook_api_*.cpp" />
+    <ClCompile Include="$(GNUProjectDir)hook_interface_*.cpp" />
+    <ClCompile Include="$(GNUProjectDir)iat.cpp" />
+    <ClCompile Include="$(GNUProjectDir)inline.cpp" />
+    <ResourceCompile Include="$(GNUProjectDir)hook.rc">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='Library'">true</ExcludedFromBuild>
+    </ResourceCompile>
+    <None Include="$(GNUetcDir)..\vc*\.hook.props" />
+  </ItemGroup>
+  <Import Project="$(GNUetcglobalDir)setting.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5D121C76-F2A3-4F16-BB2A-E20DF27B4AA5}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>$(GNUProjectName)</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug DLL libcmt|Win32">
+      <Configuration>Debug DLL libcmt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug DLL libcmt|x64">
+      <Configuration>Debug DLL libcmt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug DLL libcrt|Win32">
+      <Configuration>Debug DLL libcrt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug DLL libcrt|x64">
+      <Configuration>Debug DLL libcrt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Library libcmt|Win32">
+      <Configuration>Debug Library libcmt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Library libcmt|x64">
+      <Configuration>Debug Library libcmt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Library libcrt|Win32">
+      <Configuration>Debug Library libcrt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Library libcrt|x64">
+      <Configuration>Debug Library libcrt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release DLL libcmt|Win32">
+      <Configuration>Release DLL libcmt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release DLL libcmt|x64">
+      <Configuration>Release DLL libcmt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release DLL libcrt|Win32">
+      <Configuration>Release DLL libcrt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release DLL libcrt|x64">
+      <Configuration>Release DLL libcrt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Library libcrt|Win32">
+      <Configuration>Release Library libcrt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Library libcrt|x64">
+      <Configuration>Release Library libcrt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Library libcmt|Win32">
+      <Configuration>Release Library libcmt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Library libcmt|x64">
+      <Configuration>Release Library libcmt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(GNUetcglobalDir)default.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <Import Project="$(GNUetcglobalDir)user.props" />
+  <ItemDefinitionGroup Condition="'$(GNUConfigurationType)'=='DLL'">
+    <ClCompile>
+      <PreprocessorDefinitions>HOOK_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>
