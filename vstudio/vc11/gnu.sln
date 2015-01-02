@@ -6,6 +6,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_dumpImageSize", "_dumpImag
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_rmld", "_rmld", "{ABDE0012-EECA-4627-9094-847618723012}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_hook", "_hook", "{ABDE0013-EECA-4627-9094-847618723012}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GNU_Projects", "GNU_Projects", "{AA670001-EECA-4627-9094-847618723012}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_zlib", "_zlib", "{AA670011-EECA-4627-9094-847618723012}"
@@ -17,6 +19,11 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = ".dumpImageSize", ".dumpImageSize\.dumpImageSize.vcxproj", "{00000001-592E-4AFB-B995-9A0AAC8BC4BD}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = ".rmld", ".rmld\.rmld.vcxproj", "{FC837041-221A-47EA-B0AC-BB09927C84C2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{00000001-592E-4AFB-B995-9A0AAC8BC4BD} = {00000001-592E-4AFB-B995-9A0AAC8BC4BD}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = ".hook", ".hook\.hook.vcxproj", "{5D121C76-F2A3-4F16-BB2A-E20DF27B4AA5}"
 	ProjectSection(ProjectDependencies) = postProject
 		{00000001-592E-4AFB-B995-9A0AAC8BC4BD} = {00000001-592E-4AFB-B995-9A0AAC8BC4BD}
 	EndProjectSection
@@ -121,6 +128,38 @@ Global
 		{FC837041-221A-47EA-B0AC-BB09927C84C2}.Release Library libcrt|Win32.Build.0 = Release Library libcrt|Win32
 		{FC837041-221A-47EA-B0AC-BB09927C84C2}.Release Library libcrt|x64.ActiveCfg = Release Library libcrt|x64
 		{FC837041-221A-47EA-B0AC-BB09927C84C2}.Release Library libcrt|x64.Build.0 = Release Library libcrt|x64
+		{5D121C76-F2A3-4F16-BB2A-E20DF27B4AA5}.Debug DLL libcmt|Win32.ActiveCfg = Debug DLL libcmt|Win32
+		{5D121C76-F2A3-4F16-BB2A-E20DF27B4AA5}.Debug DLL libcmt|Win32.Build.0 = Debug DLL libcmt|Win32
+		{5D121C76-F2A3-4F16-BB2A-E20DF27B4AA5}.Debug DLL libcmt|x64.ActiveCfg = Debug DLL libcmt|x64
+		{5D121C76-F2A3-4F16-BB2A-E20DF27B4AA5}.Debug DLL libcmt|x64.Build.0 = Debug DLL libcmt|x64
+		{5D121C76-F2A3-4F16-BB2A-E20DF27B4AA5}.Debug DLL libcrt|Win32.ActiveCfg = Debug DLL libcrt|Win32
+		{5D121C76-F2A3-4F16-BB2A-E20DF27B4AA5}.Debug DLL libcrt|Win32.Build.0 = Debug DLL libcrt|Win32
+		{5D121C76-F2A3-4F16-BB2A-E20DF27B4AA5}.Debug DLL libcrt|x64.ActiveCfg = Debug DLL libcrt|x64
+		{5D121C76-F2A3-4F16-BB2A-E20DF27B4AA5}.Debug DLL libcrt|x64.Build.0 = Debug DLL libcrt|x64
+		{5D121C76-F2A3-4F16-BB2A-E20DF27B4AA5}.Debug Library libcmt|Win32.ActiveCfg = Debug Library libcmt|Win32
+		{5D121C76-F2A3-4F16-BB2A-E20DF27B4AA5}.Debug Library libcmt|Win32.Build.0 = Debug Library libcmt|Win32
+		{5D121C76-F2A3-4F16-BB2A-E20DF27B4AA5}.Debug Library libcmt|x64.ActiveCfg = Debug Library libcmt|x64
+		{5D121C76-F2A3-4F16-BB2A-E20DF27B4AA5}.Debug Library libcmt|x64.Build.0 = Debug Library libcmt|x64
+		{5D121C76-F2A3-4F16-BB2A-E20DF27B4AA5}.Debug Library libcrt|Win32.ActiveCfg = Debug Library libcrt|Win32
+		{5D121C76-F2A3-4F16-BB2A-E20DF27B4AA5}.Debug Library libcrt|Win32.Build.0 = Debug Library libcrt|Win32
+		{5D121C76-F2A3-4F16-BB2A-E20DF27B4AA5}.Debug Library libcrt|x64.ActiveCfg = Debug Library libcrt|x64
+		{5D121C76-F2A3-4F16-BB2A-E20DF27B4AA5}.Debug Library libcrt|x64.Build.0 = Debug Library libcrt|x64
+		{5D121C76-F2A3-4F16-BB2A-E20DF27B4AA5}.Release DLL libcmt|Win32.ActiveCfg = Release DLL libcmt|Win32
+		{5D121C76-F2A3-4F16-BB2A-E20DF27B4AA5}.Release DLL libcmt|Win32.Build.0 = Release DLL libcmt|Win32
+		{5D121C76-F2A3-4F16-BB2A-E20DF27B4AA5}.Release DLL libcmt|x64.ActiveCfg = Release DLL libcmt|x64
+		{5D121C76-F2A3-4F16-BB2A-E20DF27B4AA5}.Release DLL libcmt|x64.Build.0 = Release DLL libcmt|x64
+		{5D121C76-F2A3-4F16-BB2A-E20DF27B4AA5}.Release DLL libcrt|Win32.ActiveCfg = Release DLL libcrt|Win32
+		{5D121C76-F2A3-4F16-BB2A-E20DF27B4AA5}.Release DLL libcrt|Win32.Build.0 = Release DLL libcrt|Win32
+		{5D121C76-F2A3-4F16-BB2A-E20DF27B4AA5}.Release DLL libcrt|x64.ActiveCfg = Release DLL libcrt|x64
+		{5D121C76-F2A3-4F16-BB2A-E20DF27B4AA5}.Release DLL libcrt|x64.Build.0 = Release DLL libcrt|x64
+		{5D121C76-F2A3-4F16-BB2A-E20DF27B4AA5}.Release Library libcmt|Win32.ActiveCfg = Release Library libcmt|Win32
+		{5D121C76-F2A3-4F16-BB2A-E20DF27B4AA5}.Release Library libcmt|Win32.Build.0 = Release Library libcmt|Win32
+		{5D121C76-F2A3-4F16-BB2A-E20DF27B4AA5}.Release Library libcmt|x64.ActiveCfg = Release Library libcmt|x64
+		{5D121C76-F2A3-4F16-BB2A-E20DF27B4AA5}.Release Library libcmt|x64.Build.0 = Release Library libcmt|x64
+		{5D121C76-F2A3-4F16-BB2A-E20DF27B4AA5}.Release Library libcrt|Win32.ActiveCfg = Release Library libcrt|Win32
+		{5D121C76-F2A3-4F16-BB2A-E20DF27B4AA5}.Release Library libcrt|Win32.Build.0 = Release Library libcrt|Win32
+		{5D121C76-F2A3-4F16-BB2A-E20DF27B4AA5}.Release Library libcrt|x64.ActiveCfg = Release Library libcrt|x64
+		{5D121C76-F2A3-4F16-BB2A-E20DF27B4AA5}.Release Library libcrt|x64.Build.0 = Release Library libcrt|x64
 		{60F89955-91C6-3A36-8000-13C592FEC2DF}.Debug DLL libcmt|Win32.ActiveCfg = Debug DLL libcmt|Win32
 		{60F89955-91C6-3A36-8000-13C592FEC2DF}.Debug DLL libcmt|Win32.Build.0 = Debug DLL libcmt|Win32
 		{60F89955-91C6-3A36-8000-13C592FEC2DF}.Debug DLL libcmt|x64.ActiveCfg = Debug DLL libcmt|x64
@@ -227,10 +266,12 @@ Global
 		{AA670016-EECA-4627-9094-847618723012} = {AA670001-EECA-4627-9094-847618723012}
 		{ABDE0011-EECA-4627-9094-847618723012} = {ABDE0001-EECA-4627-9094-847618723012}
 		{ABDE0012-EECA-4627-9094-847618723012} = {ABDE0001-EECA-4627-9094-847618723012}
+		{ABDE0013-EECA-4627-9094-847618723012} = {ABDE0001-EECA-4627-9094-847618723012}
 		{60F89955-91C6-3A36-8000-13C592FEC2DF} = {AA670011-EECA-4627-9094-847618723012}
 		{CA047D39-BFBF-4D19-872C-F31FF4780D78} = {AA670012-EECA-4627-9094-847618723012}
 		{D6973076-9317-4EF2-A0B8-B7A18AC0713E} = {AA670016-EECA-4627-9094-847618723012}
 		{00000001-592E-4AFB-B995-9A0AAC8BC4BD} = {ABDE0011-EECA-4627-9094-847618723012}
 		{FC837041-221A-47EA-B0AC-BB09927C84C2} = {ABDE0012-EECA-4627-9094-847618723012}
+		{5D121C76-F2A3-4F16-BB2A-E20DF27B4AA5} = {ABDE0013-EECA-4627-9094-847618723012}
 	EndGlobalSection
 EndGlobal
