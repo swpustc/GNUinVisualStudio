@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <sigcxxRoot>sigc++</sigcxxRoot>
+    <sigcxxName>libsigc++</sigcxxName>
+    <sigcxxDir>$(GNUprojectDir)libsigc++\</sigcxxDir>
+    <sigcxxInclude>$(sigcxxDir)include\</sigcxxInclude>
+    <sigcxxVersion>20400</sigcxxVersion>
+    <sigcxxCharacterSet>MultiByte</sigcxxCharacterSet>
+    <!--  Global environment settings. -->
+    <GNUSourcePath>$(sigcxxDir);$(GNUSourcePath)</GNUSourcePath>
+    <GNUIncludePath>$(sigcxxInclude);$(GNUIncludePath)</GNUIncludePath>
+  </PropertyGroup>
+</Project>
