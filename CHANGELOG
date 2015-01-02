@@ -1,6 +1,6 @@
 v1.0.0rc02
   - fix preprocess script
-  - add rmld v1.0.2 sources
+  - add librmld v1.0.2 sources
   - add libpng v1.6.16 sources
   - add libsigc++ v2.4.0 sources
 
