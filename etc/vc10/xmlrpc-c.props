@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <xmlrpcRoot>xmlrpc-c</xmlrpcRoot>
+    <xmlrpc_utilName>libxmlrpc_util</xmlrpc_utilName>
+    <xmlrpc_xmltokName>libxmlrpc_xmltok</xmlrpc_xmltokName>
+    <xmlrpc_xmlparseName>libxmlrpc_xmlparse</xmlrpc_xmlparseName>
+    <xmlrpcName>libxmlrpc</xmlrpcName>
+    <xmlrpc_abyssName>libxmlrpc_abyss</xmlrpc_abyssName>
+    <xmlrpc_clientName>libxmlrpc_client</xmlrpc_clientName>
+    <xmlrpc_serverName>libxmlrpc_server</xmlrpc_serverName>
+    <xmlrpc_server_abyssName>libxmlrpc_server_abyss</xmlrpc_server_abyssName>
+    <xmlrpc_server_cgiName>libxmlrpc_server_cgi</xmlrpc_server_cgiName>
+    <xmlrpcxxName>libxmlrpc++</xmlrpcxxName>
+    <xmlrpcDir>$(GNUprojectDir)xmlrpc-c\</xmlrpcDir>
+    <xmlrpcInclude>$(xmlrpcDir)include\</xmlrpcInclude>
+    <xmlrpcVersion>13900</xmlrpcVersion>
+    <xmlrpcCharacterSet>MultiByte</xmlrpcCharacterSet>
+    <!--  Global environment settings. -->
+    <GNUSourcePath>$(xmlrpcDir)src\;$(GNUSourcePath)</GNUSourcePath>
+    <GNUIncludePath>$(xmlrpcInclude);$(GNUIncludePath)</GNUIncludePath>
+  </PropertyGroup>
+</Project>
