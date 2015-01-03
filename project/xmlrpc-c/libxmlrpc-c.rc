@@ -1,0 +1,46 @@
+/* Resources for xmlrpc.dll */
+
+#include <windows.h>
+#include "version.h"
+#ifndef FILE_NAME_ORIGINAL
+#  error FILE_NAME_ORIGINAL is NOT defined!
+#endif
+#ifndef _CRT_STRINGIZE
+#define __CRT_STRINGIZE(_Value) #_Value
+#define _CRT_STRINGIZE(_Value) __CRT_STRINGIZE(_Value)
+#endif
+#define _FILE_NAME_ORIGINAL_   _CRT_STRINGIZE(FILE_NAME_ORIGINAL)
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION XMLRPC_VERSION_MAJOR,XMLRPC_VERSION_MINOR,XMLRPC_VERSION_POINT,0
+ PRODUCTVERSION XMLRPC_VERSION_MAJOR,XMLRPC_VERSION_MINOR,XMLRPC_VERSION_POINT,0
+ FILEFLAGSMASK 0x3fL /* VS_FFI_FILEFLAGSMASK */
+#ifdef _DEBUG
+ FILEFLAGS 0x1L  /* VS_FF_DEBUG */
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS VOS_NT_WINDOWS32
+ FILETYPE VFT_DLL
+ FILESUBTYPE 0x0L  /* VFT2_UNKNOWN */
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "04090000"  /* Lang = US English, Charset = ASCII */
+        BEGIN
+            VALUE "Comments", "For more information visit http://xmlrpc-c.sourceforge.net/doc/libxmlrpc.html\0"
+            VALUE "CompanyName", "Free Software Foundation\0"
+            VALUE "FileDescription", "XML-RPC is a quick-and-easy way to make procedure calls over the Internet. It converts the procedure call into an XML document, sends it to a remote server using HTTP, and gets back the response as XML.\0"
+            VALUE "FileVersion", XMLRPC_C_VERSION "\0"
+            VALUE "InternalName", _FILE_NAME_ORIGINAL_ ".dll\0"
+            VALUE "LegalCopyright", "Copyright 2001 Eric Kidd. All rights reserved. The contents of this website may be distributed under the same license terms as XML-RPC for C/C++. Funding for the initial releases of XML-RPC for C/C++ was provided in part by First Peer, Inc.\0"
+            VALUE "OriginalFilename", _FILE_NAME_ORIGINAL_ ".dll\0"
+            VALUE "ProductName", "XML-RPC: It's remote procedure calling using HTTP as the transport and XML as the encoding.\0"
+            VALUE "ProductVersion", XMLRPC_C_VERSION "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0409, 0  /* US English, ASCII */
+    END
+END
