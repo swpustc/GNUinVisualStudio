@@ -30,6 +30,14 @@ for /f "delims=" %%i in ('xcopy /s /y /h /exclude:xcopyExclude libsigc++\sigc++ 
 echo Moved %MOVE_FILE_NUM% files
 echo;
 
+echo Preprocess xmlrpc-c...
+setlocal
+cd xmlrpc-c\Windows
+set "DATE=%DATE:~0,10% by swpustc"
+call ConfigureWin32.bat
+endlocal
+echo;
+
 echo Remove unneeded files...
 set MOVE_FILE_NUM_ALL=0
 for /f "delims=" %%i in ('dir /ad /b') do call :remove_unneeded_files "%%i"
