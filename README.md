@@ -23,6 +23,12 @@ The Default Git Repository is **USTC** Repository.
 - libpng ver.1.6.16
   - [Homepage](http://www.libpng.org/pub/png/libpng.html)
 [Sourcecode](http://sourceforge.net/p/libpng/code/ci/master/tree/)
+- libcppunit ver.(master606)
+  - [Download](http://sourceforge.net/p/cppunit/code/)
+- libxmlrpc-c ver.1.39.00(master2640)
+  - [Homepage](http://xmlrpc.scripting.com/default.html)
+[Sourcecode](http://sourceforge.net/p/xmlrpc-c/code/)
+
 
 - dumpImageSize ver.1.1.9
   - [Sourcecode](project/.dumpImageSize)
