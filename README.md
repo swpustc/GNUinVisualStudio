@@ -24,6 +24,9 @@ The Default Git Repository is **USTC** Repository.
   - [Homepage](http://www.libpng.org/pub/png/libpng.html)
 [Sourcecode](http://sourceforge.net/p/libpng/code/ci/master/tree/)
 
+- dumpImageSize ver.1.1.9
+  - [Sourcecode](project/.dumpImageSize)
+
 
 ## Setup
 ### First
