@@ -1,0 +1,38 @@
+/* Resources for cppunit.dll */
+
+#include <windows.h>
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,606,0,0
+ PRODUCTVERSION 0,606,0,0
+ FILEFLAGSMASK 0x3fL /* VS_FFI_FILEFLAGSMASK */
+#ifdef _DEBUG
+ FILEFLAGS 0x1L  /* VS_FF_DEBUG */
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x10004L  /* VOS_DOS_WINDOWS32 */
+ FILETYPE 0x2L  /* VFT_DLL */
+ FILESUBTYPE 0x0L  /* VFT2_UNKNOWN */
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "04090000"  /* Lang = US English, Charset = ASCII */
+        BEGIN
+            VALUE "Comments", "For more information visit http://sourceforge.net/p/cppunit/code\0"
+            VALUE "CompanyName", "Free Software Foundation\0"
+            VALUE "FileDescription", "CppUnit is the C++ port of the famous JUnit framework for unit testing.\0"
+            VALUE "FileVersion", "606\0"
+            VALUE "InternalName", "cppunit.dll\0"
+            VALUE "LegalCopyright", "Copyright (C) 1991, 1999 Free Software Foundation, Inc.  59 Temple Place, Suite 330, Boston, MA  02111-1307  USA\0"
+            VALUE "LegalTrademarks", "CppUnit\0"
+            VALUE "OriginalFilename", "cppunit.dll\0"
+            VALUE "ProductName", "CppUnit - C++ port of JUnit\0"
+            VALUE "ProductVersion", "606\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0409, 0  /* US English, ASCII */
+    END
+END
