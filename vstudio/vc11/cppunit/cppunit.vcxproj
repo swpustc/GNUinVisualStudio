@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(GNUDir)gnu_vc11.props" />
+  <PropertyGroup Label="Globals">
+    <GNUProjectRoot>$(cppunitRoot)</GNUProjectRoot>
+    <GNUProjectName>$(cppunitName)</GNUProjectName>
+    <GNUProjectDir>$(cppunitDir)</GNUProjectDir>
+    <GNUProjectInclude>$(cppunitInclude)</GNUProjectInclude>
+    <GNUProjectVersion>$(cppunitVersion)</GNUProjectVersion>
+    <GNUCharacterSet>$(cppunitCharacterSet)</GNUCharacterSet>
+    <GNUApplication>false</GNUApplication>
+    <GNUConsoleApplication>true</GNUConsoleApplication>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="$(GNUProjectDir)AdditionalMessage.cpp" />
+    <ClCompile Include="$(GNUProjectDir)Asserter.cpp" />
+    <ClCompile Include="$(GNUProjectDir)BeOsDynamicLibraryManager.cpp" />
+    <ClCompile Include="$(GNUProjectDir)BriefTestProgressListener.cpp" />
+    <ClCompile Include="$(GNUProjectDir)CompilerOutputter.cpp" />
+    <ClCompile Include="$(GNUProjectDir)DefaultProtector.cpp" />
+    <ClCompile Include="$(GNUProjectDir)DynamicLibraryManager.cpp" />
+    <ClCompile Include="$(GNUProjectDir)DynamicLibraryManagerException.cpp" />
+    <ClCompile Include="$(GNUProjectDir)Exception.cpp" />
+    <ClCompile Include="$(GNUProjectDir)Message.cpp" />
+    <ClCompile Include="$(GNUProjectDir)PlugInManager.cpp" />
+    <ClCompile Include="$(GNUProjectDir)PlugInParameters.cpp" />
+    <ClCompile Include="$(GNUProjectDir)Protector.cpp" />
+    <ClCompile Include="$(GNUProjectDir)ProtectorChain.cpp" />
+    <ClCompile Include="$(GNUProjectDir)RepeatedTest.cpp" />
+    <ClCompile Include="$(GNUProjectDir)ShlDynamicLibraryManager.cpp" />
+    <ClCompile Include="$(GNUProjectDir)SourceLine.cpp" />
+    <ClCompile Include="$(GNUProjectDir)StringTools.cpp" />
+    <ClCompile Include="$(GNUProjectDir)SynchronizedObject.cpp" />
+    <ClCompile Include="$(GNUProjectDir)Test.cpp" />
+    <ClCompile Include="$(GNUProjectDir)TestAssert.cpp" />
+    <ClCompile Include="$(GNUProjectDir)TestCase.cpp" />
+    <ClCompile Include="$(GNUProjectDir)TestCaseDecorator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)TestComposite.cpp" />
+    <ClCompile Include="$(GNUProjectDir)TestDecorator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)TestFactoryRegistry.cpp" />
+    <ClCompile Include="$(GNUProjectDir)TestFailure.cpp" />
+    <ClCompile Include="$(GNUProjectDir)TestLeaf.cpp" />
+    <ClCompile Include="$(GNUProjectDir)TestNamer.cpp" />
+    <ClCompile Include="$(GNUProjectDir)TestPath.cpp" />
+    <ClCompile Include="$(GNUProjectDir)TestPlugInDefaultImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)TestResult.cpp" />
+    <ClCompile Include="$(GNUProjectDir)TestResultCollector.cpp" />
+    <ClCompile Include="$(GNUProjectDir)TestRunner.cpp" />
+    <ClCompile Include="$(GNUProjectDir)TestSetUp.cpp" />
+    <ClCompile Include="$(GNUProjectDir)TestSuccessListener.cpp" />
+    <ClCompile Include="$(GNUProjectDir)TestSuite.cpp" />
+    <ClCompile Include="$(GNUProjectDir)TestSuiteBuilderContext.cpp" />
+    <ClCompile Include="$(GNUProjectDir)TextOutputter.cpp" />
+    <ClCompile Include="$(GNUProjectDir)TextTestProgressListener.cpp" />
+    <ClCompile Include="$(GNUProjectDir)TextTestResult.cpp" />
+    <ClCompile Include="$(GNUProjectDir)TextTestRunner.cpp" />
+    <ClCompile Include="$(GNUProjectDir)TypeInfoHelper.cpp" />
+    <ClCompile Include="$(GNUProjectDir)UnixDynamicLibraryManager.cpp" />
+    <ClCompile Include="$(GNUProjectDir)Win32DynamicLibraryManager.cpp" />
+    <ClCompile Include="$(GNUProjectDir)XmlDocument.cpp" />
+    <ClCompile Include="$(GNUProjectDir)XmlElement.cpp" />
+    <ClCompile Include="$(GNUProjectDir)XmlOutputter.cpp" />
+    <ClCompile Include="$(GNUProjectDir)XmlOutputterHook.cpp" />
+    <ResourceCompile Include="$(GNUProjectDir)cppunit.rc">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='Library'">true</ExcludedFromBuild>
+    </ResourceCompile>
+  </ItemGroup>
+  <Import Project="$(GNUetcglobalDir)setting.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AAAA200C-8001-AAAA-0123-456789ABCDEF}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>$(GNUProjectName)</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug DLL libcmt|Win32">
+      <Configuration>Debug DLL libcmt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug DLL libcmt|x64">
+      <Configuration>Debug DLL libcmt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug DLL libcrt|Win32">
+      <Configuration>Debug DLL libcrt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug DLL libcrt|x64">
+      <Configuration>Debug DLL libcrt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Library libcmt|Win32">
+      <Configuration>Debug Library libcmt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Library libcmt|x64">
+      <Configuration>Debug Library libcmt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Library libcrt|Win32">
+      <Configuration>Debug Library libcrt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Library libcrt|x64">
+      <Configuration>Debug Library libcrt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release DLL libcmt|Win32">
+      <Configuration>Release DLL libcmt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release DLL libcmt|x64">
+      <Configuration>Release DLL libcmt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release DLL libcrt|Win32">
+      <Configuration>Release DLL libcrt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release DLL libcrt|x64">
+      <Configuration>Release DLL libcrt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Library libcrt|Win32">
+      <Configuration>Release Library libcrt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Library libcrt|x64">
+      <Configuration>Release Library libcrt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Library libcmt|Win32">
+      <Configuration>Release Library libcmt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Library libcmt|x64">
+      <Configuration>Release Library libcmt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(GNUetcglobalDir)default.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <Import Project="$(GNUetcglobalDir)user.props" />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <DisableSpecificWarnings>4267;4275;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(GNUConfigurationType)'=='DLL'">
+    <ClCompile>
+      <PreprocessorDefinitions>CPPUNIT_BUILD_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>
