@@ -4,41 +4,49 @@ libsigc++
 libpng
 librmld
 libhook
+cppunit
 zlib.m ;Increased base By Alignment(0x1000000)
 libsigc++.m
 libpng.m
 librmld.m
 libhook.m
+cppunit.m
 zlib.64 0x076062000000 ;Increased base For BaseAddress
 libsigc++.64
 libpng.64
 librmld.64
 libhook.64
+cppunit.64
 zlib.m64 ;Increased base By Alignment(0x1000000)
 libsigc++.m64
 libpng.m64
 librmld.m64
 libhook.m64
+cppunit.m64
 zlib.debug 0x12000000 ;Increased base For BaseAddress
 libsigc++.debug
 libpng.debug
 librmld.debug
 libhook.debug
+cppunit.debug
 zlib.m.debug ;Increased base By Alignment(0x1000000)
 libsigc++.m.debug
 libpng.m.debug
 librmld.m.debug
 libhook.m.debug
+cppunit.m.debug
 zlib.debug64 0x076012000000 ;Increased base For BaseAddress
 libsigc++.debug64
 libpng.debug64
 librmld.debug64
 libhook.debug64
+cppunit.debug64
 zlib.m.debug64 ;Increased base By Alignment(0x1000000)
 libsigc++.m.debug64
 libpng.m.debug64
 librmld.m.debug64
 libhook.m.debug64
+cppunit.m.debug64
 dumpImageSize           0x00400000     ;Increased base For BaseAddress
 dumpImageSize.m         0x00400000     ;Increased base By Alignment(0x200000)
 dumpImageSize.64        0x004C00400000 ;Increased base For BaseAddress
