@@ -50,7 +50,7 @@
   </ItemGroup>
   <Import Project="$(GNUetcglobalDir)setting.props" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{60F89955-91C6-3A36-8000-13C592FEC2DF}</ProjectGuid>
+    <ProjectGuid>{AAAA2001-8001-AAAA-0123-456789ABCDEF}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>$(GNUProjectName)</RootNamespace>
   </PropertyGroup>

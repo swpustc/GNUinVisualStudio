@@ -22,7 +22,7 @@
   </ItemGroup>
   <Import Project="$(GNUetcglobalDir)setting.props" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{00000001-592E-4AFB-B995-9A0AAC8BC4BD}</ProjectGuid>
+    <ProjectGuid>{AAAA1001-8001-AAAA-0123-456789ABCDEF}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>$(GNUProjectName)</RootNamespace>
   </PropertyGroup>
