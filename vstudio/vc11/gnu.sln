@@ -16,6 +16,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_sigc++", "_sigc++", "{AAAA
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_png", "_png", "{AAAA2006-0000-AAAA-0123-456789ABCDEF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_cppunit", "_cppunit", "{AAAA200C-0000-AAAA-0123-456789ABCDEF}"
+EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = ".dumpImageSize", ".dumpImageSize\.dumpImageSize.vcxproj", "{AAAA1001-8001-AAAA-0123-456789ABCDEF}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = ".rmld", ".rmld\.rmld.vcxproj", "{AAAA1002-8001-AAAA-0123-456789ABCDEF}"
@@ -42,6 +44,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "png", "png\png.vcxproj", "{
 	ProjectSection(ProjectDependencies) = postProject
 		{AAAA1001-8001-AAAA-0123-456789ABCDEF} = {AAAA1001-8001-AAAA-0123-456789ABCDEF}
 		{AAAA2001-8001-AAAA-0123-456789ABCDEF} = {AAAA2001-8001-AAAA-0123-456789ABCDEF}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cppunit", "cppunit\cppunit.vcxproj", "{AAAA200C-8001-AAAA-0123-456789ABCDEF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AAAA1001-8001-AAAA-0123-456789ABCDEF} = {AAAA1001-8001-AAAA-0123-456789ABCDEF}
 	EndProjectSection
 EndProject
 Global
@@ -224,6 +231,38 @@ Global
 		{AAAA2006-8001-AAAA-0123-456789ABCDEF}.Release Library libcrt|Win32.Build.0 = Release Library libcrt|Win32
 		{AAAA2006-8001-AAAA-0123-456789ABCDEF}.Release Library libcrt|x64.ActiveCfg = Release Library libcrt|x64
 		{AAAA2006-8001-AAAA-0123-456789ABCDEF}.Release Library libcrt|x64.Build.0 = Release Library libcrt|x64
+		{AAAA200C-8001-AAAA-0123-456789ABCDEF}.Debug DLL libcmt|Win32.ActiveCfg = Debug DLL libcmt|Win32
+		{AAAA200C-8001-AAAA-0123-456789ABCDEF}.Debug DLL libcmt|Win32.Build.0 = Debug DLL libcmt|Win32
+		{AAAA200C-8001-AAAA-0123-456789ABCDEF}.Debug DLL libcmt|x64.ActiveCfg = Debug DLL libcmt|x64
+		{AAAA200C-8001-AAAA-0123-456789ABCDEF}.Debug DLL libcmt|x64.Build.0 = Debug DLL libcmt|x64
+		{AAAA200C-8001-AAAA-0123-456789ABCDEF}.Debug DLL libcrt|Win32.ActiveCfg = Debug DLL libcrt|Win32
+		{AAAA200C-8001-AAAA-0123-456789ABCDEF}.Debug DLL libcrt|Win32.Build.0 = Debug DLL libcrt|Win32
+		{AAAA200C-8001-AAAA-0123-456789ABCDEF}.Debug DLL libcrt|x64.ActiveCfg = Debug DLL libcrt|x64
+		{AAAA200C-8001-AAAA-0123-456789ABCDEF}.Debug DLL libcrt|x64.Build.0 = Debug DLL libcrt|x64
+		{AAAA200C-8001-AAAA-0123-456789ABCDEF}.Debug Library libcmt|Win32.ActiveCfg = Debug Library libcmt|Win32
+		{AAAA200C-8001-AAAA-0123-456789ABCDEF}.Debug Library libcmt|Win32.Build.0 = Debug Library libcmt|Win32
+		{AAAA200C-8001-AAAA-0123-456789ABCDEF}.Debug Library libcmt|x64.ActiveCfg = Debug Library libcmt|x64
+		{AAAA200C-8001-AAAA-0123-456789ABCDEF}.Debug Library libcmt|x64.Build.0 = Debug Library libcmt|x64
+		{AAAA200C-8001-AAAA-0123-456789ABCDEF}.Debug Library libcrt|Win32.ActiveCfg = Debug Library libcrt|Win32
+		{AAAA200C-8001-AAAA-0123-456789ABCDEF}.Debug Library libcrt|Win32.Build.0 = Debug Library libcrt|Win32
+		{AAAA200C-8001-AAAA-0123-456789ABCDEF}.Debug Library libcrt|x64.ActiveCfg = Debug Library libcrt|x64
+		{AAAA200C-8001-AAAA-0123-456789ABCDEF}.Debug Library libcrt|x64.Build.0 = Debug Library libcrt|x64
+		{AAAA200C-8001-AAAA-0123-456789ABCDEF}.Release DLL libcmt|Win32.ActiveCfg = Release DLL libcmt|Win32
+		{AAAA200C-8001-AAAA-0123-456789ABCDEF}.Release DLL libcmt|Win32.Build.0 = Release DLL libcmt|Win32
+		{AAAA200C-8001-AAAA-0123-456789ABCDEF}.Release DLL libcmt|x64.ActiveCfg = Release DLL libcmt|x64
+		{AAAA200C-8001-AAAA-0123-456789ABCDEF}.Release DLL libcmt|x64.Build.0 = Release DLL libcmt|x64
+		{AAAA200C-8001-AAAA-0123-456789ABCDEF}.Release DLL libcrt|Win32.ActiveCfg = Release DLL libcrt|Win32
+		{AAAA200C-8001-AAAA-0123-456789ABCDEF}.Release DLL libcrt|Win32.Build.0 = Release DLL libcrt|Win32
+		{AAAA200C-8001-AAAA-0123-456789ABCDEF}.Release DLL libcrt|x64.ActiveCfg = Release DLL libcrt|x64
+		{AAAA200C-8001-AAAA-0123-456789ABCDEF}.Release DLL libcrt|x64.Build.0 = Release DLL libcrt|x64
+		{AAAA200C-8001-AAAA-0123-456789ABCDEF}.Release Library libcmt|Win32.ActiveCfg = Release Library libcmt|Win32
+		{AAAA200C-8001-AAAA-0123-456789ABCDEF}.Release Library libcmt|Win32.Build.0 = Release Library libcmt|Win32
+		{AAAA200C-8001-AAAA-0123-456789ABCDEF}.Release Library libcmt|x64.ActiveCfg = Release Library libcmt|x64
+		{AAAA200C-8001-AAAA-0123-456789ABCDEF}.Release Library libcmt|x64.Build.0 = Release Library libcmt|x64
+		{AAAA200C-8001-AAAA-0123-456789ABCDEF}.Release Library libcrt|Win32.ActiveCfg = Release Library libcrt|Win32
+		{AAAA200C-8001-AAAA-0123-456789ABCDEF}.Release Library libcrt|Win32.Build.0 = Release Library libcrt|Win32
+		{AAAA200C-8001-AAAA-0123-456789ABCDEF}.Release Library libcrt|x64.ActiveCfg = Release Library libcrt|x64
+		{AAAA200C-8001-AAAA-0123-456789ABCDEF}.Release Library libcrt|x64.Build.0 = Release Library libcrt|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -235,11 +274,13 @@ Global
 		{AAAA2001-0000-AAAA-0123-456789ABCDEF} = {AAAA2000-0000-AAAA-0123-456789ABCDEF}
 		{AAAA2002-0000-AAAA-0123-456789ABCDEF} = {AAAA2000-0000-AAAA-0123-456789ABCDEF}
 		{AAAA2006-0000-AAAA-0123-456789ABCDEF} = {AAAA2000-0000-AAAA-0123-456789ABCDEF}
+		{AAAA200C-0000-AAAA-0123-456789ABCDEF} = {AAAA2000-0000-AAAA-0123-456789ABCDEF}
 		{AAAA1001-8001-AAAA-0123-456789ABCDEF} = {AAAA1001-0000-AAAA-0123-456789ABCDEF}
 		{AAAA1002-8001-AAAA-0123-456789ABCDEF} = {AAAA1002-0000-AAAA-0123-456789ABCDEF}
 		{AAAA1003-8001-AAAA-0123-456789ABCDEF} = {AAAA1003-0000-AAAA-0123-456789ABCDEF}
 		{AAAA2001-8001-AAAA-0123-456789ABCDEF} = {AAAA2001-0000-AAAA-0123-456789ABCDEF}
 		{AAAA2002-8001-AAAA-0123-456789ABCDEF} = {AAAA2002-0000-AAAA-0123-456789ABCDEF}
 		{AAAA2006-8001-AAAA-0123-456789ABCDEF} = {AAAA2006-0000-AAAA-0123-456789ABCDEF}
+		{AAAA200C-8001-AAAA-0123-456789ABCDEF} = {AAAA200C-0000-AAAA-0123-456789ABCDEF}
 	EndGlobalSection
 EndGlobal
