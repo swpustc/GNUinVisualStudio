@@ -4,8 +4,8 @@ v1.0.0rc02
   - add libhook v0.0.1 sources(NOT released)
   - add libpng v1.6.16 sources
   - add libsigc++ v2.4.0 sources
-  - add libcppunit (master 606) sources
-  - add libxmlrpc-c v1.39.00(master 2640) sources
+  - add libcppunit (master606) sources
+  - add libxmlrpc-c v1.39.00(master2640) sources
   -
   - format VS solution ProjectGuid
 
