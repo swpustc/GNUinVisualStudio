@@ -6,6 +6,7 @@ v1.0.0rc02
   - add libsigc++ v2.4.0 sources
   - add libcppunit (master606) sources
   - add libxmlrpc-c v1.39.00(master2640) sources
+  - add libgmp v6.0.0a sources
   -
   - format VS solution ProjectGuid
 
