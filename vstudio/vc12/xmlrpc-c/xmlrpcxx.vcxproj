@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(GNUDir)gnu_vc12.props" />
+  <PropertyGroup Label="Globals">
+    <GNUProjectRoot>$(xmlrpcRoot)</GNUProjectRoot>
+    <GNUProjectName>$(xmlrpcxxName)</GNUProjectName>
+    <GNUProjectDir>$(xmlrpcDir)</GNUProjectDir>
+    <GNUProjectInclude>$(xmlrpcInclude)</GNUProjectInclude>
+    <GNUProjectVersion>$(xmlrpcVersion)</GNUProjectVersion>
+    <GNUCharacterSet>$(xmlrpcCharacterSet)</GNUCharacterSet>
+    <GNUApplication>false</GNUApplication>
+    <GNUConsoleApplication>true</GNUConsoleApplication>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="$(GNUProjectDir)lib\wininet_transport\pthreadx_win32.c" />
+    <ClCompile Include="$(GNUProjectDir)lib\wininet_transport\xmlrpc_wininet_transport.c" />
+    <ClCompile Include="$(GNUProjectDir)src\cpp\base64.cpp">
+      <ForcedIncludeFiles>algorithm</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)src\cpp\client.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\cpp\client_simple.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\cpp\curl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\cpp\env_wrap.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\cpp\fault.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\cpp\girerr.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\cpp\girmem.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\cpp\libwww.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\cpp\Lock.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\cpp\outcome.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\cpp\packetsocket.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\cpp\param_list.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\cpp\pstream.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\cpp\registry.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\cpp\server_abyss.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\cpp\server_cgi.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\cpp\server_pstream.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\cpp\server_pstream_conn.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\cpp\value.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\cpp\wininet.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\cpp\xml.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\cpp\XmlRpcCpp.cpp" />
+    <ResourceCompile Include="$(GNUProjectDir)libxmlrpc-c.rc">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='Library'">true</ExcludedFromBuild>
+    </ResourceCompile>
+  </ItemGroup>
+  <Import Project="$(GNUetcglobalDir)setting.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AAAA200B-800A-AAAA-0123-456789ABCDEF}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>$(GNUProjectName)</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug DLL libcmt|Win32">
+      <Configuration>Debug DLL libcmt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug DLL libcmt|x64">
+      <Configuration>Debug DLL libcmt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug DLL libcrt|Win32">
+      <Configuration>Debug DLL libcrt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug DLL libcrt|x64">
+      <Configuration>Debug DLL libcrt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Library libcmt|Win32">
+      <Configuration>Debug Library libcmt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Library libcmt|x64">
+      <Configuration>Debug Library libcmt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Library libcrt|Win32">
+      <Configuration>Debug Library libcrt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Library libcrt|x64">
+      <Configuration>Debug Library libcrt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release DLL libcmt|Win32">
+      <Configuration>Release DLL libcmt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release DLL libcmt|x64">
+      <Configuration>Release DLL libcmt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release DLL libcrt|Win32">
+      <Configuration>Release DLL libcrt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release DLL libcrt|x64">
+      <Configuration>Release DLL libcrt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Library libcrt|Win32">
+      <Configuration>Release Library libcrt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Library libcrt|x64">
+      <Configuration>Release Library libcrt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Library libcmt|Win32">
+      <Configuration>Release Library libcmt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Library libcmt|x64">
+      <Configuration>Release Library libcmt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(GNUetcglobalDir)default.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <Import Project="$(GNUetcglobalDir)user.props" />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(GNUProjectDir)lib\util\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ABYSS_WIN32;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4244;4251;4267;4275;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(GNUConfigurationType)'=='DLL'">
+    <ClCompile>
+      <PreprocessorDefinitions>XMLRPC_BUILD_DLL;XMLRPC_BUILDING_LIBPP;XMLRPC_BUILDING_CLIENTPP;XMLRPC_BUILDING_OLDCPPWRAPPER;XMLRPC_BUILDING_PACKETSOCKET;XMLRPC_BUILDING_SERVERPP;XMLRPC_BUILDING_SERVER_ABYSSPP;XMLRPC_BUILDING_SERVER_CGIPP;XMLRPC_BUILDING_SERVER_PSTREAMPP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;wininet.lib;$(xmlrpc_utilName)$(GNULinkSuffix).lib;$(xmlrpcName)$(GNULinkSuffix).lib;$(xmlrpc_abyssName)$(GNULinkSuffix).lib;$(xmlrpc_clientName)$(GNULinkSuffix).lib;$(xmlrpc_serverName)$(GNULinkSuffix).lib;$(xmlrpc_server_abyssName)$(GNULinkSuffix).lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ResourceCompile>
+      <PreprocessorDefinitions>FILE_NAME_ORIGINAL=$(GNUProjectName)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>
