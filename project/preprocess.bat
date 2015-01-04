@@ -24,6 +24,16 @@ git reset -q projects-protected
 git branch -D projects-protected
 echo;
 
+echo Preprocess gmp...
+set MOVE_FILE_NUM=0
+for /f "delims=" %%i in ('dir /a-d /b "gmp\mpf\*.c"') do ren "gmp\mpf\%%~i" "mpf_%%~i" && echo gmp\mpf\mpf_%%~i && set /a MOVE_FILE_NUM+=1
+for /f "delims=" %%i in ('dir /a-d /b "gmp\mpq\*.c"') do ren "gmp\mpq\%%~i" "mpq_%%~i" && echo gmp\mpq\mpq_%%~i && set /a MOVE_FILE_NUM+=1
+for /f "delims=" %%i in ('dir /a-d /b "gmp\mpz\*.c"') do ren "gmp\mpz\%%~i" "mpz_%%~i" && echo gmp\mpz\mpz_%%~i && set /a MOVE_FILE_NUM+=1
+echo Renamed %MOVE_FILE_NUM% files
+del /f /a /q gmp\mpn\generic\gmp-mparam.h && echo gmp\mpn\generic\gmp-mparam.h
+echo Removed 1 file
+echo;
+
 echo Preprocess libsigc++...
 set MOVE_FILE_NUM=0
 for /f "delims=" %%i in ('xcopy /s /y /h /exclude:xcopyExclude libsigc++\sigc++ libsigc++\include\sigc++\ 2^>nul') do if exist "%%i" del /f /a /q "%%i" && echo %%i && set /a MOVE_FILE_NUM+=1
