@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <gmpRoot>gmp</gmpRoot>
+    <gmpName>libgmp</gmpName>
+    <gmpxxName>libgmpxx</gmpxxName>
+    <gmpDir>$(GNUprojectDir)gmp\</gmpDir>
+    <gmpInclude>$(gmpDir)</gmpInclude>
+    <gmpVersion>60000</gmpVersion>
+    <gmpCharacterSet>MultiByte</gmpCharacterSet>
+    <!--  Suggest mparam head directory -->
+    <gmpSuggestMparamHeadDir_x86>$(gmpDir)mpn\x86\coreinhm\</gmpSuggestMparamHeadDir_x86>
+    <gmpSuggestMparamHeadDir_x64>$(gmpDir)mpn\x86_64\coreinhm\</gmpSuggestMparamHeadDir_x64>
+    <!--  Global environment settings. -->
+    <GNUSourcePath>$(gmpDir);$(GNUSourcePath)</GNUSourcePath>
+    <GNUIncludePath>$(gmpInclude);$(GNUIncludePath)</GNUIncludePath>
+  </PropertyGroup>
+</Project>
