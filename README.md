@@ -28,6 +28,9 @@ The Default Git Repository is **USTC** Repository.
 - libxmlrpc-c ver.1.39.00(master2640)
   - [Homepage](http://xmlrpc.scripting.com/default.html)
 [Sourcecode](http://sourceforge.net/p/xmlrpc-c/code/)
+- libgmp ver.6.0.0a
+  - [Homepage](https://gmplib.org/)
+[Download](https://mirrors.ustc.edu.cn/gnu/gmp/)
 
 
 - dumpImageSize ver.1.1.9
