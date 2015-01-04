@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(GNUDir)gnu_vc12.props" />
+  <PropertyGroup Label="Globals">
+    <GNUProjectRoot>$(gmpRoot)</GNUProjectRoot>
+    <GNUProjectName>$(gmpName)</GNUProjectName>
+    <GNUProjectDir>$(gmpDir)</GNUProjectDir>
+    <GNUProjectInclude>$(gmpInclude)</GNUProjectInclude>
+    <GNUProjectVersion>$(gmpVersion)</GNUProjectVersion>
+    <GNUCharacterSet>$(gmpCharacterSet)</GNUCharacterSet>
+    <GNUApplication>false</GNUApplication>
+    <GNUConsoleApplication>true</GNUConsoleApplication>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="$(GNUProjectDir)assert.c" />
+    <ClCompile Include="$(GNUProjectDir)bootstrap.c" />
+    <ClCompile Include="$(GNUProjectDir)compat.c" />
+    <ClCompile Include="$(GNUProjectDir)errno.c" />
+    <ClCompile Include="$(GNUProjectDir)extract-dbl.c" />
+    <ClCompile Include="$(GNUProjectDir)invalid.c" />
+    <ClCompile Include="$(GNUProjectDir)memory.c" />
+    <ClCompile Include="$(GNUProjectDir)mp_bpl.c" />
+    <ClCompile Include="$(GNUProjectDir)mp_clz_tab.c" />
+    <ClCompile Include="$(GNUProjectDir)mp_dv_tab.c" />
+    <ClCompile Include="$(GNUProjectDir)mp_get_fns.c" />
+    <ClCompile Include="$(GNUProjectDir)mp_minv_tab.c" />
+    <ClCompile Include="$(GNUProjectDir)mp_set_fns.c" />
+    <ClCompile Include="$(GNUProjectDir)nextprime.c" />
+    <ClCompile Include="$(GNUProjectDir)primesieve.c" />
+    <ClCompile Include="$(GNUProjectDir)tal-reent.c" />
+    <ClCompile Include="$(GNUProjectDir)version.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_abs.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_add.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_add_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_ceilfloor.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_clear.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_clears.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_cmp.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_cmp_d.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_cmp_si.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_cmp_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_div.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_div_2exp.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_div_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_dump.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_eq.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_fits_sint.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_fits_slong.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_fits_sshort.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_fits_uint.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_fits_ulong.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_fits_ushort.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_get_d.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_get_d_2exp.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_get_dfl_prec.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_get_prc.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_get_si.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_get_str.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_get_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_init.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_init2.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_inits.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_inp_str.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_int_p.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_iset.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_iset_d.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_iset_si.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_iset_str.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_iset_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_mul.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_mul_2exp.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_mul_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_neg.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_out_str.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_pow_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_random2.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_reldiff.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_set.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_set_d.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_set_dfl_prec.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_set_prc.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_set_prc_raw.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_set_q.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_set_si.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_set_str.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_set_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_set_z.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_size.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_sqrt.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_sqrt_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_sub.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_sub_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_swap.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_trunc.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_ui_div.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_ui_sub.c" />
+    <ClCompile Include="$(GNUProjectDir)mpf\mpf_urandomb.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\add.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\add_1.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\add_err1_n.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\add_err2_n.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\add_err3_n.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\add_n.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\add_n_sub_n.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\addmul_1.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\bdiv_dbm1c.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\bdiv_q.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\bdiv_q_1.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\bdiv_qr.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\binvert.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\broot.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\brootinv.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\bsqrt.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\bsqrtinv.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\cmp.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\cnd_add_n.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\cnd_sub_n.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\com.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\comb_tables.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\copyd.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\copyi.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\dcpi1_bdiv_q.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\dcpi1_bdiv_qr.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\dcpi1_div_q.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\dcpi1_div_qr.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\dcpi1_divappr_q.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\div_q.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\div_qr_1.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\div_qr_1n_pi1.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\div_qr_1n_pi2.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\div_qr_1u_pi2.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\div_qr_2.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\div_qr_2n_pi1.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\div_qr_2u_pi1.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\dive_1.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\diveby3.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\divexact.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\divis.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\divrem.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\divrem_1.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\divrem_2.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\dump.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\fib2_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\fib_table.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\gcd.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\gcd_1.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\gcd_subdiv_step.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\gcdext.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\gcdext_1.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\gcdext_lehmer.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\get_d.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\get_str.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\hgcd.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\hgcd2.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\hgcd2_jacobi.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\hgcd_appr.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\hgcd_jacobi.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\hgcd_matrix.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\hgcd_reduce.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\hgcd_step.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\invert.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\invertappr.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\jacbase.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\jacobi.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\jacobi_2.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\logops_n.c">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\lshift.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\lshiftc.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\matrix22_mul.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\matrix22_mul1_inverse_vector.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\mod_1.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\mod_1_1.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\mod_1_2.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\mod_1_3.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\mod_1_4.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\mod_34lsub1.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\mode1o.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\mp_bases.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\mpn_generic.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\mu_bdiv_q.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\mu_bdiv_qr.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\mu_div_q.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\mu_div_qr.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\mu_divappr_q.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\mul.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\mul_1.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\mul_basecase.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\mul_fft.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\mul_n.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\mullo_basecase.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\mullo_n.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\mulmid.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\mulmid_basecase.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\mulmid_n.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\mulmod_bnm1.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\neg.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\nussbaumer_mul.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\perfpow.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\perfsqr.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\popham.c">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\pow_1.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\powlo.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\powm.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\pre_divrem_1.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\pre_mod_1.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\random.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\random2.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\redc_1.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\redc_2.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\redc_n.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\remove.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\rootrem.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\rshift.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\sbpi1_bdiv_q.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\sbpi1_bdiv_qr.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\sbpi1_div_q.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\sbpi1_div_qr.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\sbpi1_divappr_q.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\scan0.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\scan1.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\sec_aors_1.c">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\sec_div.c">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\sec_invert.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\sec_mul.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\sec_pi1_div.c">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\sec_powm.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\sec_sqr.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\sec_tabselect.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\set_str.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\sizeinbase.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\sqr.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\sqr_basecase.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\sqrmod_bnm1.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\sqrtrem.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\sub.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\sub_1.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\sub_err1_n.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\sub_err2_n.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\sub_err3_n.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\sub_n.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\submul_1.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\tdiv_qr.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\toom22_mul.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\toom2_sqr.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\toom32_mul.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\toom33_mul.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\toom3_sqr.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\toom42_mul.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\toom42_mulmid.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\toom43_mul.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\toom44_mul.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\toom4_sqr.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\toom52_mul.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\toom53_mul.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\toom54_mul.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\toom62_mul.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\toom63_mul.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\toom6_sqr.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\toom6h_mul.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\toom8_sqr.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\toom8h_mul.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\toom_couple_handling.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\toom_eval_dgr3_pm1.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\toom_eval_dgr3_pm2.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\toom_eval_pm1.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\toom_eval_pm2.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\toom_eval_pm2exp.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\toom_eval_pm2rexp.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\toom_interpolate_12pts.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\toom_interpolate_16pts.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\toom_interpolate_5pts.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\toom_interpolate_6pts.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\toom_interpolate_7pts.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\toom_interpolate_8pts.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\trialdiv.c" />
+    <ClCompile Include="$(GNUProjectDir)mpn\generic\zero.c" />
+    <ClCompile Include="$(GNUProjectDir)mpq\mpq_abs.c" />
+    <ClCompile Include="$(GNUProjectDir)mpq\mpq_aors.c" />
+    <ClCompile Include="$(GNUProjectDir)mpq\mpq_canonicalize.c" />
+    <ClCompile Include="$(GNUProjectDir)mpq\mpq_clear.c" />
+    <ClCompile Include="$(GNUProjectDir)mpq\mpq_clears.c" />
+    <ClCompile Include="$(GNUProjectDir)mpq\mpq_cmp.c" />
+    <ClCompile Include="$(GNUProjectDir)mpq\mpq_cmp_si.c" />
+    <ClCompile Include="$(GNUProjectDir)mpq\mpq_cmp_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpq\mpq_div.c" />
+    <ClCompile Include="$(GNUProjectDir)mpq\mpq_equal.c" />
+    <ClCompile Include="$(GNUProjectDir)mpq\mpq_get_d.c" />
+    <ClCompile Include="$(GNUProjectDir)mpq\mpq_get_den.c" />
+    <ClCompile Include="$(GNUProjectDir)mpq\mpq_get_num.c" />
+    <ClCompile Include="$(GNUProjectDir)mpq\mpq_get_str.c" />
+    <ClCompile Include="$(GNUProjectDir)mpq\mpq_init.c" />
+    <ClCompile Include="$(GNUProjectDir)mpq\mpq_inits.c" />
+    <ClCompile Include="$(GNUProjectDir)mpq\mpq_inp_str.c" />
+    <ClCompile Include="$(GNUProjectDir)mpq\mpq_inv.c" />
+    <ClCompile Include="$(GNUProjectDir)mpq\mpq_md_2exp.c" />
+    <ClCompile Include="$(GNUProjectDir)mpq\mpq_mul.c" />
+    <ClCompile Include="$(GNUProjectDir)mpq\mpq_neg.c" />
+    <ClCompile Include="$(GNUProjectDir)mpq\mpq_out_str.c" />
+    <ClCompile Include="$(GNUProjectDir)mpq\mpq_set.c" />
+    <ClCompile Include="$(GNUProjectDir)mpq\mpq_set_d.c" />
+    <ClCompile Include="$(GNUProjectDir)mpq\mpq_set_den.c" />
+    <ClCompile Include="$(GNUProjectDir)mpq\mpq_set_f.c" />
+    <ClCompile Include="$(GNUProjectDir)mpq\mpq_set_num.c" />
+    <ClCompile Include="$(GNUProjectDir)mpq\mpq_set_si.c" />
+    <ClCompile Include="$(GNUProjectDir)mpq\mpq_set_str.c" />
+    <ClCompile Include="$(GNUProjectDir)mpq\mpq_set_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpq\mpq_set_z.c" />
+    <ClCompile Include="$(GNUProjectDir)mpq\mpq_swap.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_2fac_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_abs.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_add.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_add_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_and.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_aorsmul.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_aorsmul_i.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_array_init.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_bin_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_bin_uiui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_cdiv_q.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_cdiv_q_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_cdiv_qr.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_cdiv_qr_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_cdiv_r.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_cdiv_r_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_cdiv_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_cfdiv_q_2exp.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_cfdiv_r_2exp.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_clear.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_clears.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_clrbit.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_cmp.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_cmp_d.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_cmp_si.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_cmp_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_cmpabs.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_cmpabs_d.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_cmpabs_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_com.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_combit.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_cong.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_cong_2exp.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_cong_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_dive_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_divegcd.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_divexact.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_divis.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_divis_2exp.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_divis_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_dump.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_export.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_fac_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_fdiv_q.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_fdiv_q_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_fdiv_qr.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_fdiv_qr_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_fdiv_r.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_fdiv_r_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_fdiv_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_fib2_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_fib_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_fits_sint.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_fits_slong.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_fits_sshort.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_fits_uint.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_fits_ulong.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_fits_ushort.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_gcd.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_gcd_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_gcdext.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_get_d.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_get_d_2exp.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_get_si.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_get_str.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_get_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_getlimbn.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_hamdist.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_import.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_init.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_init2.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_inits.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_inp_raw.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_inp_str.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_invert.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_ior.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_iset.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_iset_d.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_iset_si.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_iset_str.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_iset_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_jacobi.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_kronsz.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_kronuz.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_kronzs.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_kronzu.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_lcm.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_lcm_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_limbs_finish.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_limbs_modify.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_limbs_read.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_limbs_write.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_lucnum2_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_lucnum_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_mfac_uiui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_millerrabin.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_mod.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_mul.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_mul_2exp.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_mul_si.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_mul_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_n_pow_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_neg.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_nextprime.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_oddfac_1.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_out_raw.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_out_str.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_perfpow.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_perfsqr.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_popcount.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_pow_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_powm.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_powm_sec.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_powm_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_pprime_p.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_primorial_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_prodlimbs.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_random.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_random2.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_realloc.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_realloc2.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_remove.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_roinit_n.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_root.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_rootrem.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_rrandomb.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_scan0.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_scan1.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_set.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_set_d.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_set_f.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_set_q.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_set_si.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_set_str.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_set_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_setbit.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_size.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_sizeinbase.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_sqrt.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_sqrtrem.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_sub.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_sub_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_swap.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_tdiv_q.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_tdiv_q_2exp.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_tdiv_q_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_tdiv_qr.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_tdiv_qr_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_tdiv_r.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_tdiv_r_2exp.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_tdiv_r_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_tdiv_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_tstbit.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_ui_pow_ui.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_ui_sub.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_urandomb.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_urandomm.c" />
+    <ClCompile Include="$(GNUProjectDir)mpz\mpz_xor.c" />
+    <ClCompile Include="$(GNUProjectDir)printf\asprintf.c" />
+    <ClCompile Include="$(GNUProjectDir)printf\asprntffuns.c" />
+    <ClCompile Include="$(GNUProjectDir)printf\doprnt.c" />
+    <ClCompile Include="$(GNUProjectDir)printf\doprntf.c" />
+    <ClCompile Include="$(GNUProjectDir)printf\doprnti.c" />
+    <ClCompile Include="$(GNUProjectDir)printf\fprintf.c" />
+    <ClCompile Include="$(GNUProjectDir)printf\obprintf.c" />
+    <ClCompile Include="$(GNUProjectDir)printf\obprntffuns.c" />
+    <ClCompile Include="$(GNUProjectDir)printf\obvprintf.c" />
+    <ClCompile Include="$(GNUProjectDir)printf\printf.c" />
+    <ClCompile Include="$(GNUProjectDir)printf\printffuns.c" />
+    <ClCompile Include="$(GNUProjectDir)printf\repl-vsnprintf.c" />
+    <ClCompile Include="$(GNUProjectDir)printf\snprintf.c" />
+    <ClCompile Include="$(GNUProjectDir)printf\snprntffuns.c" />
+    <ClCompile Include="$(GNUProjectDir)printf\sprintf.c" />
+    <ClCompile Include="$(GNUProjectDir)printf\sprintffuns.c" />
+    <ClCompile Include="$(GNUProjectDir)printf\vasprintf.c" />
+    <ClCompile Include="$(GNUProjectDir)printf\vfprintf.c" />
+    <ClCompile Include="$(GNUProjectDir)printf\vprintf.c" />
+    <ClCompile Include="$(GNUProjectDir)printf\vsnprintf.c" />
+    <ClCompile Include="$(GNUProjectDir)printf\vsprintf.c" />
+    <ClCompile Include="$(GNUProjectDir)rand\rand.c" />
+    <ClCompile Include="$(GNUProjectDir)rand\randbui.c" />
+    <ClCompile Include="$(GNUProjectDir)rand\randclr.c" />
+    <ClCompile Include="$(GNUProjectDir)rand\randdef.c" />
+    <ClCompile Include="$(GNUProjectDir)rand\randiset.c" />
+    <ClCompile Include="$(GNUProjectDir)rand\randlc2s.c" />
+    <ClCompile Include="$(GNUProjectDir)rand\randlc2x.c" />
+    <ClCompile Include="$(GNUProjectDir)rand\randmt.c" />
+    <ClCompile Include="$(GNUProjectDir)rand\randmts.c" />
+    <ClCompile Include="$(GNUProjectDir)rand\randmui.c" />
+    <ClCompile Include="$(GNUProjectDir)rand\rands.c" />
+    <ClCompile Include="$(GNUProjectDir)rand\randsd.c" />
+    <ClCompile Include="$(GNUProjectDir)rand\randsdui.c" />
+    <ClCompile Include="$(GNUProjectDir)scanf\doscan.c" />
+    <ClCompile Include="$(GNUProjectDir)scanf\fscanf.c" />
+    <ClCompile Include="$(GNUProjectDir)scanf\fscanffuns.c" />
+    <ClCompile Include="$(GNUProjectDir)scanf\scanf.c" />
+    <ClCompile Include="$(GNUProjectDir)scanf\sscanf.c" />
+    <ClCompile Include="$(GNUProjectDir)scanf\sscanffuns.c" />
+    <ClCompile Include="$(GNUProjectDir)scanf\vfscanf.c" />
+    <ClCompile Include="$(GNUProjectDir)scanf\vscanf.c" />
+    <ClCompile Include="$(GNUProjectDir)scanf\vsscanf.c" />
+    <ResourceCompile Include="$(GNUProjectDir)gmp.rc">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='Library'">true</ExcludedFromBuild>
+    </ResourceCompile>
+  </ItemGroup>
+  <Import Project="$(GNUetcglobalDir)setting.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AAAA2004-8001-AAAA-0123-456789ABCDEF}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>$(GNUProjectName)</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug DLL libcmt|Win32">
+      <Configuration>Debug DLL libcmt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug DLL libcmt|x64">
+      <Configuration>Debug DLL libcmt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug DLL libcrt|Win32">
+      <Configuration>Debug DLL libcrt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug DLL libcrt|x64">
+      <Configuration>Debug DLL libcrt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Library libcmt|Win32">
+      <Configuration>Debug Library libcmt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Library libcmt|x64">
+      <Configuration>Debug Library libcmt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Library libcrt|Win32">
+      <Configuration>Debug Library libcrt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Library libcrt|x64">
+      <Configuration>Debug Library libcrt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release DLL libcmt|Win32">
+      <Configuration>Release DLL libcmt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release DLL libcmt|x64">
+      <Configuration>Release DLL libcmt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release DLL libcrt|Win32">
+      <Configuration>Release DLL libcrt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release DLL libcrt|x64">
+      <Configuration>Release DLL libcrt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Library libcrt|Win32">
+      <Configuration>Release Library libcrt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Library libcrt|x64">
+      <Configuration>Release Library libcrt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Library libcmt|Win32">
+      <Configuration>Release Library libcmt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Library libcmt|x64">
+      <Configuration>Release Library libcmt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(GNUetcglobalDir)default.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <Import Project="$(GNUetcglobalDir)user.props" />
+  <PropertyGroup>
+    <gmpSuggestMparamHeadDir Condition="'$(Platform)'=='Win32'">$(gmpSuggestMparamHeadDir_x86)</gmpSuggestMparamHeadDir>
+    <gmpSuggestMparamHeadDir Condition="'$(Platform)'=='x64'">$(gmpSuggestMparamHeadDir_x64)</gmpSuggestMparamHeadDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(gmpSuggestMparamHeadDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4018;4090;4101;4146;4244;4267;4307;4334;4554;4723;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <PreBuildEvent>
+      <Command>$(GNUPreBuildCommand)
+$(GNUdeleteCommand) "$(GNUProjectDir)mpn\generic\gmp-mparam.h"
+</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(GNUConfigurationType)'=='DLL'">
+    <ClCompile>
+      <PreprocessorDefinitions>__GMP_WITHIN_GMP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>
