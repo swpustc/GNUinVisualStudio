@@ -1,0 +1,37 @@
+/* Resources for gmp.dll */
+
+#include <windows.h>
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 6,0,0,0
+ PRODUCTVERSION 6,0,0,0
+ FILEFLAGSMASK 0x3fL /* VS_FFI_FILEFLAGSMASK */
+#ifdef _DEBUG
+ FILEFLAGS 0x1L  /* VS_FF_DEBUG */
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS VOS_NT_WINDOWS32
+ FILETYPE VFT_DLL
+ FILESUBTYPE 0x0L  /* VFT2_UNKNOWN */
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "04090000"  /* Lang = US English, Charset = ASCII */
+    BEGIN
+      VALUE "FileDescription", "GNU MP is a library for arbitrary precision arithmetic, operating on signed integers, rational numbers, and floating point numbers.\0"
+      VALUE "FileVersion",	"6.0.0\0"
+      VALUE "ProductVersion",	"6.0.0\0"
+      VALUE "CompanyName",	"Free Software Foundation\0"
+      VALUE "InternalName",	"GNU MP\0"
+      VALUE "OriginalFilename",	"libgmp.dll\0"
+      VALUE "ProductName",	"GNU MP Library\0"
+      VALUE "Comments",		"For more information visit https://gmplib.org/\0"
+      VALUE "LegalCopyright", "(C) 1991, 1993-1997, 1999-2014 Free Software Foundation, Inc.\0"
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0409, 0  /* US English, ASCII */
+  END
+END
