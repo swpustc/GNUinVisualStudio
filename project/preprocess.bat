@@ -24,6 +24,12 @@ git reset -q projects-protected
 git branch -D projects-protected
 echo;
 
+echo Preprocess blitz...
+set MOVE_FILE_NUM=0
+for /f "delims=" %%i in ('xcopy /s /y /h /exclude:xcopyExclude blitz\blitz blitz\include\blitz\ 2^>nul') do if exist "%%i" del /f /a /q "%%i" && echo %%i && set /a MOVE_FILE_NUM+=1
+echo Moved %MOVE_FILE_NUM% files
+echo;
+
 echo Preprocess gmp...
 set MOVE_FILE_NUM=0
 for /f "delims=" %%i in ('dir /a-d /b "gmp\mpf\*.c"') do ren "gmp\mpf\%%~i" "mpf_%%~i" && echo gmp\mpf\mpf_%%~i && set /a MOVE_FILE_NUM+=1
