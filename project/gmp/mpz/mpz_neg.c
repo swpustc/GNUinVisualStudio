@@ -33,7 +33,7 @@ see https://www.gnu.org/licenses/.  */
 #include "gmp.h"
 #include "gmp-impl.h"
 
-void
+__GMP_EXTERN_INLINE void
 mpz_neg (mpz_ptr w, mpz_srcptr u)
 {
   mp_ptr wp;

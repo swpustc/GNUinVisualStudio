@@ -41,6 +41,10 @@ see https://www.gnu.org/licenses/.  */
 #include <unistd.h>  /* for getpid */
 #endif
 
+#if HAVE_WINDOWS_H  /* for RaiseException */
+#include <windows.h>
+#endif
+
 #include "gmp.h"
 #include "gmp-impl.h"
 
@@ -78,6 +82,10 @@ see https://www.gnu.org/licenses/.  */
 void
 __gmp_invalid_operation (void)
 {
+#if HAVE_WINDOWS_H
+  RaiseException(EXCEPTION_SINGLE_STEP, 0, 0, NULL);
+#else
   raise (SIGFPE);
   abort ();
+#endif
 }

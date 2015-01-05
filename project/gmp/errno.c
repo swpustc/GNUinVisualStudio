@@ -32,7 +32,15 @@ You should have received copies of the GNU General Public License and the
 GNU Lesser General Public License along with the GNU MP Library.  If not,
 see https://www.gnu.org/licenses/.  */
 
+#include "config.h"
+
+#include <signal.h>
 #include <stdlib.h>
+
+#if HAVE_WINDOWS_H  /* for RaiseException */
+#include <windows.h>
+#endif
+
 #include "gmp.h"
 #include "gmp-impl.h"
 
@@ -50,8 +58,12 @@ void
 __gmp_exception (int error_bit)
 {
   gmp_errno |= error_bit;
+#if HAVE_WINDOWS_H
+  RaiseException(EXCEPTION_INT_DIVIDE_BY_ZERO, 0, 0, NULL);
+#else
   __gmp_junk = 10 / __gmp_0;
   abort ();
+#endif
 }
 
 

@@ -113,7 +113,7 @@ __gmp_extract_double (mp_ptr rp, double d)
       }
 #endif
 #if BITS_PER_PART != 32 && BITS_PER_PART != 64
-  You need to generalize the code above to handle this.
+#error You need to generalize the code above to handle this.
 #endif
     exp -= 1022;		/* Remove IEEE bias.  */
   }
@@ -150,11 +150,12 @@ __gmp_extract_double (mp_ptr rp, double d)
 	  }
       }
 
-    d *= (4.0 * ((unsigned long int) 1 << (BITS_PER_PART - 2)));
 #if BITS_PER_PART == 64
+    d *= (4.0 * ((unsigned long long int) 1 << (BITS_PER_PART - 2)));
     manl = d;
 #endif
 #if BITS_PER_PART == 32
+    d *= (4.0 * ((unsigned long int) 1 << (BITS_PER_PART - 2)));
     manh = d;
     manl = (d - manh) * (4.0 * ((unsigned long int) 1 << (BITS_PER_PART - 2)));
 #endif
