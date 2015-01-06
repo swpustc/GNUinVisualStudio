@@ -30,6 +30,13 @@ for /f "delims=" %%i in ('xcopy /s /y /h /exclude:xcopyExclude blitz\blitz blitz
 echo Moved %MOVE_FILE_NUM% files
 echo;
 
+echo Preprocess crypto++...
+set MOVE_FILE_NUM=0
+if not exist cryptopp\crypto++ mkdir cryptopp\crypto++
+for /f "delims=" %%i in ('dir /a /b cryptopp') do if /i not "%%~i" == "crypto++" move /y "cryptopp\%%~i" cryptopp\crypto++\ >nul && echo cryptopp\%%~i && set /a MOVE_FILE_NUM+=1
+echo Moved %MOVE_FILE_NUM% files
+echo;
+
 echo Preprocess gmp...
 set MOVE_FILE_NUM=0
 for /f "delims=" %%i in ('dir /a-d /b "gmp\mpf\*.c"') do ren "gmp\mpf\%%~i" "mpf_%%~i" && echo gmp\mpf\mpf_%%~i && set /a MOVE_FILE_NUM+=1
