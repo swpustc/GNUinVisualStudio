@@ -31,6 +31,8 @@ The Default Git Repository is **USTC** Repository.
 - libgmp ver.6.0.0a
   - [Homepage](https://gmplib.org/)
 [Download](https://mirrors.ustc.edu.cn/gnu/gmp/)
+- Blitz++ ver.0.10
+  - [Download](http://sourceforge.net/projects/blitz/)
 
 
 - dumpImageSize ver.1.1.9
