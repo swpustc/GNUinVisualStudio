@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <blitzRoot>blitz</blitzRoot>
+    <blitzName>blitz</blitzName>
+    <blitzDir>$(GNUprojectDir)blitz\</blitzDir>
+    <blitzInclude>$(blitzDir)include\</blitzInclude>
+    <blitzVersion>01000</blitzVersion>
+    <blitzCharacterSet>MultiByte</blitzCharacterSet>
+    <!--  Global environment settings. -->
+    <GNUSourcePath>$(blitzDir)src\;$(GNUSourcePath)</GNUSourcePath>
+    <GNUIncludePath>$(blitzInclude);$(GNUIncludePath)</GNUIncludePath>
+  </PropertyGroup>
+</Project>
