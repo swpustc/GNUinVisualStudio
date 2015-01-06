@@ -48,25 +48,33 @@ class nilArraySection { };
 template<typename T>
 class ArraySectionInfo {
 public:
-    static const int isValidType = 0, rank = 0, isPick = 0;
+    static const int isValidType = 0;
+    static const int rank = 0;
+    static const int isPick = 0;
 };
 
 template<>
 class ArraySectionInfo<Range> {
 public:
-    static const int isValidType = 1, rank = 1, isPick = 0;
+    static const int isValidType = 1;
+    static const int rank = 1;
+    static const int isPick = 0;
 };
 
 template<>
 class ArraySectionInfo<int> {
 public:
-    static const int isValidType = 1, rank = 0, isPick = 0;
+    static const int isValidType = 1;
+    static const int rank = 0;
+    static const int isPick = 0;
 };
 
 template<>
 class ArraySectionInfo<nilArraySection> {
 public:
-    static const int isValidType = 1, rank = 0, isPick = 0;
+    static const int isValidType = 1;
+    static const int rank = 0;
+    static const int isPick = 0;
 };
 
 template<typename T_numtype, typename T1, typename T2 = nilArraySection, 
@@ -77,7 +85,7 @@ template<typename T_numtype, typename T1, typename T2 = nilArraySection,
     class T11 = nilArraySection>
 class SliceInfo {
 public:
-    static const int 
+    static const int
         numValidTypes = ArraySectionInfo<T1>::isValidType
                       + ArraySectionInfo<T2>::isValidType
                       + ArraySectionInfo<T3>::isValidType
@@ -88,8 +96,8 @@ public:
                       + ArraySectionInfo<T8>::isValidType
                       + ArraySectionInfo<T9>::isValidType
                       + ArraySectionInfo<T10>::isValidType
-                      + ArraySectionInfo<T11>::isValidType,
-
+                      + ArraySectionInfo<T11>::isValidType;
+    static const int
         rank          = ArraySectionInfo<T1>::rank
                       + ArraySectionInfo<T2>::rank
                       + ArraySectionInfo<T3>::rank
@@ -100,8 +108,8 @@ public:
                       + ArraySectionInfo<T8>::rank
                       + ArraySectionInfo<T9>::rank
                       + ArraySectionInfo<T10>::rank
-                      + ArraySectionInfo<T11>::rank,
-
+                      + ArraySectionInfo<T11>::rank;
+    static const int
         isPick        = ArraySectionInfo<T1>::isPick
                       + ArraySectionInfo<T2>::isPick
                       + ArraySectionInfo<T3>::isPick
