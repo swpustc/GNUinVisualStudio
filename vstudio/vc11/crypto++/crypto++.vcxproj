@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(GNUDir)gnu_vc11.props" />
+  <PropertyGroup Label="Globals">
+    <GNUProjectRoot>$(cryptoppRoot)</GNUProjectRoot>
+    <GNUProjectName>$(cryptoppName)</GNUProjectName>
+    <GNUProjectDir>$(cryptoppDir)</GNUProjectDir>
+    <GNUProjectInclude>$(cryptoppInclude)</GNUProjectInclude>
+    <GNUProjectVersion>$(cryptoppVersion)</GNUProjectVersion>
+    <GNUCharacterSet>$(cryptoppCharacterSet)</GNUCharacterSet>
+    <GNUApplication>false</GNUApplication>
+    <GNUConsoleApplication>true</GNUConsoleApplication>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="$(GNUProjectDir)pch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)3way.cpp" />
+    <ClCompile Include="$(GNUProjectDir)adler32.cpp" />
+    <ClCompile Include="$(GNUProjectDir)algebra.cpp" />
+    <ClCompile Include="$(GNUProjectDir)algparam.cpp" />
+    <ClCompile Include="$(GNUProjectDir)arc4.cpp" />
+    <ClCompile Include="$(GNUProjectDir)asn.cpp" />
+    <ClCompile Include="$(GNUProjectDir)authenc.cpp" />
+    <ClCompile Include="$(GNUProjectDir)base32.cpp" />
+    <ClCompile Include="$(GNUProjectDir)base64.cpp" />
+    <ClCompile Include="$(GNUProjectDir)basecode.cpp" />
+    <ClCompile Include="$(GNUProjectDir)bfinit.cpp" />
+    <ClCompile Include="$(GNUProjectDir)blowfish.cpp" />
+    <ClCompile Include="$(GNUProjectDir)blumshub.cpp" />
+    <ClCompile Include="$(GNUProjectDir)camellia.cpp" />
+    <ClCompile Include="$(GNUProjectDir)cast.cpp" />
+    <ClCompile Include="$(GNUProjectDir)casts.cpp" />
+    <ClCompile Include="$(GNUProjectDir)cbcmac.cpp" />
+    <ClCompile Include="$(GNUProjectDir)ccm.cpp" />
+    <ClCompile Include="$(GNUProjectDir)channels.cpp" />
+    <ClCompile Include="$(GNUProjectDir)cmac.cpp" />
+    <ClCompile Include="$(GNUProjectDir)cpu.cpp" />
+    <ClCompile Include="$(GNUProjectDir)crc.cpp" />
+    <ClCompile Include="$(GNUProjectDir)cryptlib.cpp" />
+    <ClCompile Include="$(GNUProjectDir)default.cpp" />
+    <ClCompile Include="$(GNUProjectDir)des.cpp" />
+    <ClCompile Include="$(GNUProjectDir)dessp.cpp" />
+    <ClCompile Include="$(GNUProjectDir)dh.cpp" />
+    <ClCompile Include="$(GNUProjectDir)dh2.cpp" />
+    <ClCompile Include="$(GNUProjectDir)dll.cpp">
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)dsa.cpp" />
+    <ClCompile Include="$(GNUProjectDir)eax.cpp" />
+    <ClCompile Include="$(GNUProjectDir)ec2n.cpp" />
+    <ClCompile Include="$(GNUProjectDir)eccrypto.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)ecp.cpp" />
+    <ClCompile Include="$(GNUProjectDir)elgamal.cpp" />
+    <ClCompile Include="$(GNUProjectDir)emsa2.cpp" />
+    <ClCompile Include="$(GNUProjectDir)eprecomp.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)esign.cpp" />
+    <ClCompile Include="$(GNUProjectDir)files.cpp" />
+    <ClCompile Include="$(GNUProjectDir)filters.cpp" />
+    <ClCompile Include="$(GNUProjectDir)fips140.cpp" />
+    <ClCompile Include="$(GNUProjectDir)fipstest.cpp" />
+    <ClCompile Include="$(GNUProjectDir)gcm.cpp" />
+    <ClCompile Include="$(GNUProjectDir)gf256.cpp" />
+    <ClCompile Include="$(GNUProjectDir)gf2n.cpp" />
+    <ClCompile Include="$(GNUProjectDir)gf2_32.cpp" />
+    <ClCompile Include="$(GNUProjectDir)gfpcrypt.cpp" />
+    <ClCompile Include="$(GNUProjectDir)gost.cpp" />
+    <ClCompile Include="$(GNUProjectDir)gzip.cpp" />
+    <ClCompile Include="$(GNUProjectDir)hex.cpp" />
+    <ClCompile Include="$(GNUProjectDir)hmac.cpp" />
+    <ClCompile Include="$(GNUProjectDir)hrtimer.cpp" />
+    <ClCompile Include="$(GNUProjectDir)ida.cpp" />
+    <ClCompile Include="$(GNUProjectDir)idea.cpp" />
+    <ClCompile Include="$(GNUProjectDir)integer.cpp" />
+    <ClCompile Include="$(GNUProjectDir)iterhash.cpp">
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)luc.cpp" />
+    <ClCompile Include="$(GNUProjectDir)mars.cpp" />
+    <ClCompile Include="$(GNUProjectDir)marss.cpp" />
+    <ClCompile Include="$(GNUProjectDir)md2.cpp" />
+    <ClCompile Include="$(GNUProjectDir)md4.cpp" />
+    <ClCompile Include="$(GNUProjectDir)md5.cpp" />
+    <ClCompile Include="$(GNUProjectDir)misc.cpp" />
+    <ClCompile Include="$(GNUProjectDir)modes.cpp" />
+    <ClCompile Include="$(GNUProjectDir)mqueue.cpp" />
+    <ClCompile Include="$(GNUProjectDir)mqv.cpp" />
+    <ClCompile Include="$(GNUProjectDir)nbtheory.cpp" />
+    <ClCompile Include="$(GNUProjectDir)network.cpp" />
+    <ClCompile Include="$(GNUProjectDir)oaep.cpp" />
+    <ClCompile Include="$(GNUProjectDir)osrng.cpp" />
+    <ClCompile Include="$(GNUProjectDir)panama.cpp" />
+    <ClCompile Include="$(GNUProjectDir)pkcspad.cpp" />
+    <ClCompile Include="$(GNUProjectDir)polynomi.cpp" />
+    <ClCompile Include="$(GNUProjectDir)pssr.cpp" />
+    <ClCompile Include="$(GNUProjectDir)pubkey.cpp" />
+    <ClCompile Include="$(GNUProjectDir)queue.cpp" />
+    <ClCompile Include="$(GNUProjectDir)rabin.cpp" />
+    <ClCompile Include="$(GNUProjectDir)randpool.cpp" />
+    <ClCompile Include="$(GNUProjectDir)rc2.cpp" />
+    <ClCompile Include="$(GNUProjectDir)rc5.cpp" />
+    <ClCompile Include="$(GNUProjectDir)rc6.cpp" />
+    <ClCompile Include="$(GNUProjectDir)rdtables.cpp" />
+    <ClCompile Include="$(GNUProjectDir)rijndael.cpp" />
+    <ClCompile Include="$(GNUProjectDir)ripemd.cpp" />
+    <ClCompile Include="$(GNUProjectDir)rng.cpp" />
+    <ClCompile Include="$(GNUProjectDir)rsa.cpp" />
+    <ClCompile Include="$(GNUProjectDir)rw.cpp" />
+    <ClCompile Include="$(GNUProjectDir)safer.cpp" />
+    <ClCompile Include="$(GNUProjectDir)salsa.cpp" />
+    <ClCompile Include="$(GNUProjectDir)seal.cpp" />
+    <ClCompile Include="$(GNUProjectDir)seed.cpp" />
+    <ClCompile Include="$(GNUProjectDir)serpent.cpp" />
+    <ClCompile Include="$(GNUProjectDir)sha.cpp" />
+    <ClCompile Include="$(GNUProjectDir)sha3.cpp" />
+    <ClCompile Include="$(GNUProjectDir)shacal2.cpp" />
+    <ClCompile Include="$(GNUProjectDir)shark.cpp" />
+    <ClCompile Include="$(GNUProjectDir)sharkbox.cpp" />
+    <ClCompile Include="$(GNUProjectDir)simple.cpp" />
+    <ClCompile Include="$(GNUProjectDir)skipjack.cpp" />
+    <ClCompile Include="$(GNUProjectDir)socketft.cpp" />
+    <ClCompile Include="$(GNUProjectDir)sosemanuk.cpp" />
+    <ClCompile Include="$(GNUProjectDir)square.cpp" />
+    <ClCompile Include="$(GNUProjectDir)squaretb.cpp" />
+    <ClCompile Include="$(GNUProjectDir)strciphr.cpp" />
+    <ClCompile Include="$(GNUProjectDir)tea.cpp" />
+    <ClCompile Include="$(GNUProjectDir)tftables.cpp" />
+    <ClCompile Include="$(GNUProjectDir)tiger.cpp" />
+    <ClCompile Include="$(GNUProjectDir)tigertab.cpp" />
+    <ClCompile Include="$(GNUProjectDir)trdlocal.cpp" />
+    <ClCompile Include="$(GNUProjectDir)ttmac.cpp" />
+    <ClCompile Include="$(GNUProjectDir)twofish.cpp" />
+    <ClCompile Include="$(GNUProjectDir)vmac.cpp" />
+    <ClCompile Include="$(GNUProjectDir)wait.cpp" />
+    <ClCompile Include="$(GNUProjectDir)wake.cpp" />
+    <ClCompile Include="$(GNUProjectDir)whrlpool.cpp" />
+    <ClCompile Include="$(GNUProjectDir)winpipes.cpp" />
+    <ClCompile Include="$(GNUProjectDir)xtr.cpp" />
+    <ClCompile Include="$(GNUProjectDir)xtrcrypt.cpp" />
+    <ClCompile Include="$(GNUProjectDir)zdeflate.cpp" />
+    <ClCompile Include="$(GNUProjectDir)zinflate.cpp" />
+    <ClCompile Include="$(GNUProjectDir)zlib.cpp" />
+    <MASM Include="$(GNUProjectDir)x64dll.asm">
+      <ExcludedFromBuild Condition="'$(Platform)'=='Win32'">true</ExcludedFromBuild>
+    </MASM>
+    <MASM Include="$(GNUProjectDir)x64masm.asm">
+      <ExcludedFromBuild Condition="'$(Platform)'=='Win32'">true</ExcludedFromBuild>
+    </MASM>
+    <ResourceCompile Include="$(GNUProjectDir)cryptopp.rc">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='Library'">true</ExcludedFromBuild>
+    </ResourceCompile>
+  </ItemGroup>
+  <Import Project="$(GNUetcglobalDir)setting.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AAAA2005-8001-AAAA-0123-456789ABCDEF}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>$(GNUProjectName)</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug Library libcmt|Win32">
+      <Configuration>Debug Library libcmt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Library libcmt|x64">
+      <Configuration>Debug Library libcmt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Library libcrt|Win32">
+      <Configuration>Debug Library libcrt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Library libcrt|x64">
+      <Configuration>Debug Library libcrt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Library libcrt|Win32">
+      <Configuration>Release Library libcrt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Library libcrt|x64">
+      <Configuration>Release Library libcrt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Library libcmt|Win32">
+      <Configuration>Release Library libcmt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Library libcmt|x64">
+      <Configuration>Release Library libcmt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(GNUetcglobalDir)default.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <Import Project="$(GNUetcglobalDir)user.props" />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PreprocessorDefinitions>USE_PRECOMPILED_HEADERS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>
