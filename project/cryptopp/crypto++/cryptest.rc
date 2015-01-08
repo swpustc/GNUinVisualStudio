@@ -36,7 +36,7 @@ VS_VERSION_INFO VERSIONINFO
  FILEFLAGS 0x0L
 #endif
  FILEOS 0x4L
- FILETYPE 0x2L
+ FILETYPE VFT_APP
  FILESUBTYPE 0x0L
 BEGIN
     BLOCK "StringFileInfo"
@@ -45,13 +45,13 @@ BEGIN
         BEGIN
             VALUE "Comments", "free crypto library, more information available at www.cryptopp.com"
             VALUE "CompanyName", "Wei Dai"
-            VALUE "FileDescription", "Crypto++® Library DLL"
+            VALUE "FileDescription", "Crypto++® Test Program"
             VALUE "FileVersion", "5.6.2.0"
-            VALUE "InternalName", "cryptopp"
+            VALUE "InternalName", "cryptest"
             VALUE "LegalCopyright", "Copyright © 1995-2013 by Wei Dai"
             VALUE "LegalTrademarks", "Crypto++®"
-            VALUE "OriginalFilename", "cryptopp.dll"
-            VALUE "ProductName", "Crypto++® Library"
+            VALUE "OriginalFilename", "cryptest.exe"
+            VALUE "ProductName", "Crypto++® Test Program"
             VALUE "ProductVersion", "5.6.2.0"
         END
     END
