@@ -97,6 +97,7 @@ cppunit.debug
 zlib.m.debug ;Increased base By Alignment(0x1000000)
 libsigc++.m.debug
 libgmp.m.debug
+libgmpxx.m.debug
 libcrypto++.m.debug
 libpng.m.debug
 libxmlrpc_util.m.debug
