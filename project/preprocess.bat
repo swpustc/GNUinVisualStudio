@@ -14,7 +14,8 @@ git checkout -q sources -- preprocess.bat &&                REM
 
 echo Test for git branch...
 git checkout -fq sources
-if errorlevel 1 echo git is't exist or branch 'sources' checkout error. && exit /b 1
+git show --oneline --quiet
+if errorlevel 1 echo git is't exist. && exit /b 1
 echo;
 
 echo Reset to sources branch...
@@ -104,10 +105,10 @@ call ..\tools\removeBOM.sh . && git checkout -q sources -- preprocess.bat
 echo;
 
 echo Add and commit...
-git add --all :/
+git add --all :/ 2>nul
 git rm -f keepNameExt
 git rm --cached preprocess.bat
-git commit -sm "auto commit. process project directory(%DATE:~0,10%)"
+git commit -qsm "auto commit. process project directory(%DATE:~0,10%)" 2>nul
 echo;
 
 echo Done.
