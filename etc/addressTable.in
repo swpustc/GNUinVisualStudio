@@ -158,3 +158,11 @@ dumpImageSize.debug     0x00400000     ;Increased base For BaseAddress
 dumpImageSize.m.debug   0x00400000     ;Increased base By Alignment(0x200000)
 dumpImageSize.debug64   0x004C00400000 ;Increased base For BaseAddress
 dumpImageSize.m.debug64 0x004C00400000 ;Increased base By Alignment(0x200000)
+cryptest                0x00400000     ;Increased base For BaseAddress
+cryptest.m              0x00400000     ;Increased base By Alignment(0x200000)
+cryptest.64             0x004C00400000 ;Increased base For BaseAddress
+cryptest.m64            0x004C00400000 ;Increased base By Alignment(0x200000)
+cryptest.debug          0x00400000     ;Increased base For BaseAddress
+cryptest.m.debug        0x00400000     ;Increased base By Alignment(0x200000)
+cryptest.debug64        0x004C00400000 ;Increased base For BaseAddress
+cryptest.m.debug64      0x004C00400000 ;Increased base By Alignment(0x200000)
