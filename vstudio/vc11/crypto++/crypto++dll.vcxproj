@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(GNUDir)gnu_vc11.props" />
+  <PropertyGroup Label="Globals">
+    <GNUProjectRoot>$(cryptoppRoot)</GNUProjectRoot>
+    <GNUProjectName>$(cryptoppName)</GNUProjectName>
+    <GNUProjectDir>$(cryptoppDir)</GNUProjectDir>
+    <GNUProjectInclude>$(cryptoppInclude)</GNUProjectInclude>
+    <GNUProjectVersion>$(cryptoppVersion)</GNUProjectVersion>
+    <GNUCharacterSet>$(cryptoppCharacterSet)</GNUCharacterSet>
+    <GNUApplication>false</GNUApplication>
+    <GNUConsoleApplication>true</GNUConsoleApplication>
+    <GNUExcludedExtraFileInDLL>$(cryptoppExcludedExtraFileInDLL)</GNUExcludedExtraFileInDLL>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="$(GNUProjectDir)pch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)3way.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)adler32.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)algebra.cpp" />
+    <ClCompile Include="$(GNUProjectDir)algparam.cpp" />
+    <ClCompile Include="$(GNUProjectDir)arc4.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)asn.cpp" />
+    <ClCompile Include="$(GNUProjectDir)authenc.cpp" />
+    <ClCompile Include="$(GNUProjectDir)base32.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)base64.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)basecode.cpp" />
+    <ClCompile Include="$(GNUProjectDir)bfinit.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)blowfish.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)blumshub.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)camellia.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)cast.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)casts.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)cbcmac.cpp" />
+    <ClCompile Include="$(GNUProjectDir)ccm.cpp" />
+    <ClCompile Include="$(GNUProjectDir)channels.cpp" />
+    <ClCompile Include="$(GNUProjectDir)cmac.cpp" />
+    <ClCompile Include="$(GNUProjectDir)cpu.cpp" />
+    <ClCompile Include="$(GNUProjectDir)crc.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)cryptlib.cpp" />
+    <ClCompile Include="$(GNUProjectDir)default.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)des.cpp" />
+    <ClCompile Include="$(GNUProjectDir)dessp.cpp" />
+    <ClCompile Include="$(GNUProjectDir)dh.cpp" />
+    <ClCompile Include="$(GNUProjectDir)dh2.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)dll.cpp">
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)dsa.cpp" />
+    <ClCompile Include="$(GNUProjectDir)eax.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)ec2n.cpp" />
+    <ClCompile Include="$(GNUProjectDir)eccrypto.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)ecp.cpp" />
+    <ClCompile Include="$(GNUProjectDir)elgamal.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)emsa2.cpp" />
+    <ClCompile Include="$(GNUProjectDir)eprecomp.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)esign.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)files.cpp" />
+    <ClCompile Include="$(GNUProjectDir)filters.cpp" />
+    <ClCompile Include="$(GNUProjectDir)fips140.cpp" />
+    <ClCompile Include="$(GNUProjectDir)fipstest.cpp" />
+    <ClCompile Include="$(GNUProjectDir)gcm.cpp" />
+    <ClCompile Include="$(GNUProjectDir)gf256.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)gf2n.cpp" />
+    <ClCompile Include="$(GNUProjectDir)gf2_32.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)gfpcrypt.cpp" />
+    <ClCompile Include="$(GNUProjectDir)gost.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)gzip.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)hex.cpp" />
+    <ClCompile Include="$(GNUProjectDir)hmac.cpp" />
+    <ClCompile Include="$(GNUProjectDir)hrtimer.cpp" />
+    <ClCompile Include="$(GNUProjectDir)ida.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)idea.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)integer.cpp" />
+    <ClCompile Include="$(GNUProjectDir)iterhash.cpp">
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)luc.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)mars.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)marss.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)md2.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)md4.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)md5.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)misc.cpp" />
+    <ClCompile Include="$(GNUProjectDir)modes.cpp" />
+    <ClCompile Include="$(GNUProjectDir)mqueue.cpp" />
+    <ClCompile Include="$(GNUProjectDir)mqv.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)nbtheory.cpp" />
+    <ClCompile Include="$(GNUProjectDir)network.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)oaep.cpp" />
+    <ClCompile Include="$(GNUProjectDir)osrng.cpp" />
+    <ClCompile Include="$(GNUProjectDir)panama.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)pkcspad.cpp" />
+    <ClCompile Include="$(GNUProjectDir)polynomi.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)pssr.cpp" />
+    <ClCompile Include="$(GNUProjectDir)pubkey.cpp" />
+    <ClCompile Include="$(GNUProjectDir)queue.cpp" />
+    <ClCompile Include="$(GNUProjectDir)rabin.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)randpool.cpp" />
+    <ClCompile Include="$(GNUProjectDir)rc2.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)rc5.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)rc6.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)rdtables.cpp" />
+    <ClCompile Include="$(GNUProjectDir)rijndael.cpp" />
+    <ClCompile Include="$(GNUProjectDir)ripemd.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)rng.cpp" />
+    <ClCompile Include="$(GNUProjectDir)rsa.cpp" />
+    <ClCompile Include="$(GNUProjectDir)rw.cpp" />
+    <ClCompile Include="$(GNUProjectDir)safer.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)salsa.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)seal.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)seed.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)serpent.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)sha.cpp" />
+    <ClCompile Include="$(GNUProjectDir)sha3.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)shacal2.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)shark.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)sharkbox.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)simple.cpp" />
+    <ClCompile Include="$(GNUProjectDir)skipjack.cpp" />
+    <ClCompile Include="$(GNUProjectDir)socketft.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)sosemanuk.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)square.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)squaretb.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)strciphr.cpp" />
+    <ClCompile Include="$(GNUProjectDir)tea.cpp" />
+    <ClCompile Include="$(GNUProjectDir)tftables.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)tiger.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)tigertab.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)trdlocal.cpp" />
+    <ClCompile Include="$(GNUProjectDir)ttmac.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)twofish.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)vmac.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)wait.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)wake.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)whrlpool.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)winpipes.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)xtr.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)xtrcrypt.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)zdeflate.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)zinflate.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)zlib.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+    </ClCompile>
+    <MASM Include="$(GNUProjectDir)x64dll.asm">
+      <ExcludedFromBuild Condition="'$(Platform)'=='Win32'">true</ExcludedFromBuild>
+    </MASM>
+    <MASM Include="$(GNUProjectDir)x64masm.asm">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">$(GNUExcludedExtraFileInDLL)</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Platform)'=='Win32'">true</ExcludedFromBuild>
+    </MASM>
+    <ResourceCompile Include="$(GNUProjectDir)cryptopp.rc">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='Library'">true</ExcludedFromBuild>
+    </ResourceCompile>
+  </ItemGroup>
+  <Import Project="$(GNUetcglobalDir)setting.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AAAA2005-8003-AAAA-0123-456789ABCDEF}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>$(GNUProjectName)</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug DLL libcmt|Win32">
+      <Configuration>Debug DLL libcmt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug DLL libcmt|x64">
+      <Configuration>Debug DLL libcmt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug DLL libcrt|Win32">
+      <Configuration>Debug DLL libcrt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug DLL libcrt|x64">
+      <Configuration>Debug DLL libcrt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release DLL libcmt|Win32">
+      <Configuration>Release DLL libcmt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release DLL libcmt|x64">
+      <Configuration>Release DLL libcmt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release DLL libcrt|Win32">
+      <Configuration>Release DLL libcrt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release DLL libcrt|x64">
+      <Configuration>Release DLL libcrt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(GNUetcglobalDir)default.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <Import Project="$(GNUetcglobalDir)user.props" />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PreprocessorDefinitions>USE_PRECOMPILED_HEADERS;CRYPTOPP_EXPORTS;CRYPTOPP_ENABLE_COMPLIANCE_WITH_FIPS_140_2=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>$(GNUPostBuildCommand)
+if exist "$(GNUbinDir)$(cryptestName)$(GNUAppNameSuffix).exe" (
+$(cryptestName)$(GNUAppNameSuffix) mac_dll "$(GNUdllDir)$(TargetName).dll"
+$(GNUignoreErrorLevel) ) else $(GNUforceErrorLevel)
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>
