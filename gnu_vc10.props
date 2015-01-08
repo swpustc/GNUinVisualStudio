@@ -42,6 +42,7 @@
   <Import Project="$(GNUetcDir)xmlrpc-c.props" />
   <Import Project="$(GNUetcDir)cppunit.props" />
   <Import Project="$(GNUetcDir)gmp.props" />
+  <Import Project="$(GNUetcDir)cryptopp.props" />
   <Import Project="$(GNUetcDir)blitz.props" />
   <Import Project="$(GNUetcDir)sigcxx.props" />
   <!--  Import Local projects. -->
