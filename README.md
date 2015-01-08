@@ -31,6 +31,9 @@ The Default Git Repository is **USTC** Repository.
 - libgmp ver.6.0.0a
   - [Homepage](https://gmplib.org/)
 [Download](https://mirrors.ustc.edu.cn/gnu/gmp/)
+- libcrypto++ ver.5.6.2
+  - [Homepage](http://www.cryptopp.com/)
+[Download](http://www.cryptopp.com/#download)
 - Blitz++ ver.0.10
   - [Download](http://sourceforge.net/projects/blitz/)
 
