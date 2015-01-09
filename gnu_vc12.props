@@ -47,6 +47,7 @@
   <Import Project="$(GNUetcDir)cryptopp.props" />
   <Import Project="$(GNUetcDir)blitz.props" />
   <Import Project="$(GNUetcDir)sigcxx.props" />
+  <Import Project="$(GNUetcDir)s11n.props" />
   <!--  Import Local projects. -->
   <Import Project="$(GNUetcDir).dumpImageSize.props" />
   <Import Project="$(GNUetcDir).rmld.props" />
