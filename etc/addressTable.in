@@ -1,6 +1,7 @@
 ; BASEADDRESS MODIFY RECORDS -- DO NOT EDIT RECORDS LINES -- MAX RECORDS TABLE LINES(32)
 zlib 0x62000000 ;Increased base For BaseAddress
 libsigc++
+libs11n
 libgmp
 libgmpxx
 libcrypto++
@@ -21,6 +22,7 @@ libhook
 cppunit
 zlib.m ;Increased base By Alignment(0x1000000)
 libsigc++.m
+libs11n.m
 libgmp.m
 libgmpxx.m
 libcrypto++.m
@@ -41,6 +43,7 @@ libhook.m
 cppunit.m
 zlib.64 0x076062000000 ;Increased base For BaseAddress
 libsigc++.64
+libs11n.64
 libgmp.64
 libgmpxx.64
 libcrypto++.64
@@ -61,6 +64,7 @@ libhook.64
 cppunit.64
 zlib.m64 ;Increased base By Alignment(0x1000000)
 libsigc++.m64
+libs11n.m64
 libgmp.m64
 libgmpxx.m64
 libcrypto++.m64
@@ -81,6 +85,7 @@ libhook.m64
 cppunit.m64
 zlib.debug 0x12000000 ;Increased base For BaseAddress
 libsigc++.debug
+libs11n.debug
 libgmp.debug
 libgmpxx.debug
 libcrypto++.debug
@@ -101,6 +106,7 @@ libhook.debug
 cppunit.debug
 zlib.m.debug ;Increased base By Alignment(0x1000000)
 libsigc++.m.debug
+libs11n.m.debug
 libgmp.m.debug
 libgmpxx.m.debug
 libcrypto++.m.debug
@@ -121,6 +127,7 @@ libhook.m.debug
 cppunit.m.debug
 zlib.debug64 0x076012000000 ;Increased base For BaseAddress
 libsigc++.debug64
+libs11n.debug64
 libgmp.debug64
 libgmpxx.debug64
 libcrypto++.debug64
@@ -141,6 +148,7 @@ libhook.debug64
 cppunit.debug64
 zlib.m.debug64 ;Increased base By Alignment(0x1000000)
 libsigc++.m.debug64
+libs11n.m.debug64
 libgmp.m.debug64
 libgmpxx.m.debug64
 libcrypto++.m.debug64
