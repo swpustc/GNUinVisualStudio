@@ -102,7 +102,7 @@ s11n::find_child_by_name( const NodeT & parent, const std::string & name )
 
 
 template <typename NodeT>
-void s11n::debug::dump_node_structure( const NodeT & n, int indentlv = 0 )
+void s11n::debug::dump_node_structure( const NodeT & n, int indentlv)
 {
 	typedef s11n::node_traits<NodeT> TR;
 	typedef typename TR::child_list_type CLT;

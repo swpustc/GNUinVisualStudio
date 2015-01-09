@@ -7,7 +7,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
-#include <strings.h>
+// #include <strings.h>
 
 
 namespace s11n { namespace io { namespace strtool {
@@ -403,7 +403,7 @@ namespace s11n { namespace io { namespace strtool {
     
                 for ( ; *src != '\0'; src++ )
                 {
-                        char *x = strchr( _separators, *src );
+                        const char *x = strchr( _separators, *src );
                         if (( *src == '\"' ) && !quoted)
                                 quoted = DOUBLE_QUOTE;
                         else if (( *src == '\'') && !quoted)

@@ -7,7 +7,7 @@
 // core.
 
 #if defined(WIN32)
-#  define s11n_CONFIG_PLUGINS_PATH std::string("C:\\s11n.net\\lib\\plugins")
+#  define s11n_CONFIG_PLUGINS_PATH std::string("s11n.net\\lib\\plugins")
 #  define s11n_CONFIG_HAVE_LIBLTDL 0
 #  define s11n_CONFIG_HAVE_LIBDL 0
 #  define s11n_CONFIG_DLL_EXTENSION std::string(".dll")

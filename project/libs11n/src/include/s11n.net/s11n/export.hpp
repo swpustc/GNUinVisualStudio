@@ -18,14 +18,20 @@ Free functions:
 **********************************************************************/
 
 #ifdef WIN32
+#  if defined(USING_GNU_DLL) || defined(USING_ALL_DLL)
+#    if !defined(USING_s11n_DLL)
+#      define USING_s11n_DLL
+#    endif
+#  endif
 // #warning "Exporting Windows-style!"
-// #  ifdef S11N_EXPORTS
+#  ifdef S11N_EXPORTS
 #    define S11N_EXPORT_API __declspec(dllexport)
-// #  else
-// #    define S11N_EXPORT_API __declspec(dllimport)
-// #  endif
-#else
+#  elif defined (USING_s11n_DLL)
+#    define S11N_EXPORT_API __declspec(dllimport)
+#  else
 #    define S11N_EXPORT_API
+#  endif
+#else
+#  define S11N_EXPORT_API
 #endif
-
 #endif // s11n_net_S11N_EXPORT_HPP_INCLUDED

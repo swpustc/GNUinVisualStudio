@@ -18,6 +18,11 @@
 ////////////////////////////////////////////////////////////////////////
 
 
+#define S11N_VERSION_MAJOR  1
+#define S11N_VERSION_MINOR  3
+#define S11N_VERSION_POINT  1
+#define S11N_VERSION_POINT2 0
+
 #define s11n_S11N_PACKAGE_NAME "s11n"
 #define s11n_S11N_LIBRARY_VERSION "1.3.1"
 #define s11n_S11N_LIBRARY_VERSION_HEX (0x010301)
@@ -29,8 +34,8 @@
 
 /* Shared paths for s11n and clients. */
 #if defined(WIN32)
-#  define s11n_CONFIG_SHARED_DIR std::string("C:\\s11n.net\\shared")
-#  define s11n_CONFIG_LIB_DIR std::string("C:\\s11n.net\\lib")
+#  define s11n_CONFIG_SHARED_DIR std::string("s11n.net\\shared")
+#  define s11n_CONFIG_LIB_DIR std::string("s11n.net\\lib")
 #else
 #  define s11n_CONFIG_SHARED_DIR std::string("/home/stephan/share/s11n")
 #  define s11n_CONFIG_LIB_DIR std::string("/home/stephan/lib/s11n")
@@ -88,6 +93,7 @@
 
 
 #if s11n_CONFIG_HAVE_PTHREADS || s11n_CONFIG_HAVE_GNUPTH_THREADS || defined(WIN32)
+#  undef s11n_CONFIG_SINGLE_THREADED
 #  define s11n_CONFIG_SINGLE_THREADED 0
 #endif
 

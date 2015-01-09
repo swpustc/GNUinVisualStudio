@@ -199,7 +199,7 @@ namespace s11n { namespace io {
 			{
 				char ch;
 				while( (p1 < usz)
-				       && (std::isdigit(ch=_url[p1])) )
+				       && (isdigit(ch=_url[p1])) )
 				{
 					num += ch;
 					++p1;
