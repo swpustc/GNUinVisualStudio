@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <s11nRoot>s11n</s11nRoot>
+    <s11nName>libs11n</s11nName>
+    <s11nDir>$(GNUprojectDir)libs11n\</s11nDir>
+    <s11nInclude>$(s11nDir)src\include\</s11nInclude>
+    <s11nVersion>10301</s11nVersion>
+    <s11nCharacterSet>MultiByte</s11nCharacterSet>
+    <!--  Global environment settings. -->
+    <GNUSourcePath>$(s11nDir)src\;$(GNUSourcePath)</GNUSourcePath>
+    <GNUIncludePath>$(s11nInclude);$(GNUIncludePath)</GNUIncludePath>
+  </PropertyGroup>
+</Project>
