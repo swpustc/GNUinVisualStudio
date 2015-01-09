@@ -1,0 +1,38 @@
+/* Resources for libs11n.dll */
+
+#include <windows.h>
+#include <s11n.net/s11n/s11n_config.hpp>
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION    S11N_VERSION_MAJOR,S11N_VERSION_MINOR,S11N_VERSION_POINT,S11N_VERSION_POINT2
+ PRODUCTVERSION S11N_VERSION_MAJOR,S11N_VERSION_MINOR,S11N_VERSION_POINT,S11N_VERSION_POINT2
+ FILEFLAGSMASK 0x3fL /* VS_FFI_FILEFLAGSMASK */
+#ifdef _DEBUG
+ FILEFLAGS 0x1L  /* VS_FF_DEBUG */
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS VOS_NT_WINDOWS32
+ FILETYPE VFT_DLL
+ FILESUBTYPE 0x0L  /* VFT2_UNKNOWN */
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "04090000"  /* Lang = US English, Charset = ASCII */
+        BEGIN
+            VALUE "Comments", "For more information visit" s11n_PACKAGE_URL "\0"
+            VALUE "CompanyName", s11n_PACKAGE_LICENSE "\0"
+            VALUE "FileDescription", "s11n (an abbreviation for serialization) is an Open Source project focused on the generic serialization of objects (i.e., object persistence) in the C/C++ programming language.\0"
+            VALUE "FileVersion", s11n_S11N_LIBRARY_VERSION "\0"
+            VALUE "InternalName", "lib" s11n_S11N_PACKAGE_NAME ".dll\0"
+            VALUE "LegalCopyright", s11n_PACKAGE_RELEASE_CODENAME "\0"
+            VALUE "OriginalFilename", "lib" s11n_S11N_PACKAGE_NAME ".dll\0"
+            VALUE "ProductName", s11n_S11N_PACKAGE_NAME "\0"
+            VALUE "ProductVersion", s11n_S11N_LIBRARY_VERSION "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0409, 0  /* US English, ASCII */
+    END
+END
