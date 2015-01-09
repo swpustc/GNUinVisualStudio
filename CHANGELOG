@@ -8,6 +8,7 @@ v1.0.0rc02
   - add libxmlrpc-c v1.39.00(master2640) sources
   - add libgmp v6.0.0a sources
   - add Blitz++ v0.10 sources
+  - add libcrypto++ v5.6.2 sources
   -
   - format VS solution ProjectGuid
 
