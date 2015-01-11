@@ -1,3 +1,4 @@
 /cryptopp/crypto++/adhoc.cpp
 /libpng/pnglibconf.h
 /libsigc++/include/sigc++config.h
+/libxml/include/config.h
