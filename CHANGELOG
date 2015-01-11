@@ -11,6 +11,7 @@ v1.0.0rc02
   - add libcrypto++ v5.6.2 sources
   - add libiconv v1.14 sources
   - add s11n v1.3.1 sources
+  - add libxml2 v2.9.2 sources
   -
   - format VS solution ProjectGuid
 
