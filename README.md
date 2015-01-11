@@ -30,6 +30,10 @@ The Default Git Repository is **USTC** Repository.
   - [Homepage](http://xmlsoft.org/)
 [Sourcecode](https://git.gnome.org/browse/libxml2/)
 FTP:<ftp://xmlsoft.org/libxml2/>
+- libxslt ver.1.1.28
+  - [Homepage](http://xmlsoft.org/XSLT.html)
+[Sourcecode](https://git.gnome.org/browse/libxslt/)
+FTP:<ftp://xmlsoft.org/libxslt/>
 - libcppunit ver.(master606)
   - [Download](http://sourceforge.net/p/cppunit/code/)
 - libxmlrpc-c ver.1.39.00(master2640)
