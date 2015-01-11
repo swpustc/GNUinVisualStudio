@@ -12,6 +12,7 @@ v1.0.0rc02
   - add libiconv v1.14 sources
   - add s11n v1.3.1 sources
   - add libxml2 v2.9.2 sources
+  - add libxslt v1.1.28 sources
   -
   - format VS solution ProjectGuid
 
