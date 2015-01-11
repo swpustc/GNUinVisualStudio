@@ -13,12 +13,16 @@
 extern "C" {
 #endif
 
+#define LIBEXSLT_VERSION_MAJOR  0
+#define LIBEXSLT_VERSION_MINOR  8
+#define LIBEXSLT_VERSION_POINT  17
+#define LIBEXSLT_VERSION_POINT2 0
 /**
  * LIBEXSLT_DOTTED_VERSION:
  *
  * the version string like "1.2.3"
  */
-#define LIBEXSLT_DOTTED_VERSION "1.1.28"
+#define LIBEXSLT_DOTTED_VERSION "0.8.17"
 
 /**
  * LIBEXSLT_VERSION:
@@ -39,7 +43,7 @@ extern "C" {
  *
  * extra version information, used to show a CVS compilation
  */
-#define	LIBEXSLT_VERSION_EXTRA ""
+#define	LIBEXSLT_VERSION_EXTRA "-GITv1.1.27-16-g9382efe"
 
 /**
  * WITH_CRYPTO:

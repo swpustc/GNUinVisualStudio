@@ -15,6 +15,10 @@
 extern "C" {
 #endif
 
+#define LIBXSLT_VERSION_MAJOR  1
+#define LIBXSLT_VERSION_MINOR  1
+#define LIBXSLT_VERSION_POINT  28
+#define LIBXSLT_VERSION_POINT2 0
 /**
  * LIBXSLT_DOTTED_VERSION:
  *
@@ -54,7 +58,7 @@ extern "C" {
 #define WITH_XSLT_DEBUG
 #endif
 
-#if 0
+#ifdef _DEBUG
 /**
  * DEBUG_MEMORY:
  *
@@ -120,7 +124,7 @@ extern "C" {
 #ifndef WITH_MODULES
 #define WITH_MODULES
 #endif
-#define LIBXSLT_DEFAULT_PLUGINS_PATH() "/usr/lib/libxslt-plugins"
+#define LIBXSLT_DEFAULT_PLUGINS_PATH() getenv("LIBXSLT_PLUGINS_PATH")
 #endif
 
 /**
@@ -130,7 +134,7 @@ extern "C" {
 #ifndef XSLT_LOCALE_XLOCALE
 #define XSLT_LOCALE_XLOCALE
 #endif
-#elif 0
+#elif 1
 #ifndef XSLT_LOCALE_WINAPI
 #define XSLT_LOCALE_WINAPI
 #endif
@@ -159,7 +163,16 @@ extern "C" {
  */
 #if !defined LIBXSLT_PUBLIC
 #if (defined(__CYGWIN__) || defined _MSC_VER) && !defined IN_LIBXSLT && !defined LIBXSLT_STATIC
-#define LIBXSLT_PUBLIC __declspec(dllimport)
+  #if defined(USING_GNU_DLL) || defined(USING_ALL_DLL)
+    #if !defined(USING_xslt_DLL)
+      #define USING_xslt_DLL
+    #endif
+  #endif
+  #if defined(USING_xslt_DLL)
+    #define LIBXSLT_PUBLIC __declspec(dllimport)
+  #else
+    #define LIBXSLT_PUBLIC
+  #endif
 #else
 #define LIBXSLT_PUBLIC
 #endif

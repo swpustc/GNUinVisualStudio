@@ -53,10 +53,19 @@
     #define XSLTPUBFUN __declspec(dllexport)
     #define XSLTPUBVAR __declspec(dllexport)
   #else
-    #define XSLTPUBFUN
-    #if !defined(LIBXSLT_STATIC)
+    #if defined(USING_GNU_DLL) || defined(USING_ALL_DLL)
+      #if !defined(USING_xslt_DLL)
+        #define USING_xslt_DLL
+      #endif
+    #endif
+    #if defined(LIBXSLT_STATIC)
+      #define XSLTPUBFUN
+      #define XSLTPUBVAR extern
+    #elif defined(USING_xslt_DLL)
+      #define XSLTPUBFUN __declspec(dllimport) extern
       #define XSLTPUBVAR __declspec(dllimport) extern
     #else
+      #define XSLTPUBFUN
       #define XSLTPUBVAR extern
     #endif
   #endif

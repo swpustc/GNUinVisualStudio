@@ -51,10 +51,19 @@
     #define EXSLTPUBFUN __declspec(dllexport)
     #define EXSLTPUBVAR __declspec(dllexport)
   #else
-    #define EXSLTPUBFUN
-    #if !defined(LIBEXSLT_STATIC)
+    #if defined(USING_GNU_DLL) || defined(USING_ALL_DLL)
+      #if !defined(USING_exslt_DLL)
+        #define USING_exslt_DLL
+      #endif
+    #endif
+    #if defined(LIBEXSLT_STATIC)
+      #define EXSLTPUBFUN
+      #define EXSLTPUBVAR extern
+    #elif defined(USING_exslt_DLL)
+      #define EXSLTPUBFUN __declspec(dllimport) extern
       #define EXSLTPUBVAR __declspec(dllimport) extern
     #else
+      #define EXSLTPUBFUN
       #define EXSLTPUBVAR extern
     #endif
   #endif
