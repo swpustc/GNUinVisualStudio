@@ -60,10 +60,19 @@
     #define XMLPUBFUN __declspec(dllexport)
     #define XMLPUBVAR __declspec(dllexport)
   #else
-    #define XMLPUBFUN
-    #if !defined(LIBXML_STATIC)
+    #if defined(USING_GNU_DLL) || defined(USING_ALL_DLL)
+      #if !defined(USING_xml2_DLL)
+        #define USING_xml2_DLL
+      #endif
+    #endif
+    #if defined(LIBXML_STATIC)
+      #define XMLPUBFUN
+      #define XMLPUBVAR extern
+    #elif defined(USING_xml2_DLL)
+      #define XMLPUBFUN __declspec(dllimport) extern
       #define XMLPUBVAR __declspec(dllimport) extern
     #else
+      #define XMLPUBFUN
       #define XMLPUBVAR extern
     #endif
   #endif

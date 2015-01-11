@@ -24,6 +24,14 @@ extern "C" {
 XMLPUBFUN void XMLCALL xmlCheckVersion(int version);
 #endif /* LIBXML2_COMPILING_MSCCDEF */
 
+#ifndef NOLIBTOOL
+#define NOLIBTOOL 1
+#endif
+
+#define LIBXML_VERSION_MAJOR  2
+#define LIBXML_VERSION_MINOR  9
+#define LIBXML_VERSION_POINT  2
+#define LIBXML_VERSION_POINT2 0
 /**
  * LIBXML_DOTTED_VERSION:
  *
@@ -388,7 +396,7 @@ XMLPUBFUN void XMLCALL xmlCheckVersion(int version);
  *
  * the string suffix used by dynamic modules (usually shared libraries)
  */
-#define LIBXML_MODULE_EXTENSION ".so" 
+#define LIBXML_MODULE_EXTENSION ".dll"
 #endif
 
 /**

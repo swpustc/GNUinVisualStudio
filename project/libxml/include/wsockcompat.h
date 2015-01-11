@@ -8,7 +8,7 @@
 #ifdef _WIN32_WCE
 #include <winsock.h>
 #else
-#undef HAVE_ERRNO_H
+// #undef HAVE_ERRNO_H
 #include <winsock2.h>
 
 /* the following is a workaround a problem for 'inline' keyword in said

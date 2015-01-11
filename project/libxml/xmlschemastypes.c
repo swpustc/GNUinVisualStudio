@@ -32,7 +32,7 @@
 #include <float.h>
 #endif
 
-#define DEBUG
+#define DEBUG 1
 
 #ifndef LIBXML_XPATH_ENABLED
 extern double xmlXPathNAN;
