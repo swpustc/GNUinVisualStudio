@@ -7,6 +7,7 @@ libgmpxx
 libcrypto++
 libpng
 libiconv
+libxml2
 libxmlrpc_util
 libxmlrpc_xmltok
 libxmlrpc_xmlparse
@@ -28,6 +29,7 @@ libgmpxx.m
 libcrypto++.m
 libpng.m
 libiconv.m
+libxml2.m
 libxmlrpc_util.m
 libxmlrpc_xmltok.m
 libxmlrpc_xmlparse.m
@@ -49,6 +51,7 @@ libgmpxx.64
 libcrypto++.64
 libpng.64
 libiconv.64
+libxml2.64
 libxmlrpc_util.64
 libxmlrpc_xmltok.64
 libxmlrpc_xmlparse.64
@@ -70,6 +73,7 @@ libgmpxx.m64
 libcrypto++.m64
 libpng.m64
 libiconv.m64
+libxml2.m64
 libxmlrpc_util.m64
 libxmlrpc_xmltok.m64
 libxmlrpc_xmlparse.m64
@@ -91,6 +95,7 @@ libgmpxx.debug
 libcrypto++.debug
 libpng.debug
 libiconv.debug
+libxml2.debug
 libxmlrpc_util.debug
 libxmlrpc_xmltok.debug
 libxmlrpc_xmlparse.debug
@@ -112,6 +117,7 @@ libgmpxx.m.debug
 libcrypto++.m.debug
 libpng.m.debug
 libiconv.m.debug
+libxml2.m.debug
 libxmlrpc_util.m.debug
 libxmlrpc_xmltok.m.debug
 libxmlrpc_xmlparse.m.debug
@@ -133,6 +139,7 @@ libgmpxx.debug64
 libcrypto++.debug64
 libpng.debug64
 libiconv.debug64
+libxml2.debug64
 libxmlrpc_util.debug64
 libxmlrpc_xmltok.debug64
 libxmlrpc_xmlparse.debug64
@@ -154,6 +161,7 @@ libgmpxx.m.debug64
 libcrypto++.m.debug64
 libpng.m.debug64
 libiconv.m.debug64
+libxml2.m.debug64
 libxmlrpc_util.m.debug64
 libxmlrpc_xmltok.m.debug64
 libxmlrpc_xmlparse.m.debug64
