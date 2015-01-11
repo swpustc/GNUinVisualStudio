@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <xml2Root>xml2</xml2Root>
+    <xml2Name>libxml2</xml2Name>
+    <xml2Dir>$(GNUprojectDir)libxml\</xml2Dir>
+    <xml2Include>$(xml2Dir)include\</xml2Include>
+    <xml2Version>20902</xml2Version>
+    <xml2CharacterSet>MultiByte</xml2CharacterSet>
+    <!--  Global environment settings. -->
+    <GNUSourcePath>$(xml2Dir);$(GNUSourcePath)</GNUSourcePath>
+    <GNUIncludePath>$(xml2Include);$(GNUIncludePath)</GNUIncludePath>
+  </PropertyGroup>
+</Project>
