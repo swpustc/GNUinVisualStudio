@@ -26,6 +26,10 @@ The Default Git Repository is **USTC** Repository.
 - libiconv ver.1.14
   - [Homepage](https://www.gnu.org/software/libiconv/)
 [Download](https://mirrors.ustc.edu.cn/gnu/libiconv/)
+- libxml2 ver.2.9.2
+  - [Homepage](http://xmlsoft.org/)
+[Sourcecode](https://git.gnome.org/browse/libxml2/)
+FTP:<ftp://xmlsoft.org/libxml2/>
 - libcppunit ver.(master606)
   - [Download](http://sourceforge.net/p/cppunit/code/)
 - libxmlrpc-c ver.1.39.00(master2640)
