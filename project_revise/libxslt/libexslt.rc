@@ -1,0 +1,39 @@
+/* Resources for libexslt.dll */
+
+#include <windows.h>
+#include "libexslt/exsltconfig.h"
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION    LIBEXSLT_VERSION_MAJOR,LIBEXSLT_VERSION_MINOR,LIBEXSLT_VERSION_POINT,LIBEXSLT_VERSION_POINT2
+ PRODUCTVERSION LIBEXSLT_VERSION_MAJOR,LIBEXSLT_VERSION_MINOR,LIBEXSLT_VERSION_POINT,LIBEXSLT_VERSION_POINT2
+ FILEFLAGSMASK 0x3fL /* VS_FFI_FILEFLAGSMASK */
+#ifdef _DEBUG
+ FILEFLAGS 0x1L  /* VS_FF_DEBUG */
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS VOS_NT_WINDOWS32
+ FILETYPE VFT_DLL
+ FILESUBTYPE 0x0L  /* VFT2_UNKNOWN */
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "04090000"  /* Lang = US English, Charset = ASCII */
+        BEGIN
+            VALUE "Comments", "For more information visit http://www.exslt.org/\0"
+            VALUE "CompanyName", "Free Software Foundation\0"
+            VALUE "FileDescription", "EXSLT is set of processor-portable extensions functions and some of Saxon's evaluate and expressions extensions.\0"
+            VALUE "FileVersion", LIBEXSLT_DOTTED_VERSION "\0"
+            VALUE "InternalName", "libexslt.dll\0"
+            VALUE "LegalCopyright", "Copyright (C) 2001-2002 Thomas Broyer, Charlie Bozeman and Daniel Veillard.  All Rights Reserved.\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "libexslt.dll\0"
+            VALUE "ProductName", "libexslt: a community initiative to provide extensions to XSLT.\0"
+            VALUE "ProductVersion", LIBEXSLT_DOTTED_VERSION "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0409, 0  /* US English, ASCII */
+    END
+END

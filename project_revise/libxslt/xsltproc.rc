@@ -1,0 +1,39 @@
+/* Resources for xsltproc.exe */
+
+#include <windows.h>
+#include "libxslt/xsltconfig.h"
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION    LIBXSLT_VERSION_MAJOR,LIBXSLT_VERSION_MINOR,LIBXSLT_VERSION_POINT,LIBXSLT_VERSION_POINT2
+ PRODUCTVERSION LIBXSLT_VERSION_MAJOR,LIBXSLT_VERSION_MINOR,LIBXSLT_VERSION_POINT,LIBXSLT_VERSION_POINT2
+ FILEFLAGSMASK 0x3fL /* VS_FFI_FILEFLAGSMASK */
+#ifdef _DEBUG
+ FILEFLAGS 0x1L  /* VS_FF_DEBUG */
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS VOS_NT_WINDOWS32
+ FILETYPE VFT_APP
+ FILESUBTYPE 0x0L  /* VFT2_UNKNOWN */
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "04090000"  /* Lang = US English, Charset = ASCII */
+        BEGIN
+            VALUE "Comments", "For more information visit http://xmlsoft.org/XSLT/xsltproc.html\0"
+            VALUE "CompanyName", "Free Software Foundation\0"
+            VALUE "FileDescription", "xsltproc is a command line tool for applying XSLT stylesheets to XML documents.  It is part of libxslt, the XSLT C library for GNOME.\0"
+            VALUE "FileVersion", LIBXSLT_DOTTED_VERSION "\0"
+            VALUE "InternalName", "xsltproc.exe\0"
+            VALUE "LegalCopyright", "Copyright (C) 2001-2002 Daniel Veillard.  All Rights Reserved.\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "xsltproc.exe\0"
+            VALUE "ProductName", "xsltproc: The command line XSLT processor.\0"
+            VALUE "ProductVersion", LIBXSLT_DOTTED_VERSION "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0409, 0  /* US English, ASCII */
+    END
+END
