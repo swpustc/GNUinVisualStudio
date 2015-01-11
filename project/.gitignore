@@ -2,3 +2,5 @@
 /libpng/pnglibconf.h
 /libsigc++/include/sigc++config.h
 /libxml/include/config.h
+/libxslt/config.h
+/libxslt/win32config.h
