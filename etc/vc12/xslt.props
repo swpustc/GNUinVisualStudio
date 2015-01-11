@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <xsltRoot>xslt</xsltRoot>
+    <xsltName>libxslt</xsltName>
+    <exsltName>libexslt</exsltName>
+    <xsltprocName>xsltproc</xsltprocName>
+    <xsltDir>$(GNUprojectDir)libxslt\</xsltDir>
+    <xsltInclude>$(xsltDir)</xsltInclude>
+    <xsltVersion>10128</xsltVersion>
+    <exsltVersion>00817</exsltVersion>
+    <xsltprocVersion>$(xsltVersion)</xsltprocVersion>
+    <xsltCharacterSet>MultiByte</xsltCharacterSet>
+    <!--  Global environment settings. -->
+    <GNUSourcePath>$(xsltDir);$(GNUSourcePath)</GNUSourcePath>
+    <GNUIncludePath>$(xsltInclude);$(GNUIncludePath)</GNUIncludePath>
+  </PropertyGroup>
+</Project>
