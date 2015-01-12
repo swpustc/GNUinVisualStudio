@@ -9,6 +9,7 @@ libpng
 xerces-c
 libiconv
 libxml2
+libxslt
 libxmlrpc_util
 libxmlrpc_xmltok
 libxmlrpc_xmlparse
@@ -32,6 +33,7 @@ libpng.m
 xerces-c.m
 libiconv.m
 libxml2.m
+libxslt.m
 libxmlrpc_util.m
 libxmlrpc_xmltok.m
 libxmlrpc_xmlparse.m
@@ -55,6 +57,7 @@ libpng.64
 xerces-c.64
 libiconv.64
 libxml2.64
+libxslt.64
 libxmlrpc_util.64
 libxmlrpc_xmltok.64
 libxmlrpc_xmlparse.64
@@ -78,6 +81,7 @@ libpng.m64
 xerces-c.m64
 libiconv.m64
 libxml2.m64
+libxslt.m64
 libxmlrpc_util.m64
 libxmlrpc_xmltok.m64
 libxmlrpc_xmlparse.m64
@@ -101,6 +105,7 @@ libpng.debug
 xerces-c.debug
 libiconv.debug
 libxml2.debug
+libxslt.debug
 libxmlrpc_util.debug
 libxmlrpc_xmltok.debug
 libxmlrpc_xmlparse.debug
@@ -124,6 +129,7 @@ libpng.m.debug
 xerces-c.m.debug
 libiconv.m.debug
 libxml2.m.debug
+libxslt.m.debug
 libxmlrpc_util.m.debug
 libxmlrpc_xmltok.m.debug
 libxmlrpc_xmlparse.m.debug
@@ -147,6 +153,7 @@ libpng.debug64
 xerces-c.debug64
 libiconv.debug64
 libxml2.debug64
+libxslt.debug64
 libxmlrpc_util.debug64
 libxmlrpc_xmltok.debug64
 libxmlrpc_xmlparse.debug64
@@ -170,6 +177,7 @@ libpng.m.debug64
 xerces-c.m.debug64
 libiconv.m.debug64
 libxml2.m.debug64
+libxslt.m.debug64
 libxmlrpc_util.m.debug64
 libxmlrpc_xmltok.m.debug64
 libxmlrpc_xmlparse.m.debug64
