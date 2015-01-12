@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(GNUDir)gnu_vc10.props" />
+  <PropertyGroup Label="Globals">
+    <GNUProjectRoot>$(xercesRoot)</GNUProjectRoot>
+    <GNUProjectName>$(xercesName)</GNUProjectName>
+    <GNUProjectDir>$(xercesDir)</GNUProjectDir>
+    <GNUProjectInclude>$(xercesInclude)</GNUProjectInclude>
+    <GNUProjectVersion>$(xercesVersion)</GNUProjectVersion>
+    <GNUCharacterSet>$(xercesCharacterSet)</GNUCharacterSet>
+    <GNUApplication>false</GNUApplication>
+    <GNUConsoleApplication>true</GNUConsoleApplication>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\DOMException.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\DOMLSException.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\DOMRangeException.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\DOMXPathException.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMAttrImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMAttrMapImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMAttrNSImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMCDATASectionImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMCharacterDataImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMChildNode.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMCommentImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMConfigurationImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMDeepNodeListImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMDocumentFragmentImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMDocumentImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMDocumentTypeImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMElementImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMElementNSImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMEntityImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMEntityReferenceImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMErrorImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMImplementationImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMImplementationListImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMImplementationRegistry.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMLocatorImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMLSInputImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMLSOutputImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMLSSerializerImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMNamedNodeMapImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMNodeIDMap.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMNodeImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMNodeIteratorImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMNodeListImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMNodeVector.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMNormalizer.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMNotationImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMParentNode.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMProcessingInstructionImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMRangeImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMStringListImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMStringPool.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMTextImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMTreeWalkerImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMTypeInfoImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMXPathExpressionImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMXPathNSResolverImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\DOMXPathResultImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\dom\impl\XSDElementNSImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\BinOutputStream.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\LocalFileFormatTarget.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\LocalFileInputSource.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\MemBufFormatTarget.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\MemBufInputSource.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\psvi\PSVIAttribute.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\psvi\PSVIAttributeList.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\psvi\PSVIElement.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\psvi\PSVIItem.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\psvi\XSAnnotation.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\psvi\XSAttributeDeclaration.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\psvi\XSAttributeGroupDefinition.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\psvi\XSAttributeUse.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\psvi\XSComplexTypeDefinition.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\psvi\XSElementDeclaration.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\psvi\XSFacet.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\psvi\XSIDCDefinition.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\psvi\XSModel.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\psvi\XSModelGroup.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\psvi\XSModelGroupDefinition.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\psvi\XSMultiValueFacet.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\psvi\XSNamespaceItem.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\psvi\XSNotationDeclaration.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\psvi\XSObject.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\psvi\XSParticle.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\psvi\XSSimpleTypeDefinition.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\psvi\XSTypeDefinition.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\psvi\XSValue.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\psvi\XSWildcard.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\StdInInputSource.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\StdOutFormatTarget.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\URLInputSource.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\Wrapper4DOMLSInput.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\Wrapper4InputSource.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\XMLAttDef.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\XMLAttDefList.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\XMLAttr.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\XMLBuffer.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\XMLBufferMgr.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\XMLContentModel.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\XMLDTDDescription.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\XMLElementDecl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\XMLEntityDecl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\XMLFormatter.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\XMLGrammarDescription.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\XMLGrammarPoolImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\XMLNotationDecl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\XMLRecognizer.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\XMLRefInfo.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\XMLSchemaDescription.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\framework\XMLValidator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\internal\BinFileOutputStream.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\internal\BinMemOutputStream.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\internal\DGXMLScanner.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\internal\ElemStack.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\internal\IGXMLScanner.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\internal\IGXMLScanner2.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\internal\MemoryManagerImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\internal\ReaderMgr.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\internal\SGXMLScanner.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\internal\ValidationContextImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\internal\VecAttributesImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\internal\VecAttrListImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\internal\WFXMLScanner.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\internal\XMLReader.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\internal\XMLScanner.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\internal\XMLScannerResolver.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\internal\XProtoType.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\internal\XSAXMLScanner.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\internal\XSerializeEngine.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\internal\XSObjectFactory.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\internal\XTemplateSerializer.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\parsers\AbstractDOMParser.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\parsers\DOMLSParserImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\parsers\SAX2XMLFilterImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\parsers\SAX2XMLReaderImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\parsers\SAXParser.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\parsers\XercesDOMParser.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\sax2\sax2Dummy.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\sax\Dummy.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\sax\InputSource.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\sax\SAXException.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\sax\SAXParseException.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\Base64.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\BinFileInputStream.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\BinInputStream.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\BinMemInputStream.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\BitSet.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\DefaultPanicHandler.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\EncodingValidator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\FileManagers\WindowsFileMgr.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\HeaderDummy.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\HexBin.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\KVStringPair.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\MsgLoaders\InMemory\InMemMsgLoader.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='DLL'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\MsgLoaders\Win32\Win32MsgLoader.cpp">
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='Library'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\Mutexes.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\MutexManagers\WindowsMutexMgr.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\NetAccessors\BinHTTPInputStreamCommon.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\NetAccessors\WinSock\BinHTTPURLInputStream.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\NetAccessors\WinSock\WinSockNetAccessor.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\PanicHandler.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\PlatformUtils.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\PSVIUni.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\QName.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\regx\ASCIIRangeFactory.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\regx\BlockRangeFactory.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\regx\BMPattern.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\regx\CharToken.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\regx\ClosureToken.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\regx\ConcatToken.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\regx\Match.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\regx\Op.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\regx\OpFactory.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\regx\ParenToken.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\regx\ParserForXMLSchema.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\regx\RangeFactory.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\regx\RangeToken.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\regx\RangeTokenMap.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\regx\RegularExpression.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\regx\RegxParser.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\regx\RegxUtil.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\regx\StringToken.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\regx\Token.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\regx\TokenFactory.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\regx\UnicodeRangeFactory.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\regx\UnionToken.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\regx\XMLRangeFactory.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\regx\XMLUniCharacter.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\StringPool.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\SynchronizedStringPool.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\Transcoders\Win32\Win32TransService.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\TransService.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\XMemory.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\XML256TableTranscoder.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\XML88591Transcoder.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\XMLAbstractDoubleFloat.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\XMLASCIITranscoder.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\XMLBigDecimal.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\XMLBigInteger.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\XMLChar.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\XMLChTranscoder.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\XMLDateTime.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\XMLDouble.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\XMLEBCDICTranscoder.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\XMLException.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\XMLFloat.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\XMLIBM1047Transcoder.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\XMLIBM1140Transcoder.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\XMLInitializer.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\XMLMsgLoader.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\XMLNumber.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\XMLString.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\XMLStringTokenizer.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\XMLUCS4Transcoder.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\XMLUni.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\XMLUri.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\XMLURL.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\XMLUTF16Transcoder.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\XMLUTF8Transcoder.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\util\XMLWin1252Transcoder.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\common\AllContentModel.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\common\CMAny.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\common\CMBinaryOp.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\common\CMUnaryOp.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\common\ContentLeafNameTypeVector.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\common\ContentSpecNode.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\common\DFAContentModel.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\common\Grammar.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\common\GrammarResolver.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\common\MixedContentModel.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\common\SimpleContentModel.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\datatype\AbstractNumericFacetValidator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\datatype\AbstractNumericValidator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\datatype\AbstractStringValidator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\datatype\AnySimpleTypeDatatypeValidator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\datatype\AnyURIDatatypeValidator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\datatype\Base64BinaryDatatypeValidator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\datatype\BooleanDatatypeValidator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\datatype\DatatypeValidator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\datatype\DatatypeValidatorFactory.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\datatype\DateDatatypeValidator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\datatype\DateTimeDatatypeValidator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\datatype\DateTimeValidator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\datatype\DayDatatypeValidator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\datatype\DecimalDatatypeValidator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\datatype\DoubleDatatypeValidator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\datatype\DurationDatatypeValidator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\datatype\ENTITYDatatypeValidator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\datatype\FloatDatatypeValidator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\datatype\HexBinaryDatatypeValidator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\datatype\IDDatatypeValidator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\datatype\IDREFDatatypeValidator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\datatype\ListDatatypeValidator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\datatype\MonthDatatypeValidator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\datatype\MonthDayDatatypeValidator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\datatype\NameDatatypeValidator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\datatype\NCNameDatatypeValidator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\datatype\NOTATIONDatatypeValidator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\datatype\QNameDatatypeValidator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\datatype\StringDatatypeValidator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\datatype\TimeDatatypeValidator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\datatype\UnionDatatypeValidator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\datatype\XMLCanRepGroup.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\datatype\YearDatatypeValidator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\datatype\YearMonthDatatypeValidator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\DTD\DTDAttDef.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\DTD\DTDAttDefList.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\DTD\DTDElementDecl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\DTD\DTDEntityDecl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\DTD\DTDGrammar.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\DTD\DTDScanner.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\DTD\DTDValidator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\DTD\XMLDTDDescriptionImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\schema\ComplexTypeInfo.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\schema\GeneralAttributeCheck.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\schema\identity\FieldActivator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\schema\identity\FieldValueMap.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\schema\identity\IC_Field.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\schema\identity\IC_Key.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\schema\identity\IC_KeyRef.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\schema\identity\IC_Selector.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\schema\identity\IC_Unique.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\schema\identity\IdentityConstraint.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\schema\identity\IdentityConstraintHandler.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\schema\identity\ValueStore.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\schema\identity\ValueStoreCache.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\schema\identity\XercesXPath.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\schema\identity\XPathMatcher.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\schema\identity\XPathMatcherStack.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\schema\identity\XPathSymbols.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\schema\NamespaceScope.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\schema\SchemaAttDef.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\schema\SchemaAttDefList.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\schema\SchemaElementDecl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\schema\SchemaGrammar.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\schema\SchemaInfo.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\schema\SchemaSymbols.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\schema\SchemaValidator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\schema\SubstitutionGroupComparator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\schema\TraverseSchema.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\schema\XercesAttGroupInfo.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\schema\XercesElementWildcard.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\schema\XercesGroupInfo.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\schema\XMLSchemaDescriptionImpl.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\schema\XSDDOMParser.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\schema\XSDErrorReporter.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\schema\XSDLocator.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\validators\schema\XUtil.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\xinclude\XIncludeDOMDocumentProcessor.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\xinclude\XIncludeLocation.cpp" />
+    <ClCompile Include="$(GNUProjectDir)src\xercesc\xinclude\XIncludeUtils.cpp" />
+    <ResourceCompile Include="$(GNUProjectDir)src\xercesc\util\MsgLoaders\Win32\Version.rc">
+      <PreprocessorDefinitions>_INC_STRING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExcludedFromBuild Condition="'$(GNUConfigurationType)'=='Library'">true</ExcludedFromBuild>
+    </ResourceCompile>
+  </ItemGroup>
+  <Import Project="$(GNUetcglobalDir)setting.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AAAA2007-8001-AAAA-0123-456789ABCDEF}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>$(GNUProjectName)</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug DLL libcmt|Win32">
+      <Configuration>Debug DLL libcmt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug DLL libcmt|x64">
+      <Configuration>Debug DLL libcmt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug DLL libcrt|Win32">
+      <Configuration>Debug DLL libcrt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug DLL libcrt|x64">
+      <Configuration>Debug DLL libcrt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Library libcmt|Win32">
+      <Configuration>Debug Library libcmt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Library libcmt|x64">
+      <Configuration>Debug Library libcmt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Library libcrt|Win32">
+      <Configuration>Debug Library libcrt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Library libcrt|x64">
+      <Configuration>Debug Library libcrt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release DLL libcmt|Win32">
+      <Configuration>Release DLL libcmt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release DLL libcmt|x64">
+      <Configuration>Release DLL libcmt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release DLL libcrt|Win32">
+      <Configuration>Release DLL libcrt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release DLL libcrt|x64">
+      <Configuration>Release DLL libcrt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Library libcrt|Win32">
+      <Configuration>Release Library libcrt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Library libcrt|x64">
+      <Configuration>Release Library libcrt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Library libcmt|Win32">
+      <Configuration>Release Library libcmt</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Library libcmt|x64">
+      <Configuration>Release Library libcmt</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(GNUetcglobalDir)default.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <Import Project="$(GNUetcglobalDir)user.props" />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PreprocessorDefinitions>XERCES_BUILDING_LIBRARY;XERCES_USE_TRANSCODER_WINDOWS;XERCES_USE_NETACCESSOR_WINSOCK;XERCES_USE_FILEMGR_WINDOWS;XERCES_USE_MUTEXMGR_WINDOWS;XERCES_PATH_DELIMITER_BACKSLASH;HAVE_WCHAR_H;HAVE_WCTYPE_H;HAVE_STRICMP;HAVE_STRNICMP;HAVE_LIMITS_H;HAVE_SYS_TIMEB_H;HAVE_FTIME;HAVE_WCSUPR;HAVE_WCSLWR;HAVE_WCSICMP;HAVE_WCSNICMP;HAVE_TOWUPPER;HAVE_TOWLOWER;HAVE_MBRLEN;HAVE_WCSRTOMBS;HAVE_MBSRTOWCS;HAVE_SYS_TIMEB_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4355;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <PreBuildEvent>
+      <Command>$(GNUPreBuildCommand)
+$(GNUcopybash) "$(GNUProjectDir)src\xercesc\util\Xerces_autoconf_config.msvc.hpp" "$(GNUProjectDir)src\xercesc\util\Xerces_autoconf_config.hpp"
+</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(GNUConfigurationType)'=='Library'">
+    <ClCompile>
+      <PreprocessorDefinitions>XERCES_STATIC_LIBRARY;XERCES_USE_MSGLOADER_INMEMORY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(GNUConfigurationType)'=='DLL'">
+    <ClCompile>
+      <PreprocessorDefinitions>XERCES_USE_WIN32_MSGLOADER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>
