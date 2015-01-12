@@ -47,6 +47,9 @@ FTP:<ftp://xmlsoft.org/libxslt/>
 [Download](http://www.cryptopp.com/#download)
 - Blitz++ ver.0.10
   - [Download](http://sourceforge.net/projects/blitz/)
+- Xerces-C++ ver.3.1.1
+  - [Homepage](http://xerces.apache.org/xerces-c/)
+[Download](http://xerces.apache.org/xerces-c/download.cgi)
 - s11n ver.1.3.1
   - [Homepage](http://s11n.net/)
 [Download](http://s11n.net/download/#s11n)
