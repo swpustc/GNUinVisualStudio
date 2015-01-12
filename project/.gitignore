@@ -4,3 +4,4 @@
 /libxml/include/config.h
 /libxslt/config.h
 /libxslt/win32config.h
+/xerces-c/src/xercesc/util/Xerces_autoconf_config.hpp
