@@ -215,3 +215,11 @@ cryptest.debug          0x00400000     ;Increased base For BaseAddress
 cryptest.m.debug        0x00400000     ;Increased base By Alignment(0x200000)
 cryptest.debug64        0x004C00400000 ;Increased base For BaseAddress
 cryptest.m.debug64      0x004C00400000 ;Increased base By Alignment(0x200000)
+xsltproc                0x00400000     ;Increased base For BaseAddress
+xsltproc.m              0x00400000     ;Increased base By Alignment(0x200000)
+xsltproc.64             0x004C00400000 ;Increased base For BaseAddress
+xsltproc.m64            0x004C00400000 ;Increased base By Alignment(0x200000)
+xsltproc.debug          0x00400000     ;Increased base For BaseAddress
+xsltproc.m.debug        0x00400000     ;Increased base By Alignment(0x200000)
+xsltproc.debug64        0x004C00400000 ;Increased base For BaseAddress
+xsltproc.m.debug64      0x004C00400000 ;Increased base By Alignment(0x200000)
