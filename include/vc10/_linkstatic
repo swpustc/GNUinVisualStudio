@@ -24,15 +24,15 @@
 #else               /* !DEBUG */
 #  ifdef _M_X64     /* _M_X64 */
 #    ifdef _DLL     /* libcrt */
-#      pragma comment(lib, _CRT_STRINGIZE(__GNU_PROJECT_NAME__) ".v100.static.libcrt64.lib")
+#      pragma comment(lib, _CRT_STRINGIZE(__GNU_PROJECT_NAME__) ".v100.static.libcrt.release64.lib")
 #    else           /* libcmt */
-#      pragma comment(lib, _CRT_STRINGIZE(__GNU_PROJECT_NAME__) ".v100.static.libcmt64.lib")
+#      pragma comment(lib, _CRT_STRINGIZE(__GNU_PROJECT_NAME__) ".v100.static.libcmt.release64.lib")
 #    endif
 #  else             /* _M_X86 */
 #    ifdef _DLL     /* libcrt */
-#      pragma comment(lib, _CRT_STRINGIZE(__GNU_PROJECT_NAME__) ".v100.static.libcrt.lib")
+#      pragma comment(lib, _CRT_STRINGIZE(__GNU_PROJECT_NAME__) ".v100.static.libcrt.release.lib")
 #    else           /* libcmt */
-#      pragma comment(lib, _CRT_STRINGIZE(__GNU_PROJECT_NAME__) ".v100.static.libcmt.lib")
+#      pragma comment(lib, _CRT_STRINGIZE(__GNU_PROJECT_NAME__) ".v100.static.libcmt.release.lib")
 #    endif
 #  endif
 #endif
