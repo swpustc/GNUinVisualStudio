@@ -107,6 +107,7 @@ echo;
 echo Add and commit...
 git add --all :/ 2>nul
 git rm -f keepNameExt
+git rm -f xcopyExclude
 git rm --cached preprocess.bat
 git commit -qsm "auto commit. process project directory(%DATE:~0,10%)" 2>nul
 echo;
