@@ -15,51 +15,51 @@ The Default Git Repository is **USTC** Repository.
 
 ## GNU Source
 ### Now this project include the following packages
-- zlib ver.1.2.8
+- zlib ***ver1.2.8***
   - [Homepage](http://www.zlib.net/)
-- libsigc++ ver.2.4.0
+- libsigc++ ***ver2.4.0***
   - [Sourcecode](https://git.gnome.org/browse/libsigc++2/)
 [Download](https://mirrors.ustc.edu.cn/gnome/sources/libsigc++/)
-- libpng ver.1.6.16
+- libpng ***ver1.6.16***
   - [Homepage](http://www.libpng.org/pub/png/libpng.html)
 [Sourcecode](http://sourceforge.net/p/libpng/code/ci/master/tree/)
-- libiconv ver.1.14
+- libiconv ***ver1.14***
   - [Homepage](https://www.gnu.org/software/libiconv/)
 [Download](https://mirrors.ustc.edu.cn/gnu/libiconv/)
-- libxml2 ver.2.9.2
+- libxml2 ***ver2.9.2***
   - [Homepage](http://xmlsoft.org/)
 [Sourcecode](https://git.gnome.org/browse/libxml2/)
 FTP:<ftp://xmlsoft.org/libxml2/>
-- libxslt ver.1.1.28
+- libxslt ***ver1.1.28***
   - [Homepage](http://xmlsoft.org/XSLT.html)
 [Sourcecode](https://git.gnome.org/browse/libxslt/)
 FTP:<ftp://xmlsoft.org/libxslt/>
-- libcppunit ver.(master606)
+- libcppunit ***ver (master606)***
   - [Download](http://sourceforge.net/p/cppunit/code/)
-- libxmlrpc-c ver.1.39.00(master2640)
+- libxmlrpc-c ***ver1.39.00 (master2640)***
   - [Homepage](http://xmlrpc.scripting.com/default.html)
 [Sourcecode](http://sourceforge.net/p/xmlrpc-c/code/)
-- libgmp ver.6.0.0a
+- libgmp ***ver6.0.0a***
   - [Homepage](https://gmplib.org/)
 [Download](https://mirrors.ustc.edu.cn/gnu/gmp/)
-- libcrypto++ ver.5.6.2
+- libcrypto++ ***ver5.6.2***
   - [Homepage](http://www.cryptopp.com/)
 [Download](http://www.cryptopp.com/#download)
-- Blitz++ ver.0.10
+- Blitz++ ***ver0.10***
   - [Download](http://sourceforge.net/projects/blitz/)
-- Xerces-C++ ver.3.1.1
+- Xerces-C++ ***ver3.1.1***
   - [Homepage](http://xerces.apache.org/xerces-c/)
 [Download](http://xerces.apache.org/xerces-c/download.cgi)
-- s11n ver.1.3.1
+- s11n ***ver1.3.1***
   - [Homepage](http://s11n.net/)
 [Download](http://s11n.net/download/#s11n)
 
-
-- dumpImageSize ver.1.1.9
+### These is local projects below
+- dumpImageSize ***ver1.1.9***
   - [Sourcecode](project/.dumpImageSize)
-- libhook ver.0.0.1(NOT released)
+- libhook ***ver0.0.1(NOT released)***
   - [Sourcecode](project/.hook)
-- librmld ver.1.0.2
+- librmld ***ver1.0.2***
   - [Sourcecode](project/.rmld)
 
 
