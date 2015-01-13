@@ -12,8 +12,8 @@
     <GNUDLLNameSuffix_release_crt></GNUDLLNameSuffix_release_crt>
     <GNULibNameSuffix_debug_cmt>$(GNUPlatformToolset).static.libcmt.debug</GNULibNameSuffix_debug_cmt>
     <GNULibNameSuffix_debug_crt>$(GNUPlatformToolset).static.libcrt.debug</GNULibNameSuffix_debug_crt>
-    <GNULibNameSuffix_release_cmt>$(GNUPlatformToolset).static.libcmt</GNULibNameSuffix_release_cmt>
-    <GNULibNameSuffix_release_crt>$(GNUPlatformToolset).static.libcrt</GNULibNameSuffix_release_crt>
+    <GNULibNameSuffix_release_cmt>$(GNUPlatformToolset).static.libcmt.release</GNULibNameSuffix_release_cmt>
+    <GNULibNameSuffix_release_crt>$(GNUPlatformToolset).static.libcrt.release</GNULibNameSuffix_release_crt>
     <GNUPlatformNameSuffix_Win32></GNUPlatformNameSuffix_Win32>
     <GNUPlatformNameSuffix_x64>64</GNUPlatformNameSuffix_x64>
     <GNUPlatformNameSuffix_ARM>.arm</GNUPlatformNameSuffix_ARM>
