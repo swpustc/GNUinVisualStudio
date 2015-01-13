@@ -28,7 +28,7 @@ call "%COPY_BAT%" remove_ifexist "%SLN_DIR%*.opensdf"
 call "%COPY_BAT%" remove_ifexist "%SLN_DIR%*.sdf"
 call "%COPY_BAT%" remove_ifexist "%SLN_DIR%*.suo"
 call "%COPY_BAT%" remove_ifexist "%SLN_DIR%*.vcxproj.user"
-for /f "delims=" %%i in ('dir /ad /b "%SLN_DIR%"') do call "%COPY_BAT%" remove_ifexist "%SLN_DIR%%%~i\*.vcxproj.user"
+for /f "delims=" %%i in ('dir /ad /b "%SLN_DIR%"') do if /i not "%GNU_SLNDIR%" == "vc10" call "%COPY_BAT%" remove_ifexist "%SLN_DIR%%%~i\*.vcxproj.user"
 goto :eof
 
 :error
