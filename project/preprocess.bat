@@ -23,6 +23,7 @@ git branch -f projects-protected projects
 git checkout -fq projects && git reset --hard -q sources
 git reset -q projects-protected
 git branch -D projects-protected
+call ..\tools\merge_sources.sh
 echo;
 
 echo Preprocess blitz...
@@ -109,7 +110,7 @@ git add --all :/ 2>nul
 git rm -f keepNameExt
 git rm -f xcopyExclude
 git rm --cached preprocess.bat
-git commit -qsm "auto commit. process project directory(%DATE:~0,10%)" 2>nul
+git commit -qsm "auto merge commit. process project directory(%DATE:~0,10%)" 2>nul
 echo;
 
 echo Done.
