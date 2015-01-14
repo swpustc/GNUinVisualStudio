@@ -110,6 +110,7 @@ git add --all :/ 2>nul
 git rm -f keepNameExt
 git rm -f xcopyExclude
 git rm --cached preprocess.bat
+git rm -f ..\tools\merge_sources.sh
 git commit -qsm "auto merge commit. process project directory(%DATE:~0,10%)" 2>nul
 echo;
 
