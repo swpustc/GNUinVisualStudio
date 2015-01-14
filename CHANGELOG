@@ -1,3 +1,6 @@
+v1.0.0rc04
+  - Fix pre-process script branch merge policy
+
 v1.0.0rc03
   - Change batch filemode to 0755
   - fix preprocess script and remove xcopyExclude file in master branch
