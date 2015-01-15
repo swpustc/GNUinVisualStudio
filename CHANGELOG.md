@@ -1,4 +1,6 @@
 ## v1.0.0beta01
+  - Add TODO and BUG
+  - Using markdown document format
 
 ## v1.0.0
   - No changes
