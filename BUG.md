@@ -1,0 +1,1 @@
+  - *1.* <stringprintf.h> can not work with MFC
