@@ -1,2 +1,2 @@
-  - Release libhook
-  - Upgrade libxmlrpc
+- Release libhook
+- Upgrade libxmlrpc
