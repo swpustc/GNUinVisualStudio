@@ -69,7 +69,7 @@ The Default Git Repository is **USTC** Repository.
 
 ### Install and Build
 1. Run `install.bat` to write **GNUDir** in system environment
-  variables.</br>
+  variables.<br />
   ```
   cmd '/c ' install.bat [cur|all]
   ```
@@ -78,7 +78,7 @@ The Default Git Repository is **USTC** Repository.
   need to *REBOOT* your computer otherwise this value maybe unavailabled
   in VisualStudio and Command Line.
 
-1. Run `build.bat` script.</br>
+1. Run `build.bat` script.<br />
   ```
   cmd '/c ' build.bat [vc10|vc10.0|2010|vs2010] [vc11|vc11.0|2012|vs2012] [vc12|vc12.0|2013|vs2013] [all|c[r|m]t[r|d][d|l][32|64]] [sign|signture]
   ```
@@ -86,7 +86,7 @@ The Default Git Repository is **USTC** Repository.
   Sample: ```cmd '/c ' build.bat vc12 crtd(debug)l(static library)32(platform)```
 
 1. Import attribute table file [[vs2010](gnu_vc10.props)|[vs2012](gnu_vc11.props)|
-  [vs2013](gnu_vc12.props)] to your project (.vcxproj file) like this:</br>
+  [vs2013](gnu_vc12.props)] to your project (.vcxproj file) like this:<br />
   ```
   <Import Project="$(GNUDir)gnu_vc10.props" />
   ```
@@ -95,15 +95,15 @@ The Default Git Repository is **USTC** Repository.
 
 1. Import env file [[vs2010](etc/vc10/global/env.props)|[vs2012](etc/vc11/global/env.props)|
   [vs2013](etc/vc12/global/env.props)] to your project .vcxproj
-  file.  You should do like this:</br>
+  file.  You should do like this:<br />
   ```
   <Import Project="$(GNUetcglobalDir)env.props" />
   ```
 
   File `env.props` is the environment setting for GNU projects.  When you
   import this props, you can use `#include <zlib.h>` in your code to
-  include GNU project.</br>
-  This statement must be after:</br>
+  include GNU project.<br />
+  This statement must be after:<br />
   ```
   <PropertyGroup Label="UserMacros" />
   ```
@@ -111,53 +111,51 @@ The Default Git Repository is **USTC** Repository.
 
 ### Build options
 
-1. **GNUBuildOneDLL**: *true* or *false*</br>
+1. **GNUBuildOneDLL**: *true* or *false*<br />
   Generation all GNU and local in one dll.  If you want to use all
   GNU or LOCAL projects in ONE DLL, please set $(**GNUBuildOneDLL**) to
   true in `gnu_vcxx.props` file, and rebuild all GNU and LOCAL projects.
 
-1. **GNUGenerateBrowseInformation**: *true* or *false*</br>
+1. **GNUGenerateBrowseInformation**: *true* or *false*<br />
   When you build this project, it will output .bsc files in `bsc`
   directory or the path you set in `gnu_vcxx.props`.
 
-1. **GNUGenerateDebugInformation**: *true* or *false*</br>
+1. **GNUGenerateDebugInformation**: *true* or *false*<br />
   When you build this project, it will output .pdb and .idb files
   in **pdb** directory or the path you set in gnu_vcxx.props.
 
-1. **GNUGeneratePublicSymbolDebugInformation**: *true* or *false*</br>
+1. **GNUGeneratePublicSymbolDebugInformation**: *true* or *false*<br />
   When you build this project, it will generation another public
   symbol debug information files in `pdb_pub` directory or the path
   you set in `gnu_vcxx.props`.
 .
-1. **GNUGenerateMapFile**: *true* or *false*</br>
+1. **GNUGenerateMapFile**: *true* or *false*<br />
   When you build this project, it will output .map files in `map`
   directory or the path you set in `gnu_vcxx.props`.
 
-1. **GNUHardLinkInsteadofCopyExe**: *true* or *false*</br>
-  **GNUHardLinkInsteadofCopyDll**: *true* or *false*</br>
-  **GNUHardLinkInsteadofCopyLib**: *true* or *false*</br>
+1. **GNUHardLinkInsteadofCopyExe**: *true* or *false*<br />
+  **GNUHardLinkInsteadofCopyDll**: *true* or *false*<br />
+  **GNUHardLinkInsteadofCopyLib**: *true* or *false*<br />
   When you build this project, it will make a hardlink of these
   generation files to `bin`, `dll` and `lib` directory or the
   path you set in `gnu_vcxx.props`.
 
-1. **addressTable.txt**: *BaseAddress* setting file</br>
+1. **addressTable.txt**: *BaseAddress* setting file<br />
   When you build this project, this file [[vs2010](etc/vc10/addressTable.txt)|
   [vs2012](etc/vc11/addressTable.txt)|[vs2013](etc/vc12/addressTable.txt)]
   will automatic generation.  Then you can edit it and rebuild the
-  projects to overriding the default location for exe or dll file.</br>
+  projects to overriding the default location for exe or dll file.<br />
   For more information, see
   [MSDN](http://msdn.microsoft.com/en-us/library/f7f5138s.aspx).
 
-**Note:** If you change the default path setting in gnu_vcxx.props,
-be careful to modify these values in batch files.
+  **Note:** If you change the default path setting in `gnu_vcxx.props`,
+  be careful to modify these values in batch files.
 
-
-### Link options
-1. Macro **`USING_GNU_DLL`**</br>
-  Macro **`USING_ALL_DLL`**</br>
+1. Macro **`USING_GNU_DLL`**<br />
+  Macro **`USING_ALL_DLL`**<br />
   If you want to use GNU projects as DLLs, defined `USING_GNU_DLL`,
   or you can defined `USING_ALL_DLL` to use GNU and LOCAL projects as
-  DLLs.</br>
+  DLLs.<br />
   For more information, see linker header file [sample](include/linkzlib.h).
 
 ### BaseAddress Setting
@@ -169,11 +167,11 @@ file for dll or exe files which is `etc/vcxx/addressTable.txt`
 you build this projects again, this project will fix the BaseAddress
 with the right settings.
 
-1. `;Increased base For BaseAddress`</br>
+1. `;Increased base For BaseAddress`<br />
   This comment means one program which you want to keep it's BaseAddress
   unchanged.
 
-1. `;Increased base By Alignment(size)`</br>
+1. `;Increased base By Alignment(size)`<br />
   This comment means BaseAddress will automatic increase by send alignment size.
 
   Otherwise, the linker will automatic increase ImageSize according
@@ -186,7 +184,7 @@ Run `cleat.bat` to clean the workspace, or you really want to clean all generati
 files, you should run `clean.bat dist-clean`, it will removes the intermediate files
 at the same time, such as addressTable file [[vs2010](etc/vc10/addressTable.txt)|
 [vs2012](etc/vc11/addressTable.txt)|[vs2013](etc/vc12/addressTable.txt)], and a
-file list defined [here](project/.dist_clean) (Compile-time generated files).</br>
+file list defined [here](project/.dist_clean) (Compile-time generated files).<br />
 ```
-cmd '/c ' clean.bat [all|dist|dist-clean] [vc10|vc10.0|2010|vs2010] [vc11|vc11.0|2012|vs2012] [vc12|vc12.0|2013|vs2013]
+cmd '/c ' clean.bat [dist|dist-clean] [all] [vc10|vc10.0|2010|vs2010] [vc11|vc11.0|2012|vs2012] [vc12|vc12.0|2013|vs2013]
 ```
