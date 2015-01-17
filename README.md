@@ -60,53 +60,48 @@ The Default Git Repository is **USTC** Repository.
 
 #### These is local projects below
 1. dumpImageSize **`1.1.9`**
-  [Sourcecode](project/.dumpImageSize)
+  [Sourcecode](project/.dumpImageSize/)
 1. libhook **`0.0.1(NOT released)`**
-  [Sourcecode](project/.hook)
+  [Sourcecode](project/.hook/)
 1. librmld **`1.0.2`**
-  [Sourcecode](project/.rmld)
+  [Sourcecode](project/.rmld/)
 
 
 ### Install and Build
 1. Run `install.bat` to write **GNUDir** in system environment
-  variables.<br />
-  ```
-  cmd '/c ' install.bat [cur|all]
-  ```
+  variables.
+
+		cmd '/c ' install.bat [cur|all]
 
   When you add **GNUDir** to your environmental variables, you maybe
-  need to *REBOOT* your computer otherwise this value maybe unavailabled
+  need to **REBOOT** your computer otherwise this value maybe unavailabled
   in VisualStudio and Command Line.
 
-1. Run `build.bat` script.<br />
-  ```
-  cmd '/c ' build.bat [vc10|vc10.0|2010|vs2010] [vc11|vc11.0|2012|vs2012] [vc12|vc12.0|2013|vs2013] [all|c[r|m]t[r|d][d|l][32|64]] [sign|signture]
-  ```
+1. Run `build.bat` script.
 
-  Sample: ```cmd '/c ' build.bat vc12 crtd(debug)l(static library)32(platform)```
+		cmd '/c ' build.bat [vc10|vc10.0|2010|vs2010] [vc11|vc11.0|2012|vs2012] [vc12|vc12.0|2013|vs2013] [all|c[r|m]t[r|d][d|l][32|64]] [sign|signture]
+
+  Sample: `cmd '/c ' build.bat vc12 crtd(debug)l(static library)32(platform`
 
 1. Import attribute table file [[vs2010](gnu_vc10.props)|[vs2012](gnu_vc11.props)|
-  [vs2013](gnu_vc12.props)] to your project (.vcxproj file) like this:<br />
-  ```
-  <Import Project="$(GNUDir)gnu_vc10.props" />
-  ```
+  [vs2013](gnu_vc12.props)] to your project (.vcxproj file) like this:
+
+		<Import Project="$(GNUDir)gnu_vc10.props" />
 
   File `gnu_vc10.prop` is the global setting file.
 
 1. Import env file [[vs2010](etc/vc10/global/env.props)|[vs2012](etc/vc11/global/env.props)|
   [vs2013](etc/vc12/global/env.props)] to your project .vcxproj
-  file.  You should do like this:<br />
-  ```
-  <Import Project="$(GNUetcglobalDir)env.props" />
-  ```
+  file.  You should do like this:
+
+		<Import Project="$(GNUetcglobalDir)env.props" />
 
   File `env.props` is the environment setting for GNU projects.  When you
   import this props, you can use `#include <zlib.h>` in your code to
   include GNU project.<br />
-  This statement must be after:<br />
-  ```
-  <PropertyGroup Label="UserMacros" />
-  ```
+  This statement must be after:
+
+		<PropertyGroup Label="UserMacros" />
 
 
 ### Build options
@@ -122,7 +117,7 @@ The Default Git Repository is **USTC** Repository.
 
 1. **GNUGenerateDebugInformation**: *true* or *false*<br />
   When you build this project, it will output .pdb and .idb files
-  in **pdb** directory or the path you set in gnu_vcxx.props.
+  in `pdb` directory or the path you set in `gnu_vcxx.props`.
 
 1. **GNUGeneratePublicSymbolDebugInformation**: *true* or *false*<br />
   When you build this project, it will generation another public
@@ -184,7 +179,8 @@ Run `cleat.bat` to clean the workspace, or you really want to clean all generati
 files, you should run `clean.bat dist-clean`, it will removes the intermediate files
 at the same time, such as addressTable file [[vs2010](etc/vc10/addressTable.txt)|
 [vs2012](etc/vc11/addressTable.txt)|[vs2013](etc/vc12/addressTable.txt)], and a
-file list defined [here](project/.dist_clean) (Compile-time generated files).<br />
-```
-cmd '/c ' clean.bat [dist|dist-clean] [all] [vc10|vc10.0|2010|vs2010] [vc11|vc11.0|2012|vs2012] [vc12|vc12.0|2013|vs2013]
-```
+file list defined [here](project/.dist_clean) (Compile-time generated files).
+
+	cmd '/c ' clean.bat [dist|dist-clean] [all] [vc10|vc10.0|2010|vs2010] [vc11|vc11.0|2012|vs2012] [vc12|vc12.0|2013|vs2013]
+
+Option `all` means all `vc10`, `vc11` and `vc12`, **NOT** dist clean.
