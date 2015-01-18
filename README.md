@@ -1,7 +1,7 @@
 ## GNUinVisualStudio
 This is GNU projects for Microsoft (R) Visual Studio (R) 2010, 2012 and 2013.
 
-Make by Song Wanpeng ([swpustc](https://swpustc.wicp.net/ "swpustc Homepage")),<swpustc@mail.ustc.edu.cn>.
+Make by Song Wanpeng ([swpustc](https://swpustc.info/ "swpustc Homepage")), <swpustc@mail.ustc.edu.cn>.
 
 University of Science and Technology of China,
 No.96, JinZhai Road, Baohe District, Hefei, Anhui, 230026, P.R.China.
@@ -13,7 +13,7 @@ The Default Git Repository is **USTC** Repository.
 
 - [USTC](https://git.ustclug.org/swp/gnuinvisualstudio "USTC Default")
 - [GitHub](https://github.com/swpustc/GNUinVisualStudio "GitHub")
-- [Local](https://git-swp.wicp.net/swp/gnuinvisualstudio "Local Preview")
+- [Local](https://git.swpbox.info/swp/gnuinvisualstudio "Local GitLab")
 
 
 ### GNU Source
@@ -71,7 +71,8 @@ The Default Git Repository is **USTC** Repository.
 1. Run `install.bat` to write **GNUDir** in system environment
   variables.
 
-		cmd '/c ' install.bat [cur|all]
+		#!cmd '/c '
+		install.bat [cur|all]
 
   When you add **GNUDir** to your environmental variables, you maybe
   need to **REBOOT** your computer otherwise this value maybe unavailabled
@@ -79,9 +80,13 @@ The Default Git Repository is **USTC** Repository.
 
 1. Run `build.bat` script.
 
-		cmd '/c ' build.bat [vc10|vc10.0|2010|vs2010] [vc11|vc11.0|2012|vs2012] [vc12|vc12.0|2013|vs2013] [all|c[r|m]t[r|d][d|l][32|64]] [sign|signture]
+		#!cmd '/c '
+		build.bat [vc10|vc10.0|2010|vs2010] [vc11|vc11.0|2012|vs2012] [vc12|vc12.0|2013|vs2013] [all|c[r|m]t[r|d][d|l][32|64]] [sign|signture]
 
-  Sample: `cmd '/c ' build.bat vc12 crtd(debug)l(static library)32(platform`
+  Sample:
+
+		#!cmd '/c '
+		build.bat vc12 crtd(debug)l(static library)32(platform)
 
 1. Import attribute table file [[vs2010](gnu_vc10.props)|[vs2012](gnu_vc11.props)|
   [vs2013](gnu_vc12.props)] to your project (.vcxproj file) like this:
@@ -181,6 +186,7 @@ at the same time, such as addressTable file [[vs2010](etc/vc10/addressTable.txt)
 [vs2012](etc/vc11/addressTable.txt)|[vs2013](etc/vc12/addressTable.txt)], and a
 file list defined [here](project/.dist_clean) (Compile-time generated files).
 
-	cmd '/c ' clean.bat [dist|dist-clean] [all] [vc10|vc10.0|2010|vs2010] [vc11|vc11.0|2012|vs2012] [vc12|vc12.0|2013|vs2013]
+	#!cmd '/c '
+	clean.bat [dist|dist-clean] [all] [vc10|vc10.0|2010|vs2010] [vc11|vc11.0|2012|vs2012] [vc12|vc12.0|2013|vs2013]
 
 Option `all` means all `vc10`, `vc11` and `vc12`, **NOT** dist clean.
